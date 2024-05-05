@@ -28,3 +28,25 @@ bundle exec jekyll serve --livereload
 http://localhost:4000
 ```
 8. Edit files in the root directory and they will be generated as static pages in the _site directory. So to edit the index page, edit the rosecityrobotics.com/index.html file.
+
+### Publishing Blog Posts
+
+Jekyll has some built in functionality for managing blog posts. To create a new blog post add a file in the _posts directory with the following format:
+```
+YYYY-MM-DD-title-of-post.md
+```
+
+The blog post can be written in markdown and you can also mix in html if needed. For example in the _/posts/2024-04-28-join-us-at-portland-area-robotics-society.md file there is a youtube video embed code using an iframe. The embed code is just cut and pasted from youtube, but you need to wrap in in a div tag with class `responsive-iframe-container` to make it responsive. To include images, just add them to the _site/assets/images directory and then reference them in the markdown.
+
+At the top of the post file, you need to include "front matter" in YAML format. This is where you specify the layout and author of the post. Here is an example:
+
+```
+---
+layout: post
+author: duncan_miller
+---
+```
+
+The author maps to a record in the _data/authors.yml file. So if you want to add or modify author details, just edit the authors.yml file. The author key should match the key in the front matter of the blog post.
+
+The post title and date will be added to the post based on the filename, just use kabob case and the correct format for the date. The author and author image and bio will be added to the post based on the front matter and corresponding author data in the _data/authors.yml file. You can view the structure of this template in the _layouts/post.html file.
