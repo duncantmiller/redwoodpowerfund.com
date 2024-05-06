@@ -5,7 +5,7 @@
 # in the templates via {{ site.metadata.myvariable }}.
 
 title: Rose City Robotics
-tagline: This site is totally awesome
+tagline: An AI robotics integrator based in Portland Oregon
 email: support@rosecityrobotics.com
 description: >-
-  Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+  We help companies implement robotics using AI and machine learning to enhance robot hardware with vision and predictive motion planning capabilities.
