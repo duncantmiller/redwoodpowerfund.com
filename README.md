@@ -40,12 +40,13 @@ YYYY-MM-DD-title-of-post.md
 
 The blog post can be written in markdown and you can also mix in html if needed. For example in the /src/_posts/2024-04-28-join-us-at-portland-area-robotics-society.md file there is a youtube video embed code using an iframe. The embed code is just cut and pasted from youtube, but you need to wrap in in a div tag with class `responsive-iframe-container` to make it responsive. To include images, just add them to the src/images directory and then reference them in the markdown.
 
-At the top of the post file, you need to include "front matter" in YAML format. This is where you specify the layout and author of the post. Here is an example:
+At the top of the post file, you need to include "front matter" in YAML format. This is where you specify the layout and author of the post as well as a meta description for SEO (should be 156 characters or less). Here is an example:
 
 ```
 ---
 layout: post
 author: duncan_miller
+description: Rose City Robotics Founder and CEO Joseph Cole, PhD will be presenting on Mobile ALOHA, the open source robotics hardware developed by Stanford University.
 ---
 ```
 
