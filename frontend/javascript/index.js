@@ -34,5 +34,3 @@ Object.entries(controllers).forEach(([filename, controller]) => {
     Stimulus.register(identifier, controller.default)
   }
 })
-
-import './menu.js';
