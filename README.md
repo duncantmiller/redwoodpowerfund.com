@@ -2,6 +2,8 @@
 A robotics startup in Portland Oregon.
 
 ## Usage
+gem install bridgetown -N
+
 This codebase generates a static site using [Jekyll](https://jekyllrb.com/). To use it:
 
 1. Make sure you have all [required Jekyll dependencies](https://jekyllrb.com/docs/installation/#requirements) installed. If you need to install Ruby, I recommend [RVM](https://rvm.io/).

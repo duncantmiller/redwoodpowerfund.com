@@ -1,9 +1,19 @@
 module.exports = {
-  plugins: [
-    require('tailwindcss'),
-    require('autoprefixer'),
-    ...(process.env.JEKYLL_ENV == 'production'
-      ? [require('cssnano')({ preset: 'default' })]
-      : [])
-  ]
+  plugins: {
+    'tailwindcss': {},
+    'postcss-flexbugs-fixes': {},
+    'postcss-preset-env': {
+      autoprefixer: {
+        flexbox: 'no-2009'
+      },
+      stage: 2,
+      features: {
+        'nesting-rules': true,
+        'custom-media-queries': true
+      },
+    },
+    'cssnano': {
+      preset: 'default'
+    }
+  }
 }
