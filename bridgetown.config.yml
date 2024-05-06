@@ -32,3 +32,9 @@ template_engine: liquid
 # timezone: America/Los_Angeles
 # pagination:
 #   enabled: true
+
+kramdown:
+  input: GFM # GitHub Flavored Markdown, if you prefer it
+  hard_wrap: false # Prevents newlines from being converted to <br> tags
+  auto_ids: true # Automatically generates IDs for headers
+  toc_levels: 1..6 # Sets which headers are included in auto-generated TOCs
