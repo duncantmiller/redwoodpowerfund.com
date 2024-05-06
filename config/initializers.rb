@@ -62,4 +62,5 @@ Bridgetown.configure do |config|
   # visit: https://edge.bridgetownrb.com/docs/configuration/initializers/
   config.url = "https://rosecityrobotics.com"
   init :"bridgetown-sitemap"
+  init :"bridgetown-seo-tag"
 end
