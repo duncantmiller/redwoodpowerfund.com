@@ -24,6 +24,11 @@ Our data collection methodologies are at the forefront of the industry, leveragi
 ### Overview of UMI
 The Universal Manipulation Interface (UMI) is our primary data collection framework, designed to capture nuanced human manipulations directly from demonstrations. This system uses sensorized hand-held grippers and advanced camera setups to record detailed manipulation actions, which are then translated into trainable data for robots.
 
+### UMI Data Collection Examples
+<div class="responsive-iframe-container">
+  <iframe src="https://www.youtube.com/embed/T0g66FbVaow?si=O4fibgg6Bf9LxymB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ### Technological Innovations
 - **Wide Field of View:** Fisheye lenses on wrist-mounted cameras significantly enhance the visual context, capturing intricate interactions in a broad visual field.
 - **Implicit Stereo Vision:** Side mirrors on the grippers enrich the dataset by providing multiple visual perspectives, crucial for depth perception and environmental understanding.
@@ -36,6 +41,11 @@ UMI enables operators to perform tasks in varied environments, capturing every m
 
 ### Overview of ALOHA
 ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperation. It represents a significant leap in making fine manipulation tasks accessible and reproducible on a budget, without sacrificing performance.
+
+### Teleoperation Data Collection Examples
+<div class="responsive-iframe-container">
+  <iframe src="https://www.youtube.com/embed/T0g66FbVaow?si=O4fibgg6Bf9LxymB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ### Teleoperation System Setup
 - **Bimanual Coordination:** Utilizes two synchronized robotic arms to replicate complex human tasks, enhancing the dexterity and range of robotic actions. Enables a human operator to directly control both arms and the mobile base of the robot. Suitable for executing complex tasks.
