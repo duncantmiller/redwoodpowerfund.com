@@ -89,7 +89,7 @@ Regardless of which methodology is used for collecting the data, the samples are
 - **Co-training Across Tasks** In addition to training data collected about the specific task, training effectiveness of the neural network also improves with co-training on other unrelated tasks, so the more data collected the easier each new task becomes to train.
 
 #### Post-Training Capabilities
-- **Learned Skills:** Robots trained with this data perform with precision in real-world applications, successfully executing tasks like threading cable ties, opening condiment cups, and even juggling ping pong balls with high success rates.
+- **Learned Skills:** Robots trained with this data perform with precision in real-world applications, successfully executing tasks like threading cable ties, opening condiment cups, and cleaning up messes while handling fragile glassware.
 - **Bimanual Manipulation:** Robots are able to coordinate both arms simultaneously to perform tasks like cooking, cleaning, and object sorting.
 - **Navigation:** The robot base is able to move through space in conjunction with arm movements, facilitating smooth navigation in complex environments.
 - **Long-Horizon Tasks:** Combining movement and manipulation skills to handle more intricate, unstructured and sequential tasks such as tidying up spaces and loading objects.
