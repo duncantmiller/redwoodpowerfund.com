@@ -3,14 +3,13 @@ layout: post
 author: duncan_miller
 title: Training Data Collection Methodologies for AI-Powered Robotics
 description: Learn about cutting edge data collection methods for capturing training data for AI-powered robotics
-published: false
 ---
 
 In traditional automation or robotics, the tasks done by the machines must be very prescriptive and well defined. Mapping movements to precise locations, ordered operations and a scripted list of actions and repeated processes. This works well for high volume, low mix tasks where there are a small number of variations in possible objects the robot will interact with. This is because an operator must reprogram the robot for each new object or movement. High volume, low mix processes make can justify this additional work by spreading out out over a large number of automated actions.
 
 Were traditional robotics and automation hardware fall short are in more challenging tasks for example tasks which include low volumes and unstructured or high mix of variations in the possible objects the robot will interact with. For this case, it is typically not economically feasible for the operator to reprogram the robot for each low volume run many times for the high mix of objects.
 
-This is where the power of AI and intelligent robotics can comes into play. At Rose City Robotics, our innovative approaches in data collection and robotic training using neural networks enable us to add layers of intelligence and capabilities to any robotics hardware. This enables the robots to be more adaptable, learn on the fly and intuit next actions based on its broader training dataset.
+This is where the power of AI and intelligent robotics comes into play. At Rose City Robotics, our innovative approaches in data collection and robotic training using neural networks enable us to add layers of intelligence and capabilities to any robotics hardware. This enables the robots to be more adaptable, learn on the fly and intuit next actions based on its broader training dataset.
 
 A robot will need to be trained to do any new task and the essential first step of that process is collecting sample data of a human performing the task. In order to train a neural network on the intricacies of the task, we need to collect somewhere in the range of 50-100 examples of a human, or leader robot operated by a human doing that task using carefully placed video and sensors.
 
