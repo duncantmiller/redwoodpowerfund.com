@@ -5,11 +5,11 @@ title: Training Data Collection Methodologies for AI-Powered Robotics
 description: Learn about cutting edge data collection methods for capturing training data for AI-powered robotics
 ---
 
-In traditional automation or robotics, the tasks done by the machines must be very prescriptive and well defined. Mapping movements to precise locations, ordered operations and a scripted list of actions and repeated processes. This works well for high volume, low mix tasks where there are a small number of variations in possible objects the robot will interact with. This is because an operator must reprogram the robot for each new object or movement. High volume, low mix processes make can justify this additional work by spreading out out over a large number of automated actions.
+In traditional automation or robotics, the tasks performed by machines must be rigidly prescriptive, structured, and well-defined.. Movements are mapped to precise locations, operations are ordered in sequences and a script lists the actions, parameters and repeated processes. This works well for high volume, low mix tasks where there are a small number of variations in possible objects the robot will interact with. This is because an operator must reprogram the robot for each new object or variation in movement. High volume, low mix processes can justify this additional work by allocating out that fixed overhead over a large number of automated actions.
 
-Were traditional robotics and automation hardware fall short are in more challenging tasks for example tasks which include low volumes and unstructured or high mix of variations in the possible objects the robot will interact with. For this case, it is typically not economically feasible for the operator to reprogram the robot for each low volume run many times for the high mix of objects.
+Where traditional robotics and automation hardware fall short are in more challenging tasks. For example tasks which include low volumes with unstructured or a high mix of variations in the possible objects the robot will interact with. For this case, it is typically not economically feasible for the operator to reprogram the robot for each low volume run many times for the high mix of objects.
 
-This is where the power of AI and intelligent robotics comes into play. At Rose City Robotics, our innovative approaches in data collection and robotic training using neural networks enable us to add layers of intelligence and capabilities to any robotics hardware. This enables the robots to be more adaptable, learn on the fly and intuit next actions based on its broader training dataset.
+This is where the power of AI and intelligent robotics comes into play. At Rose City Robotics, our innovative approaches in data collection and robotic training using neural networks enable us to add layers of intelligence and capabilities to any robotics hardware. This enables the robots to be more adaptable, learn on the fly and intuitively decide on next actions based on its broader training dataset.
 
 A robot will need to be trained to do any new task and the essential first step of that process is collecting sample data of a human performing the task. In order to train a neural network on the intricacies of the task, we need to collect somewhere in the range of 50-100 examples of a human, or leader robot operated by a human doing that task using carefully placed video and sensors.
 
@@ -36,7 +36,7 @@ UMI is our primary data collection framework, designed to capture nuanced human 
 - **Wide Field of View:** Fisheye lenses on wrist-mounted cameras significantly enhance the visual context, capturing intricate interactions in a broad visual field.
 - **Implicit Stereo Vision:** Side mirrors on the grippers enrich the dataset by providing multiple visual perspectives, crucial for depth perception and environmental understanding.
 - **Kinematic-Based Data Filtering:** This feature ensures that the diverse data collected is readily applicable across different robotic models, enhancing flexibility and utility.
-- **Open Source Inexpensive Hardware** The sensorized gripper can be constructed using off the shelf and inexpensive hardware including cameras, sensors and 3d printed parts, all totaling less than $500. All instructions, required components and plans for 3d printing are available in the [UMI hardware guide](https://docs.google.com/document/d/1TPYwV9sNVPAi0ZlAupDMkXZ4CA1hsZx7YDMSmcEy6EU/edit).
+- **Open Source Inexpensive Hardware** The sensorized gripper can be constructed using off the shelf and inexpensive hardware including cameras, sensors and 3D printed parts, all totaling less than $500. All instructions, required components and plans for 3D printing are available in the [UMI hardware guide](https://docs.google.com/document/d/1TPYwV9sNVPAi0ZlAupDMkXZ4CA1hsZx7YDMSmcEy6EU/edit).
 
 ### Data Collection and Processing
 UMI enables operators to perform tasks in varied environments, capturing every movement and interaction. The data is meticulously processed and mapped to specific joints and motors providing a foundational dataset that informs the precise and adaptive behaviors of the robots.
@@ -66,7 +66,7 @@ ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperati
 #### Advanced Sensory Capabilities
 In addition to more traditional data collections outlined above, we have also developed a custom data collection app for the Apple Vision Pro. The Vision Pro is equipped with state-of-the-art sensors including depth sensors, infrared illuminators, lidar scanners, and RGB cameras.
 
-This offers unprecedented data collection capabilities in a low friction form factor. Users can wear the Apple Vision Pro in pass through mode and perform the task as they usually do with their own hands, instead of using UMI grippers or a teleoperated robot to perform the task. This technology captures intricate environmental and interaction details, ideal for training AI-driven robots in complex tasks.
+This offers unprecedented data collection capabilities in a low friction form factor. Users can wear the Apple Vision Pro in pass-through mode and perform the task as they usually do with their own hands, instead of using UMI grippers or a teleoperated robot to perform the task. This technology captures intricate environmental and interaction details, ideal for training AI-driven robots in complex tasks.
 
 #### Hand Tracking Technology
 Apple Vision Pro's hand tracking technology allows for the precise capture of human hand movements and gestures. This feature can be useful for capturing data used for teaching robots tasks requiring fine motor skills and intuitive human-robot interaction.
@@ -103,6 +103,6 @@ From advanced manufacturing to recycling and logistics, our robots are adept at 
 
 ## Future of Robotics
 
-As we look ahead, the rapid growth in capabilities of generative AI as it relates to language has direct implications in the growth of capabilities of robotics. This integration of even more advanced AI capabilities promises to further enhance the autonomous and adaptable functions of robots, rapidly making them even more capable and flexible over time.
+As we look ahead, the rapid growth in capabilities of generative AI as it relates to language has direct implications in the growth of capabilities of robotics. Integrating even more advanced AI capabilities promises to further enhance the autonomous and adaptable functions of robots, rapidly making them even more capable and flexible over time.
 
 Rose City Robotics is committed to pushing the boundaries of what's possible in robotic automation. By integrating sophisticated data collection systems like UMI, teleoperation with ALOHA and our Apple Vision Pro app into our workflow, we empower forward looking businesses to transform their operations with smart, safe, and efficient robotic assistants. For a consultation or demonstration, [reach out](/#contact) to us today.
