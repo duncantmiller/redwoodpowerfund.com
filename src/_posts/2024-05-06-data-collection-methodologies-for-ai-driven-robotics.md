@@ -2,7 +2,7 @@
 layout: post
 author: duncan_miller
 title: Data Collection Methodologies for AI-Driven Robotics
-description:
+description: Learn about cutting edge data collection methods for capturing training data for AI-powered robotics
 published: false
 ---
 
@@ -41,10 +41,10 @@ The Universal Manipulation Interface (UMI) is our primary data collection framew
 ### Data Collection and Processing
 UMI enables operators to perform tasks in varied environments, capturing every movement and interaction. The data is meticulously processed and annotated, providing a foundational dataset that informs the precise and adaptive behaviors of our robots.
 
-## Teleoperation with ALOHA A Low-Cost System for Precise Robotic Training
+## Teleoperation with ALOHA: A Low-Cost System for Precise Robotic Training
 
 ### Overview of ALOHA
-ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperation. It represents a significant leap in making fine manipulation tasks accessible and reproducible on a budget, without sacrificing performance.
+ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperation, (developed and published[https://mobile-aloha.github.io/]) by a research team at Stanford University. It represents a significant leap in making fine manipulation tasks accessible and reproducible on a budget, without sacrificing performance.
 
 ### Teleoperation Data Collection Examples
 {% render "youtube_embed", youtube_key: "N-WSYbU4I_0" %}
@@ -53,30 +53,19 @@ ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperati
 - **Bimanual Coordination:** Utilizes two synchronized robotic arms to replicate complex human tasks, enhancing the dexterity and range of robotic actions. Enables a human operator to directly control both arms and the mobile base of the robot. Suitable for executing complex tasks.
 - **Cameras and Sensors:** Multiple cameras provide comprehensive visual feedback at a high frequency, capturing detailed visual and motion data during demonstrations which is essential for tasks requiring fine visual coordination.
 - **Complex Task Execution:** Capable of handling intricate tasks like cooking, cleaning, and navigation.
+- **Built in Joint Mapping** Since the operations are done directly by the robot arms and grippers, we can avoid the complex step of mapping sensor data to the robot joints and servos.
 - **Integration with Training Data:** Combines data from mobile and static ALOHA demonstrations for improved generalization and training efficiency.
 
 ### Data Collection Process
 - **Human Demonstrations:** Operators use this teleoperation system to perform finely controlled tasks, which are recorded in detail.
 - **Recording Data:** Captures both the physical motions and the visual data, providing a complete picture of each task.
 
-### Volume of Data Collected
-- **Sample Size and Time:** For each task, about 50 to 100 demonstrations are recorded, totaling around 10-20 minutes of active demonstration time per task.
-
-### Post-Training Capabilities
-- **Learned Skills:** Robots trained with data from ALOHA perform with precision in real-world applications, successfully executing tasks like threading cable ties, opening condiment cups, and even juggling ping pong balls with high success rates.
-- **Bimanual Manipulation:** Coordinating both arms simultaneously to perform tasks like cooking, cleaning, and object sorting.
-- **Navigation:** Moving the robot base in conjunction with arm movements, facilitating smooth navigation in complex environments.
-- **Long-Horizon Tasks:** Combining movement and manipulation skills to handle more intricate, sequential tasks such as tidying up spaces and loading objects.
-
-### Addressing Challenges
-- **Compounding Errors and Variability:** ALOHA addresses these common challenges in robotic training through innovative techniques like action chunking and the use of a conditional variational autoencoder, ensuring smooth operation and adaptability to task variations.
-- **Co-Training Approach:** Data from static ALOHA demonstrations, which include 825 examples of diverse manipulation tasks, is integrated into training alongside Mobile ALOHA data to improve generalization and data efficiency.
-- **Imitation Learning:** Behavior cloning is used to replicate human demonstrations. The system benefits from combining mobile and static data to learn long-horizon tasks such as cooking, cleaning, and navigating.
-
 ### Enhancing Robotic Training with Apple Vision Pro
 
 #### Advanced Sensory Capabilities
-In addition to more traditional data collections outlined above, we have also developed a data collection application for the Apple Vision Pro. The Vision Pro is equipped with state-of-the-art sensors including depth sensors, infrared illuminators, lidar scanners, and RGB cameras, offers unprecedented data collection capabilities. This technology captures intricate environmental and interaction details, ideal for training AI-driven robots in complex tasks.
+In addition to more traditional data collections outlined above, we have also developed a custom data collection app for the Apple Vision Pro. The Vision Pro is equipped with state-of-the-art sensors including depth sensors, infrared illuminators, lidar scanners, and RGB cameras.
+
+This offers unprecedented data collection capabilities in a low friction tool. Users can wear the Apple Vision Pro in pass through mode and perform the task as they usually do with their own hands, instead of using UMI grippers or a teleoperated robot to perform the task. This technology captures intricate environmental and interaction details, ideal for training AI-driven robots in complex tasks.
 
 #### Hand Tracking Technology
 Apple Vision Pro's hand tracking technology allows for the precise capture of human hand movements and gestures. This feature can be useful for capturing data used for teaching robots tasks requiring fine motor skills and intuitive human-robot interaction.
@@ -86,14 +75,32 @@ Apple Vision Pro's hand tracking technology allows for the precise capture of hu
 - **Gesture and Motion Recognition**: Enhances robots' understanding of human gestures, improving their responsiveness and interaction capabilities in various settings.
 - **High-Quality Training Data**: Provides accurate and detailed data, crucial for developing sophisticated robotic behaviors and operational adaptability.
 
-By leveraging the Apple Vision Pro’s capabilities, we are innovating ways to significantly enhance data collection for robotic training, leading to more adaptive, responsive, and capable robotic systems.
+By leveraging the Apple Vision Pro’s capabilities, we are innovating ways to reduce barriers and significantly enhance data collection for robotic training, leading to more adaptive, responsive, and capable robotic systems.
+
+## Utilizing the Collected Data for Training
+
+Regardless of which methodology is used for collecting the data, the samples are then cleaned and prepared for use in training a neural network on the task recorded.
+
+### Volume of Data Collected
+- **Sample Size and Time:** For each task, about 50 to 100 demonstrations are recorded, totaling around 10-20 minutes of active demonstration time per task.
+
+### Post-Training Capabilities
+- **Learned Skills:** Robots trained with this data perform with precision in real-world applications, successfully executing tasks like threading cable ties, opening condiment cups, and even juggling ping pong balls with high success rates.
+- **Bimanual Manipulation:** Coordinating both arms simultaneously to perform tasks like cooking, cleaning, and object sorting.
+- **Navigation:** Moving the robot base in conjunction with arm movements, facilitating smooth navigation in complex environments.
+- **Long-Horizon Tasks:** Combining movement and manipulation skills to handle more intricate, sequential tasks such as tidying up spaces and loading objects.
+
+### Addressing Challenges
+- **Compounding Errors and Variability:** ALOHA addresses these common challenges in robotic training through innovative techniques like action chunking and the use of a conditional variational autoencoder, ensuring smooth operation and adaptability to task variations.
+- **Co-Training Approach:** Data from static ALOHA demonstrations, which include 825 examples of diverse manipulation tasks, is integrated into training alongside Mobile ALOHA data to improve generalization and data efficiency.
+- **Imitation Learning:** Behavior cloning is used to replicate human demonstrations. The system benefits from combining mobile and static data to learn long-horizon tasks such as cooking, cleaning, and navigating.
 
 ## Applications in Industry
 
-From manufacturing to recycling and logistics, our robots are adept at performing a range of tasks—from assembly and inspection to delicate assists and intricate sorting operations. This versatility showcases the practical benefits of these advanced training methodologies.
+From manufacturing to recycling and logistics, our robots are adept at performing a range of low volume, high mix tasks from assembly and inspection to delicate manipulations and intricate sorting operations. This versatility showcases the practical benefits of these advanced training methodologies.
 
 ## Future of Robotics
 
-As we look ahead, the integration of even more advanced AI capabilities promises to further enhance the autonomous functions of robots, making them even more capable and flexible.
+As we look ahead, the integration of even more advanced AI capabilities promises to further enhance the autonomous and adaptable functions of robots, making them even more capable and flexible.
 
-Rose City Robotics is committed to pushing the boundaries of what's possible in robotic automation. By integrating sophisticated data collection systems like UMI,  ALOHA teleoperation and our Apple Vision Pro app into our workflow, we empower businesses to transform their operations with smart, safe, and efficient robotic assistants. For a consultation or demonstration, [reach out](/#contact) to us today.
+Rose City Robotics is committed to pushing the boundaries of what's possible in robotic automation. By integrating sophisticated data collection systems like UMI, teleoperation with ALOHA and our Apple Vision Pro app into our workflow, we empower businesses to transform their operations with smart, safe, and efficient robotic assistants. For a consultation or demonstration, [reach out](/#contact) to us today.
