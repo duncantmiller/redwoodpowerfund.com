@@ -5,7 +5,9 @@ title: Training Data Collection Methodologies for AI-Powered Robotics
 description: Learn about cutting edge data collection methods for capturing training data for AI-powered robotics
 ---
 
-In traditional automation or robotics, the tasks performed by machines must be rigidly prescriptive, structured, and well-defined.. Movements are mapped to precise locations, operations are ordered in sequences and a script lists the actions, parameters and repeated processes. This works well for high volume, low mix tasks where there are a small number of variations in possible objects the robot will interact with. This is because an operator must reprogram the robot for each new object or variation in movement. High volume, low mix processes can justify this additional work by allocating out that fixed overhead over a large number of automated actions.
+In traditional automation and robotics, the tasks performed by machines must be rigidly prescriptive, structured, and well-defined. Movements are mapped to precise locations, operations are ordered in sequences and a script lists the actions, parameters and repeated processes. This works well for high volume, low mix tasks where there are a small number of variations in possible objects the robot will interact with, but not so well for use cases which do not fit this mold.
+
+This is because an operator must reprogram the robot for each new object or variation in movement. High volume, low mix processes can justify this human work by allocating out that fixed overhead over a large number of automated actions.
 
 Where traditional robotics and automation hardware fall short are in more challenging tasks. For example tasks which include low volumes with unstructured or a high mix of variations in the possible objects the robot will interact with. For this case, it is typically not economically feasible for the operator to reprogram the robot for each low volume run many times for the high mix of objects.
 
