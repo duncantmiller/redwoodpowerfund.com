@@ -1,8 +1,8 @@
 ---
 layout: post
 author: duncan_miller
-title: Training Data Collection Methodologies for AI-Powered Robotics
-description: Learn about cutting edge data collection methods for capturing training data for AI-powered robotics
+title: Training Data Collection Methodologies for AI-Driven Robotics
+description: Learn about cutting edge data collection methods for capturing training data for AI-driven robotics
 ---
 
 In traditional automation and robotics, the tasks performed by machines must be rigidly prescriptive, structured, and well-defined. Movements are mapped to precise locations, operations are ordered in sequences and a script lists the actions, parameters and repeated processes. This works well for high volume, low mix tasks where there are a small number of variations in possible objects the robot will interact with, but not so well for use cases which do not fit this mold.
@@ -18,7 +18,7 @@ A robot will need to be trained to do any new task and the essential first step 
 ### The Role of Data in AI Robotics
 
 #### Data as the Foundation
-Effective AI-powered robotics begins with high-quality data. At Rose City Robotics, we utilize advanced sensors and vision systems to collect diverse, rich datasets that enable us to use machine learning to train robots to perform complex tasks with precision and adaptability.
+Effective AI-driven robotics begins with high-quality data. At Rose City Robotics, we utilize advanced sensors and vision systems to collect diverse, rich datasets that enable us to use machine learning to train robots to perform complex tasks with precision and adaptability.
 
 #### Leading Data Collection Methodologies
 Our data collection methodologies are at the forefront of the industry, leveraging cutting-edge technologies to capture and process data in ways that are both efficient and effective. Our primary data collection methodologies include:
@@ -78,7 +78,7 @@ Apple Vision Pro's hand tracking technology allows for the precise capture of hu
 - **Gesture and Motion Recognition:** Enhances robots' understanding of human gestures, improving their responsiveness and interaction capabilities in various settings.
 - **High-Quality Training Data:** Provides accurate and detailed data, crucial for developing sophisticated robotic behaviors and operational adaptability.
 
-By leveraging the Apple Vision Pro’s capabilities, we are innovating ways to reduce barriers and significantly enhance training data collection for AI-powered robotics, leading to more adaptive, responsive, and capable robotic systems.
+By leveraging the Apple Vision Pro’s capabilities, we are innovating ways to reduce barriers and significantly enhance training data collection for AI-driven robotics, leading to more adaptive, responsive, and capable robotic systems.
 
 ### Utilizing the Collected Data for Training
 
