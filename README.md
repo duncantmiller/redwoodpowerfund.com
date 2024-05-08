@@ -38,7 +38,11 @@ Bridgetown has some built in functionality for managing blog posts. To create a 
 YYYY-MM-DD-title-of-post.md
 ```
 
-The blog post can be written in markdown and you can also mix in html if needed. For example in the /src/_posts/2024-04-28-join-us-at-portland-area-robotics-society.md file there is a youtube video embed code using an iframe. The embed code is just cut and pasted from youtube, but you need to wrap in in a div tag with class `responsive-iframe-container` to make it responsive. To include images, just add them to the src/images directory and then reference them in the markdown.
+The blog post can be written in markdown and you can also mix in html if needed, or more complex logic using [liquid](https://github.com/Shopify/liquid). For example in the /src/_posts/2024-04-28-join-us-at-portland-area-robotics-society.md file there is a youtube video embed code using an iframe. I've added this html code in a reusable youtube_embed component using liquid that just requires a value passed for the youtube_key variable which comes at the end of the youtube url. So for example you can embed an youtube video with the url `https://www.youtube.com/embed/N-WSYbU4I_0` using:
+
+```
+{% render "youtube_embed", youtube_key: "N-WSYbU4I_0" %}
+```
 
 At the top of the post file, you need to include "front matter" in YAML format. This is where you specify the layout and author of the post as well as a meta description for SEO (should be 156 characters or less). Here is an example:
 
