@@ -73,6 +73,9 @@ This offers unprecedented data collection capabilities in a low friction form fa
 ##### Hand Tracking Technology
 Apple Vision Pro's hand tracking technology allows for the precise capture of human hand movements and gestures. This feature can be useful for capturing data used for teaching robots tasks requiring fine motor skills and intuitive human-robot interaction.
 
+#### Apple Vision Pro Data Collection Example
+{% render "youtube_embed", youtube_key: "Ezz7mlMf1_U" %}
+
 ##### Applications and Benefits
 - **Detailed Environmental Interaction:** Utilizes advanced sensors to capture comprehensive environmental data, enriching the training datasets for robotic systems.
 - **Gesture and Motion Recognition:** Enhances robots' understanding of human gestures, improving their responsiveness and interaction capabilities in various settings.
