@@ -63,20 +63,20 @@ ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperati
 - **Human Demonstrations:** Operators use this teleoperation system to perform finely controlled tasks, which are recorded in detail.
 - **Recording Data:** Captures both the physical motions and the visual data, providing a complete picture of each task.
 
-#### 3. Apple Vision Pro App
+### 3. Apple Vision Pro App
 
-##### Advanced Sensory Capabilities
+#### Advanced Sensory Capabilities
 In addition to more traditional data collections outlined above, we have also developed a custom data collection app for the Apple Vision Pro. The Vision Pro is equipped with state-of-the-art sensors including depth sensors, infrared illuminators, lidar scanners, and RGB cameras.
 
 This offers unprecedented data collection capabilities in a low friction form factor. Users can wear the Apple Vision Pro in pass-through mode and perform the task as they usually do with their own hands, instead of using UMI grippers or a teleoperated robot to perform the task. This technology captures intricate environmental and interaction details, ideal for training AI-driven robots in complex tasks.
 
-##### Hand Tracking Technology
+#### Hand Tracking Technology
 Apple Vision Pro's hand tracking technology allows for the precise capture of human hand movements and gestures. This feature can be useful for capturing data used for teaching robots tasks requiring fine motor skills and intuitive human-robot interaction.
 
 #### Apple Vision Pro Data Collection Example
 {% render "youtube_embed", youtube_key: "Ezz7mlMf1_U" %}
 
-##### Applications and Benefits
+#### Applications and Benefits
 - **Detailed Environmental Interaction:** Utilizes advanced sensors to capture comprehensive environmental data, enriching the training datasets for robotic systems.
 - **Gesture and Motion Recognition:** Enhances robots' understanding of human gestures, improving their responsiveness and interaction capabilities in various settings.
 - **High-Quality Training Data:** Provides accurate and detailed data, crucial for developing sophisticated robotic behaviors and operational adaptability.
