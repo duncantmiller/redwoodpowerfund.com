@@ -6,7 +6,13 @@ description:
 published: false
 ---
 
-At Rose City Robotics, we harness the transformative power of AI to add layers of intelligence and autonomy to robotics hardware. Our innovative approaches in data collection and robotic training not only enhance efficiency but also ensure safety, making robots true collaborative partners in the workplace.
+A robot will need to be trained to do any new task an the essential first step of that processing is collecting examples using video and sensors. In order to train a neural network on the intricacies of the task, we need to collect somewhere in the range of 50-100 examples of a human, or leader robot doing that task using carefully placed video and sensors.
+
+In traditional automation or robotics, the tasks done by the machines must be very prescriptive and well defined. Mapping movements to precise locations, ordered operations and a scripted list of actions and repeated processes. This works well for high volume, low mix tasks where there are a small number of variations in possible objects the robot will interact with. This is because an operator must reprogram the robot for each new object or movement. High volume, low mix processes make can justify this additional work by spreading out out over a large number of automated actions.
+
+Were traditional robotics and automation hardware fall short are in more challenging tasks for example tasks which include low volumes and high mix of variations in the possible objects the robot will interact with. For this case, it is typically not economically feasible for the operator to reprogram the robot for each low volume run many times for the high mix of objects.
+
+This is where the power of AI and intelligent robotics can comes into play. At Rose City Robotics, our innovative approaches in data collection and robotic training using neural networks enable us to add layers of intelligence and capabilities to any robotics hardware. This enables the robots to be more adaptable, learn on the fly and intuit next actions based on its broader training dataset.
 
 ## The Role of Data in Robotics
 
@@ -14,20 +20,18 @@ At Rose City Robotics, we harness the transformative power of AI to add layers o
 Effective AI-driven robotics begins with high-quality data. At Rose City Robotics, we utilize advanced sensors and vision systems to collect diverse, rich datasets that enable us to use machine learning to train robots to perform complex tasks with precision and adaptability.
 
 ### Leading Data Collection Methodologies
-Our data collection methodologies are at the forefront of the industry, leveraging cutting-edge technologies to capture and process data in ways that are both efficient and effective. Our current methodologies include:
+Our data collection methodologies are at the forefront of the industry, leveraging cutting-edge technologies to capture and process data in ways that are both efficient and effective. Our primary data collection methodologies include:
 - Universal Manipulation Interface (UMI)
-- ALOHA Teleoperation
+- Teleoperation with ALOHA
 - Apple Vision Pro
 
 ## Universal Manipulation Interface (UMI): Bridging Human Skills and Robotic Capabilities
 
 ### Overview of UMI
-The Universal Manipulation Interface (UMI) is our primary data collection framework, designed to capture nuanced human manipulations directly from demonstrations. This system uses sensorized hand-held grippers and advanced camera setups to record detailed manipulation actions, which are then translated into trainable data for robots.
+The Universal Manipulation Interface (UMI) is our primary data collection framework, designed to capture nuanced human manipulations directly from demonstrations. The UMI devices we use are based on [research and open source hardware](https://umi-gripper.github.io/) from Stanford University, Columbia University and the Toyota Research Institute. This system uses sensorized hand-held grippers and advanced camera setups to record detailed manipulation actions, which are then translated into trainable data for robots.
 
 ### UMI Data Collection Examples
-<div class="responsive-iframe-container">
-  <iframe src="https://www.youtube.com/embed/T0g66FbVaow?si=O4fibgg6Bf9LxymB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+{% render "youtube_embed", youtube_key: "gXtIW1HlITo" %}
 
 ### Technological Innovations
 - **Wide Field of View:** Fisheye lenses on wrist-mounted cameras significantly enhance the visual context, capturing intricate interactions in a broad visual field.
@@ -37,15 +41,13 @@ The Universal Manipulation Interface (UMI) is our primary data collection framew
 ### Data Collection and Processing
 UMI enables operators to perform tasks in varied environments, capturing every movement and interaction. The data is meticulously processed and annotated, providing a foundational dataset that informs the precise and adaptive behaviors of our robots.
 
-## ALOHA Teleoperation: A Low-Cost System for Precise Robotic Training
+## Teleoperation with ALOHA A Low-Cost System for Precise Robotic Training
 
 ### Overview of ALOHA
 ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperation. It represents a significant leap in making fine manipulation tasks accessible and reproducible on a budget, without sacrificing performance.
 
 ### Teleoperation Data Collection Examples
-<div class="responsive-iframe-container">
-  <iframe src="https://www.youtube.com/embed/T0g66FbVaow?si=O4fibgg6Bf9LxymB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+{% render "youtube_embed", youtube_key: "N-WSYbU4I_0" %}
 
 ### Teleoperation System Setup
 - **Bimanual Coordination:** Utilizes two synchronized robotic arms to replicate complex human tasks, enhancing the dexterity and range of robotic actions. Enables a human operator to directly control both arms and the mobile base of the robot. Suitable for executing complex tasks.
