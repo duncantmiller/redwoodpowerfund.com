@@ -40,7 +40,7 @@ UMI is our primary data collection framework, designed to capture nuanced human 
 - **Open Source Inexpensive Hardware** The sensorized gripper can be constructed using off the shelf and inexpensive hardware including cameras, sensors and 3d printed parts, all totaling less than $500. All instructions, required components and plans for 3d printing are available in the [UMI hardware guide](https://docs.google.com/document/d/1TPYwV9sNVPAi0ZlAupDMkXZ4CA1hsZx7YDMSmcEy6EU/edit).
 
 ### Data Collection and Processing
-UMI enables operators to perform tasks in varied environments, capturing every movement and interaction. The data is meticulously processed and mapped to specific joints and servos providing a foundational dataset that informs the precise and adaptive behaviors of the robots.
+UMI enables operators to perform tasks in varied environments, capturing every movement and interaction. The data is meticulously processed and mapped to specific joints and motors providing a foundational dataset that informs the precise and adaptive behaviors of the robots.
 
 ## 2. Teleoperation with ALOHA
 
@@ -54,7 +54,7 @@ ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperati
 - **Bimanual Coordination:** Utilizes two synchronized robotic arms to replicate complex human tasks, enhancing the dexterity and range of robotic actions. This enables a human operator to directly control both arms and the mobile base of the robot and is suitable for executing complex tasks.
 - **Cameras and Sensors:** Multiple cameras provide comprehensive visual feedback at a high frequency, capturing detailed visual and motion data during demonstrations which is essential for tasks requiring fine visual coordination.
 - **Complex Task Execution:** Capable of handling intricate tasks like cooking, cleaning, and navigation.
-- **Built in Joint Mapping** Since the operations are done directly by the robot arms and grippers, we can avoid the complex step of mapping sensor data to the robot joints and servos.
+- **Built in Joint Mapping** Since the operations are done directly by the robot arms and grippers, we can avoid the complex step of mapping sensor data to the robot joints and motors.
 - **Integration with Training Data:** Combines data from mobile and static ALOHA demonstrations for improved generalization and training efficiency.
 - **Open Source Hardware** All plans and specifications are available in the [ALOHA hardware tutorial](https://docs.google.com/document/d/1sgRZmpS7HMcZTPfGy3kAxDrqFMtNNzmK-yVtX5cKYME/edit) and can be constructed with parts which cost approximately $20,000. ALOHA units are also manufactured by 3rd party providers, ranging in cost from $25,000 - $50,000 each.
 
