@@ -4,35 +4,45 @@ title: Blog
 ---
 <div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl">
+    <div class="mx-auto max-w-2xl lg:max-w-4xl">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
       <p class="mt-2 text-lg leading-8 text-gray-600">Learn about what is happening on the forefront of AI in robotics.</p>
       <div class="mt-10 space-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16">
         {% for post in collections.posts.resources %}
           {% assign author = site.data.authors[post.author] %}
-          <article class="flex max-w-xl flex-col items-start justify-between">
-            <div class="flex items-center gap-x-4 text-xs">
-              <time datetime="2020-03-16" class="text-gray-500">{{ post.date | date: "%B %e, %Y" }}</time>
+          <article class="relative isolate flex flex-col gap-8 lg:flex-row">
+            <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
+              <a href="{{ post.relative_url }}">
+                <img src="{{ post.image }}"  alt="{{ post.title }} image" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+              </a>
+              <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
             </div>
-            <div class="group relative">
-              <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                <a href="{{ post.relative_url }}">
-                  <span class="absolute inset-0"></span>
-                  {{ post.title }}
-                </a>
-              </h3>
-              <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">{{ post.summary }}</p>
-            </div>
-            <div class="relative mt-8 flex items-center gap-x-4">
-              <img src="{{ author.image }}" alt="" class="h-10 w-10 rounded-full bg-gray-50">
-              <div class="text-sm leading-6">
-                <p class="font-semibold text-gray-900">
-                  <a href="{{ post.relative_url }}">
+            <div>
+              <div class="flex items-center gap-x-4 text-xs">
+                <time class="text-gray-500">{{ post.date | date: "%B %e, %Y" }}</time>
+              </div>
+              <div class="group relative max-w-xl">
+                <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-200">
+                  <a href="{{ post.relative_url }}" class="text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-200">
                     <span class="absolute inset-0"></span>
-                    {{ author.name }}
+                    {{ post.title }}
                   </a>
-                </p>
-                <p class="text-gray-600">{{ author.title }}</p>
+                </h3>
+                <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-200 break-words">{{ post.summary | strip_html }}</p>
+              </div>
+              <div class="mt-6 flex border-t border-gray-900/5 pt-6">
+                <div class="relative flex items-center gap-x-4">
+                  <img src="{{ author.image }}" alt="" class="h-10 w-10 rounded-full bg-gray-50">
+                  <div class="text-sm leading-6">
+                    <p class="font-semibold text-gray-900">
+                      <a href="{{ post.relative_url }}">
+                        <span class="absolute inset-0"></span>
+                        {{ author.name }}
+                      </a>
+                    </p>
+                    <p class="text-gray-600">{{ author.title }}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </article>

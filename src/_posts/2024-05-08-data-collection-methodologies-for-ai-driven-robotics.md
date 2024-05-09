@@ -3,6 +3,7 @@ layout: post
 author: duncan_miller
 title: Training Data Collection Methodologies for AI-Driven Robotics
 description: Learn about cutting edge data collection methods for capturing training data for AI-driven robotics
+image: /images/posts/training_data_collection.png
 ---
 
 In traditional automation and robotics, the tasks performed by machines must be rigidly prescriptive, structured, and well-defined. Movements are mapped to precise locations, operations are ordered in sequences and a script lists the actions, parameters and repeated processes. This works well for high volume, low mix tasks where there are a small number of variations in possible objects the robot will interact with, but not so well for use cases which do not fit this mold.
