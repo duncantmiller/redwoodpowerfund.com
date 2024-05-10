@@ -1,0 +1,30 @@
+name: Bridgetown CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3.0'  # Specify your Ruby version
+
+    - name: Install dependencies
+      run: |
+        bundle install
+
+    - name: Run tests
+      run: |
+        bin/bridgetown test
+
+    - name: Build site
+      run: |
+        bin/bridgetown build
