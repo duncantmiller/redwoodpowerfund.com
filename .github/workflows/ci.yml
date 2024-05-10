@@ -25,6 +25,10 @@ jobs:
       run: |
         bin/bridgetown test
 
+    - name: Run standardrb
+      run: |
+        standardrb
+
     - name: Build site
       run: |
         bin/bridgetown build
