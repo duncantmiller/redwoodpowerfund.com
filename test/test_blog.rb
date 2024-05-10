@@ -1,4 +1,4 @@
-require_relative "./helper"
+require_relative "helper"
 
 class TestBlog < Minitest::Test
   context "blog" do
@@ -12,19 +12,19 @@ class TestBlog < Minitest::Test
     end
 
     should "display blog titles" do
-      assert_select 'h3 a', true, "Blog titles should be present and contained within <h3> tags"
+      assert_select "h3 a", true, "Blog titles should be present and contained within <h3> tags"
     end
 
     should "display author names" do
-      assert_select '.text-sm a', true, "Author names should be present and contained within the specified selector"
+      assert_select ".text-sm a", true, "Author names should be present and contained within the specified selector"
     end
 
     should "include post images for each blog entry" do
-      assert_select 'article a img', true, "Each blog entry should have at least one post image within an anchor tag"
+      assert_select "article a img", true, "Each blog entry should have at least one post image within an anchor tag"
     end
 
     should "include author images for each blog entry" do
-      assert_select 'article img.rounded-full', true, "Each blog entry should have at least one author image with 'rounded-full' class"
+      assert_select "article img.rounded-full", true, "Each blog entry should have at least one author image with 'rounded-full' class"
     end
   end
 end
