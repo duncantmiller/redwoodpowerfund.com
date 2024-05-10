@@ -6,4 +6,3 @@ image: /images/posts/technical_courses.jpg
 ---
 
 {% remote_md https://raw.githubusercontent.com/duncantmiller/robotics-resources/main/README.md %}
-
