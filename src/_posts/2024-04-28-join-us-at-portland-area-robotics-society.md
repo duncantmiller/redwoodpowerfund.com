@@ -24,7 +24,7 @@ Introduction to Mobile ALOHA: Explore the key features and capabilities of this 
 We are eager to share our knowledge and insights on Mobile ALOHA, providing attendees with a comprehensive understanding of this cutting-edge technology and its role in shaping the future of mobile manipulation.
 
 ### Watch Below to see Mobile ALOHA in Action
-{% render "youtube_embed", youtube_key: "T0g66FbVaow" %}
+{% render "youtube_embed", youtube_key: "QCzPoV8ISXY" %}
 
 ### Attend the P.A.R.T.S. Presentation on Mobile ALOHA
 As we navigate through 2024, the world of robotics continues to evolve, presenting new opportunities and challenges. By attending this presentation, you'll have the chance to:
