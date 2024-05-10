@@ -42,6 +42,7 @@ sitemap_change_frequency: monthly
       by {{ author.name }} on {{ page.date | date: "%B %e, %Y" }}
     </div>
     <article class="prose lg:prose-xl mt-6">
+      <img src="{{ page.image }}"  alt="{{ page.title }} image" class="aspect-[16/9] w-full rounded-2xl bg-gray-100">
       <div>
         {{ content }}
       </div>
