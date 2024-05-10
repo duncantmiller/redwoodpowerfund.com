@@ -38,3 +38,13 @@ gem "puma", "< 7"
 gem "bridgetown-sitemap", "~> 2.0"
 gem "bridgetown-seo-tag", "~> 6.0"
 gem "faraday"
+
+
+group :test, optional: true do
+  gem "nokogiri"
+  gem "minitest"
+  gem "minitest-profile"
+  gem "minitest-reporters"
+  gem "shoulda"
+  gem "rails-dom-testing"
+end
