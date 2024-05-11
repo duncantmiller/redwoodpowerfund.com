@@ -60,3 +60,28 @@ The post title and date will be added to the post based on the filename, just us
 
 ## Draft blog posts
 If you want to create a draft blog post that won't be published, just add the `published: false` key to the front matter. This will prevent the post from being published. You can also preview the post by running the server with the --unpublished or -U flag `bin/bridgetown start -U`.
+
+## Running tests
+The tests and standardrb linter check will need to pass in the github action continuous integration in order for the changes to be deployed to Netlify after pushing commits to github. You can run the tests with:
+
+```
+bin/bridgetown test
+```
+
+and run standardrb linter with
+
+```
+standardrb
+```
+
+or to also fix any issues automatically
+
+```
+standardrb --fix
+```
+
+or tests and standardrb together with:
+
+```
+bin/check
+```
