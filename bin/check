@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Exit when any command fails
+set -e
+
+# Check Ruby code formatting
+bundle exec standardrb
+
+# Run the test suite
+bin/bridgetown test
