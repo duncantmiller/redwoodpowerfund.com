@@ -38,7 +38,7 @@ jobs:
 
     - name: Deploy to Netlify
       if: success()  # This ensures deployment happens only if previous steps are successful
-      run: netlify deploy --prod
+      run: netlify deploy --prod --message "${{ github.event.head_commit.message }}"
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
