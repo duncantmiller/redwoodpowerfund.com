@@ -19,7 +19,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        bundle install
+        bundle install --with test
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
