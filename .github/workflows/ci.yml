@@ -21,6 +21,16 @@ jobs:
       run: |
         bundle install
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '22'  # Specify your Node.js version, adjust as needed
+        cache: 'yarn'  # Enables caching of Yarn modules
+
+    - name: Install Node.js dependencies with Yarn
+      run: |
+        yarn install
+
     - name: Run tests
       run: |
         bin/bridgetown test
@@ -33,12 +43,12 @@ jobs:
       run: |
         bin/bridgetown build
 
-    # - name: Install Netlify CLI
-    #   run: npm install -g netlify-cli
+    - name: Install Netlify CLI
+      run: npm install -g netlify-cli
 
-    # - name: Deploy to Netlify
-    #   if: success()  # This ensures deployment happens only if previous steps are successful
-    #   run: netlify deploy --prod --message "${{ github.event.head_commit.message }}"
-    #   env:
-    #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-    #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+    - name: Deploy to Netlify
+      if: success()  # This ensures deployment happens only if previous steps are successful
+      run: netlify deploy --prod --message "${{ github.event.head_commit.message }}"
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
