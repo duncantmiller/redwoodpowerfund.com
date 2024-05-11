@@ -33,6 +33,12 @@ jobs:
       run: |
         bin/bridgetown build
 
+    - name: Install Netlify CLI
+      run: npm install -g netlify-cli
+
     - name: Deploy to Netlify
-      if: success()
-      run: curl -X POST -d {} https://api.netlify.com/build_hooks/663eb45a98c32262d755cc11
+      if: success()  # This ensures deployment happens only if previous steps are successful
+      run: netlify deploy --prod
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
