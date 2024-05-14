@@ -7,52 +7,114 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.3.0'  # Specify your Ruby version
+        ruby-version: '3.3.0'
 
-    - name: Install dependencies
-      run: |
-        bundle install --with test
+    - name: Cache Ruby gems
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
+    - name: Install Ruby dependencies
+      run: bundle install --with test
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '22'  # Specify your Node.js version, adjust as needed
-        cache: 'yarn'  # Enables caching of Yarn modules
+        node-version: '22'
+        cache: 'yarn'
+
+    - name: Cache Node.js modules
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.npm
+          ~/.cache/yarn
+        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
 
     - name: Install Node.js dependencies with Yarn
-      run: |
-        yarn install
+      run: yarn install
 
     - name: Build Frontend Assets
-      run: |
-        bin/bridgetown frontend:build
+      run: bin/bridgetown frontend:build
 
     - name: Run tests
-      run: |
-        bin/bridgetown test
+      run: bin/bridgetown test
 
     - name: Run standardrb
-      run: |
-        standardrb
+      run: standardrb
 
     - name: Build site
-      run: |
-        bin/bridgetown build
+      run: bin/bridgetown build
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3.0'
+
+    - name: Cache Ruby gems
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
+    - name: Install Ruby dependencies
+      run: bundle install --with test
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '22'
+        cache: 'yarn'
+
+    - name: Cache Node.js modules
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.npm
+          ~/.cache/yarn
+        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Install Node.js dependencies with Yarn
+      run: yarn install
+
+    - name: Build Frontend Assets
+      run: bin/bridgetown frontend:build
+
+    - name: Build site
+      run: bin/bridgetown build
 
     - name: Install Netlify CLI
       run: npm install -g netlify-cli
 
     - name: Deploy to Netlify
-      if: success()  # This ensures deployment happens only if previous steps are successful
       run: netlify deploy --prod --message "${{ github.event.head_commit.message }}"
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
