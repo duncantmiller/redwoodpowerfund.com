@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -19,7 +19,7 @@ jobs:
         ruby-version: '3.3.0'
 
     - name: Cache Ruby gems
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: vendor/bundle
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
@@ -36,7 +36,7 @@ jobs:
         cache: 'yarn'
 
     - name: Cache Node.js modules
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: |
           ~/.npm
@@ -66,7 +66,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -74,7 +74,7 @@ jobs:
         ruby-version: '3.3.0'
 
     - name: Cache Ruby gems
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: vendor/bundle
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
@@ -91,7 +91,7 @@ jobs:
         cache: 'yarn'
 
     - name: Cache Node.js modules
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: |
           ~/.npm
@@ -117,7 +117,6 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          const { context, github } = require('@actions/github');
           const { data: deployment } = await github.rest.repos.createDeployment({
             owner: context.repo.owner,
             repo: context.repo.repo,
@@ -127,7 +126,7 @@ jobs:
             transient_environment: false,
             auto_merge: false
           });
-          return { deployment_id: deployment.id };
+          core.setOutput('deployment_id', deployment.id);
 
     - name: Deploy to Netlify
       run: netlify deploy --prod --message "${{ github.event.head_commit.message }}"
@@ -140,7 +139,6 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          const { context, github } = require('@actions/github');
           await github.rest.repos.createDeploymentStatus({
             owner: context.repo.owner,
             repo: context.repo.repo,
@@ -156,7 +154,6 @@ jobs:
       uses: actions/github-script@v6
       with:
         script: |
-          const { context, github } = require('@actions/github');
           await github.rest.repos.createDeploymentStatus({
             owner: context.repo.owner,
             repo: context.repo.repo,
@@ -165,4 +162,3 @@ jobs:
             environment: 'production',
             log_url: 'https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}'
           });
-
