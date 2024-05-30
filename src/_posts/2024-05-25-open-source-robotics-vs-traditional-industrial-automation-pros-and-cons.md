@@ -3,7 +3,7 @@ layout: post
 title: "Open Source Robotics vs Traditional Industrial Automation Pros and Cons"
 author: duncan_miller
 image: /images/posts/technical_courses.jpg
-description:
+description: Open Source Robotics vs Traditional Industrial Automation Pros and Cons
 published: false
 ---
 
