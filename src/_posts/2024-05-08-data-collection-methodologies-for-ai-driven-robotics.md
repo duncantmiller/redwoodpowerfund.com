@@ -67,7 +67,7 @@ ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperati
 ### 3. Apple Vision Pro App
 
 #### Advanced Sensory Capabilities
-In addition to more traditional data collections outlined above, we have also developed a custom data collection app for the Apple Vision Pro. The Vision Pro is equipped with state-of-the-art sensors including depth sensors, infrared illuminators, lidar scanners, and RGB cameras.
+In addition to more traditional data collections outlined above, we have also developed a custom data collection app for the Apple Vision Pro. The Vision Pro is equipped with state-of-the-art sensors including a stereoscopic 3D main camera system enabling spatial video capture, 2 high resolution main cameras, 6 world-facing tracking cameras, 4 eye-tracking cameras and a LiDAR scanner.
 
 This offers unprecedented data collection capabilities in a low friction form factor. Users can wear the Apple Vision Pro in pass-through mode and perform the task as they usually do with their own hands, instead of using UMI grippers or a teleoperated robot to perform the task. This technology captures intricate environmental and interaction details, ideal for training AI-driven robots in complex tasks.
 
