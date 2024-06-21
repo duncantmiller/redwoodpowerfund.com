@@ -2,7 +2,7 @@
 layout: post
 title: "Open Source Robotics vs Traditional Industrial Automation Pros and Cons"
 author: duncan_miller
-image: /images/posts/wall_e.jpg
+image: /images/posts/wall_e.png
 description: Optimize your automation with AI and machine learning for robotics. Learn pros and cons of traditional industrial and new low-cost open-source hardware.
 published: true
 ---
