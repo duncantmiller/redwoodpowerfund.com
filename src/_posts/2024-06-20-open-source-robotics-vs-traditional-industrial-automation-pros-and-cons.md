@@ -4,7 +4,7 @@ title: "Open Source Robotics vs Traditional Industrial Automation Pros and Cons"
 author: duncan_miller
 image: /images/posts/wall_e.jpg
 description: Optimize your automation with AI and machine learning for robotics. Learn pros and cons of traditional industrial and new low-cost open-source hardware.
-published: false
+published: true
 ---
 
 As a robotics integrator, we focus on using machine learning to enhance automation hardware. Our focus on sensor systems for capturing training data and neural networks for imitation learning allows us to enable robots to autonomously perform tasks that are difficult or impossible to automate with traditional methods. This approach is akin to how large language models operate, but instead of predicting the next token, we train robots to predict the next motion given what they see in front of them relative to the training data they have been provided.
