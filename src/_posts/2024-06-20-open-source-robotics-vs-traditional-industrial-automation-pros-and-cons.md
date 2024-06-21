@@ -2,7 +2,7 @@
 layout: post
 title: "Open Source Robotics vs Traditional Industrial Automation Pros and Cons"
 author: duncan_miller
-image: /images/posts/wall_e.png
+image: /images/posts/welding_robot.png
 description: Optimize your automation with AI and machine learning for robotics. Learn pros and cons of traditional industrial and new low-cost open-source hardware.
 published: true
 ---
@@ -10,8 +10,6 @@ published: true
 As a robotics integrator, we focus on using machine learning to enhance automation hardware. Our focus on sensor systems for capturing training data and neural networks for imitation learning allows us to enable robots to autonomously perform tasks that are difficult or impossible to automate with traditional methods. This approach is akin to how large language models operate, but instead of predicting the next token, we train robots to predict the next motion given what they see in front of them relative to the training data they have been provided.
 
 In this quickly developing field, we have the option to utilize either traditional industrial robotics hardware from established partners like FANUC, Zebra, and Universal Robots or to explore new low-cost open-source models such as Stanford's ALOHA Robot and the Annin Robotics AR4. Each type of hardware has its pros and cons, which we will explore in this article.
-
----
 
 ### Industrial Robotics Hardware
 
@@ -31,12 +29,10 @@ Traditional industrial robots, such as those from FANUC, Zebra, and Universal Ro
 - **Complexity:** Operating and maintaining these robots require specialized knowledge and training. Additionally, reliance on OEM parts can add to the complexity, cost and difficulty of repairs which can extend downtimes.
 - **Flexibility:** Industrial robots typically run on closed-source proprietary software, often written in their own proprietary scripting language. Operators need to understand how to operate custom graphical user interface or write in custom scripting languages to program tasks, which can add raise barriers to utilizing multiple hardware vendors and add to vendor lock in. While many vendors do offer integrations with open source software like ROS2, their overall dependence on proprietary software can limit their exposure to rapid changes and new technologies happening in open-source communities.
 
----
-
 ### New Low-Cost Open-Source Robotics Models
 
 **Overview of New Low-Cost Open-Source Models**
-Emerging low-cost open-source models like Stanford's ALOHA Robot and the Annin Robotics AR4 robot offer exciting new possibilities. The [ALOHA parts list and assembly tutorial](https://docs.google.com/document/d/1_3yhWjodSNNYlpxkRCPIlvIAaQ76Nqk2wsqhnEVM6Dc/edit) is open source so you can build it yourself, or you can order it from a manufacturer like our partner [Trossen Robotics](https://www.trossenrobotics.com/aloha-kits) These models are accessible, customizable, and designed to be built with readily available materials, including 3D-printed components.
+Emerging low-cost open-source models like Stanford's ALOHA Robot and the Annin Robotics AR4 robot offer exciting new possibilities. ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperation, (developed and published)[https://mobile-aloha.github.io/]) by researchers at Stanford University. The [ALOHA parts list and assembly tutorial](https://docs.google.com/document/d/1_3yhWjodSNNYlpxkRCPIlvIAaQ76Nqk2wsqhnEVM6Dc/edit) is open source so you can build it yourself, or you can order a pre-built kit from our partner [Trossen Robotics](https://www.trossenrobotics.com/aloha-kits). These robots are relatively inexpensive ($30-40K), accessible, customizable, and designed to be built with readily available materials, including 3D-printed components.
 
 **Advantages of Low-Cost Open-Source Models**
 
@@ -51,8 +47,6 @@ Emerging low-cost open-source models like Stanford's ALOHA Robot and the Annin R
 - **Repeatability and Precision:** The precision and repeatability of these models may not match that of traditional industrial robots, limiting their use in applications that require high levels of accuracy. However, this can be balanced by utilizing machine learning techniques shown in Standford's ALOHA project to error correct on the fly in real time.
 - **Support and Maintenance:** The support and maintenance infrastructure for open-source models is limited compared to traditional manufacturers, potentially leading to longer downtimes.
 - **Real-World Implementation Examples:** With fewer real-world implementation examples, users may need to navigate challenges independently and innovate solutions without established guidelines.
-
----
 
 ### Application of Machine Learning and Imitation Learning
 
@@ -73,8 +67,6 @@ Open-source models benefit strongly from machine learning integration. The ALOHA
 **ALOHA Robot Demonstration**
 {% render "youtube_embed", youtube_key: "QCzPoV8ISXY" %}
 
----
-
 ### ROS
 
 **What is ROS**
@@ -85,8 +77,6 @@ Open-source hardware often leverages ROS for developing and testing new applicat
 
 **ROS in Traditional Hardware**
 Most traditional industrial robotics manufacturers now offer some type of ROS integration. This compatibility allows for enhanced machine learning applications and easier integration of new technologies into existing systems.
-
----
 
 ### Conclusion
 
