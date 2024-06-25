@@ -49,7 +49,7 @@ Robotic equipment offers precise disassembly, recovering materials with greater 
 ### Technological Innovations in Robotics
 
 #### Leveraging Machine Learning
-Our approach at Rose City Robotics involves collecting and utilizing sensor and vision data to train transformer neural networks to provide robots with predictive motion planning capabilities. This allows our robots to train on complex tasks, enabling them to perform precise disassembly operations autonomously. This process is called imitation learning, where robots learn from human demonstrations and other robots in a network using [research out of Stanford University](https://mobile-aloha.github.io/).
+Our approach at Rose City Robotics involves collecting and utilizing sensor and vision data to train transformer neural networks to provide robots with predictive motion planning capabilities. This allows our robots to train on complex tasks, enabling them to perform precise disassembly operations autonomously. This process is called imitation learning, where robots learn from human demonstrations and other robots in a network using [research pioneered by Stanford University](https://mobile-aloha.github.io/).
 
 #### Sensor and Vision Data Integration
 We are developing [systems for capturing training data from human demonstrations](https://rosecityrobotics.com/2024/05/08/data-collection-methodologies-for-ai-driven-robotics/). By integrating training data gathered from our sensors and vision systems, we provide our robots with the necessary data to understand and navigate the intricate structures of EV battery packs. This data is crucial for training custom robots to perform these tasks safely and efficiently.
