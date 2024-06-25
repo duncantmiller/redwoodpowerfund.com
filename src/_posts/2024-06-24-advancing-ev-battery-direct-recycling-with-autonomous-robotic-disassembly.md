@@ -11,7 +11,7 @@ Electric vehicles (EVs) are taking over the automotive industry and as their pow
 
 Lithium-ion batteries are made with several chemistries, but all use some combination of valuable materials like nickel, manganese, cobalt, aluminum, copper and of course lithium. Many of these critical materials are mined outside the United States and some materials will be in scarce supply based on the projected numbers of batteries we will need, particularly cobalt.
 
-Aside from lithium, the rest of the materials are not actually used up by the battery so they still exist in their original quantities in a battery at its end of life. The problem is recovering them.
+Aside from lithium, the rest of the materials generally retain much of their initial quantities from a new battery through its end of life. The problem is recovering them.
 
 At Rose City Robotics, we are developing autonomous robotic systems to enhance the recycling process of lithium-ion batteries. Our mission is to enable the autonomous disassembly of large lithium-ion batteries like the ones used in electric vehicles, recovering valuable materials with greater efficiency and lower emissions.
 
@@ -49,7 +49,7 @@ Robotic equipment offers precise disassembly, recovering materials with greater 
 ### Technological Innovations in Robotics
 
 #### Leveraging Machine Learning
-Our approach at Rose City Robotics involves collecting and utilizing sensor and vision data to train transformer neural networks to provide robots with predictive motion planning capabilities. This allows our robots to train on complex tasks, enabling them to perform precise disassembly operations autonomously. This process is called imitation learning, where robots learn from human demonstrations and other robots in a network using [research pioneered by Stanford University](https://mobile-aloha.github.io/).
+Our approach at Rose City Robotics involves collecting and utilizing sensor and vision data to train transformer neural networks to provide robots with predictive motion planning capabilities. This allows our robots to train on complex tasks, enabling them to perform precise disassembly operations autonomously. This process is called imitation learning, where robots learn from human demonstrations and teleoperation using [research pioneered by Stanford University](https://mobile-aloha.github.io/).
 
 #### Sensor and Vision Data Integration
 We are developing [systems for capturing training data from human demonstrations](https://rosecityrobotics.com/2024/05/08/data-collection-methodologies-for-ai-driven-robotics/). By integrating training data gathered from our sensors and vision systems, we provide our robots with the necessary data to understand and navigate the intricate structures of EV battery packs. This data is crucial for training custom robots to perform these tasks safely and efficiently.
