@@ -32,7 +32,7 @@ When batteries are delivered to recyclers from scrap yards they come in a wide v
 
 #### Dangers to Humans
 
-In addition, batteries may come in at varying levels of charge and nearly all with at least some charge. Due to the fact that they become unstable (catch on fire) at low charge, batteries have a built in safety mechanism to ensure they always retain a certain minium charge. This means nearly every large battery is dangerous to work on for human workers due to risk of electrical shock. The batteries can also create explosive fire and emit toxic gasses if a short circuit is created while working on them, which is extremely easy to do. Once disassembled the batteries also contain hazardous materials which can be harmful to human health if not handled properly.
+In addition, batteries may come in at varying levels of charge and nearly all with at least some charge. Due to the fact that they become unstable (catch on fire) at low charge, batteries have a built in safety mechanism to ensure they always retain a certain minimum charge. This means nearly every large battery is dangerous to work on for human workers due to risk of electrical shock. The batteries can also create explosive fire and emit toxic gasses if a short circuit is created while working on them, which is extremely easy to do. Once disassembled the batteries also contain hazardous materials which can be harmful to human health if not handled properly.
 
 #### No Standardization of Fastenings
 Manufacturers also make their own proprietary battery packs that are sealed and fastened in a variety of ways including fusion welding, ultrasonic welding, ultrasonic bonding, industrial adhesives like epoxy, silicone and acrylic or mechanical fasteners like screws, rivets, or bolts. This means that each battery pack is unique and requires a custom approach to disassembly. The rapid pace of innovation in the EV industry also means that battery packs are constantly evolving with many manufacturers changing up their battery packs multiple times per year, making it challenging to develop a standardized approach to disassembly even within the same brand of battery.
@@ -42,7 +42,7 @@ Given these dangers and challenges, its simply not feasible for humans to disass
 #### Why Autonomous Robots?
 Autonomous robots offer a promising solution by enabling direct recycling of battery packs. Robots are well suited for dangerous jobs dealing with high voltage electricity and hazardous materials, removing the risk to human workers.
 
-Overcoming the challenge of fastener defeating calls for for intelligent and adaptive robotics that can learn on the job, from other robots in a network as well as from humans, videos and product documentation.
+Overcoming the challenge of fastener defeating calls for intelligent and adaptive robotics that can learn on the job, from other robots in a network as well as from humans, videos and product documentation.
 
 Robotic equipment offers precise disassembly, recovering materials with greater efficiency and significantly reducing downstream emissions in the recycling process. Leveraging machine learning and transformer neural networks, we are developing robots that can use sensor and vision data to learn to perform these dangerous and challenging tasks with adaptive intelligence and continuous learning capabilities.
 
