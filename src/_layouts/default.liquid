@@ -19,7 +19,9 @@
     {% seo %}
   </head>
   <body>
-    {% render "banner" %}
+    {% if false %}
+      {% render "banner" %}
+    {% endif %}
     {% render "navbar" %}
     {{ content }}
     {% render "footer" %}
