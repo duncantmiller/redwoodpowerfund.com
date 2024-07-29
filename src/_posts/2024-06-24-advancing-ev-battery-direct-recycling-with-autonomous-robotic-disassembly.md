@@ -7,11 +7,15 @@ image: /images/posts/ev_battery.png
 published: true
 ---
 
-Electric vehicles (EVs) are taking over the automotive industry and as their powerful lithium-ion batteries begin to reach their end of life, the need for efficient recycling solutions for those batteries is becoming more and more critical. Battery powered equipment is also taking over trucking, bicycles, scooters, motorcycles, marine craft, tractors, forklifts, lawnmowers, drones and many other types of equipment, not to mention the growing number of humanoid robot companies preparing for mass production like Tesla, Agility, Figure AI and Boston Dynamics all powered by lithium-ion batteries. There is also an explosion in building and grid energy storage with lithium-ion technology in residential, commercial, industrial and utility scale applications to help the world adopt more wind and solar power.
+Electric vehicles (EVs) are taking over the automotive industry and as their powerful lithium-ion batteries begin to reach their end of life, the need for efficient recycling solutions for those batteries is becoming more and more critical. In addition to passenger vehicles, EVs are also taking over in commercial and industrial applications, such as delivery trucks, buses, and forklifts as well as motorcycles, marine craft and leisure applications (scooters, bicycles etc).
+
+Beyond vehicle applications, there are a growing number of humanoid robot companies preparing for mass production like Tesla, Agility, Figure AI and Boston Dynamics all powered by lithium-ion batteries. There is also an explosion in building and grid energy storage with lithium-ion technology in residential, commercial, industrial and utility scale applications to help the world adopt more wind and solar power.
+
+There are often second-life applications for batteries, for example when EV batteries reach end of life, they often have up to 80% of their charge capacity. If we take apart the battery pack, some components, modules and cells can be directly reused for energy storage in buildings or refurbished EV batteries.
 
 Lithium-ion batteries are made with several chemistries, but all use some combination of valuable materials like nickel, manganese, cobalt, aluminum, copper and of course lithium. Many of these critical materials are mined outside the United States and some materials will be in scarce supply based on the projected numbers of batteries we will need, particularly cobalt.
 
-Aside from lithium, the rest of the materials generally retain much of their initial quantities from a new battery through its end of life. The problem is recovering them.
+Even when battery cells are no longer usable, one interesting thing about batteries is that they don't consume these valuable materials over the course of their life, so most of the materials still exist in their original quantities. The problem is recovering them.
 
 At Rose City Robotics, we are developing autonomous robotic systems to enhance the recycling process of lithium-ion batteries. Our mission is to enable the autonomous disassembly of large lithium-ion batteries like the ones used in electric vehicles, recovering valuable materials with greater efficiency and lower emissions.
 
@@ -25,6 +29,8 @@ Unfortunately today, direct recycling is not used for the vast majority of batte
 
 Batteries that come in under a 30% charge of are simply shredded whole, then recovered using hydrometallurgy. Again, since the whole pack is shredded together it takes lots of energy and strong acids to recover the materials. If a battery has over 30% charge, pyrometallurgy makes more sense as the charge is too high for shredding and it would be too challenging and time consuming to discharge to a safe level.
 
+Some recyclers and vehicle OEMs perform manual disassembly of the packs down to the module level, but no further than that as the process is too dangerous and time consuming for human workers.
+
 Both burning and shredding whole battery packs are not only inefficient but also environmentally damaging. The recycling process involves significant emissions and fails to recover valuable materials optimally. This is where the need for direct recycling and a more refined, autonomous approach becomes evident.
 
 #### Challenges of Direct Recycling
@@ -32,7 +38,7 @@ When batteries are delivered to recyclers from scrap yards they come in a wide v
 
 #### Dangers to Humans
 
-In addition, batteries may come in at varying levels of charge and nearly all with at least some charge. Due to the fact that they become unstable (catch on fire) at low charge, batteries have a built in safety mechanism to ensure they always retain a certain minimum charge. This means nearly every large battery is dangerous to work on for human workers due to risk of electrical shock. The batteries can also create explosive fire and emit toxic gasses if a short circuit is created while working on them, which is extremely easy to do. Once disassembled the batteries also contain hazardous materials which can be harmful to human health if not handled properly.
+In addition, batteries may come in at varying levels of charge and nearly all with at least some charge. Due to the fact that they become unstable (catch on fire) at low charge, batteries have a built in safety mechanism to ensure they always retain a certain minimum charge. This means nearly every large battery is dangerous to work on for human workers due to risk of life-threatening electrical shock. The batteries can also experience a thermal runaway, resulting in explosive fire and emit toxic gasses if a short circuit is created while working on them, which can easy happen with old or damaged batteries. Once disassembled the batteries also contain hazardous materials which can be harmful to human health if not handled properly.
 
 #### No Standardization of Fastenings
 Manufacturers also make their own proprietary battery packs that are sealed and fastened in a variety of ways including fusion welding, ultrasonic welding, ultrasonic bonding, industrial adhesives like epoxy, silicone and acrylic or mechanical fasteners like screws, rivets, or bolts. This means that each battery pack is unique and requires a custom approach to disassembly. The rapid pace of innovation in the EV industry also means that battery packs are constantly evolving with many manufacturers changing up their battery packs multiple times per year, making it challenging to develop a standardized approach to disassembly even within the same brand of battery.
