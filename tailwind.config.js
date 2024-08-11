@@ -59,7 +59,7 @@ module.exports = {
           '900': '#733B28',
           '950': '#4A1E11'
         },
-        'light-wisteria': {
+        'wisteria': {
           '50': '#FCFAFC',
           '100': '#FBF5FC',
           '200': '#F4E6F7',
