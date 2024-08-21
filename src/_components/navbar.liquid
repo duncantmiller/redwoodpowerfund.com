@@ -1,9 +1,11 @@
 <header data-controller="toggle">
   <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-    <a href="/" class="-m-1.5 p-1.5">
-      <img class="h-12 w-auto inline" src="/images/rose_city_robotics_icon.png"/>
-      <span class="ml-2 text-xl font-bold tracking-tight text-gray-900 ">Rose City Robotics</span>
-    </a>
+    <div class="flex items-center">
+      <a href="/" class="-m-1.5 p-1.5">
+        <img src="{{ "/images/Logo-Primary.svg" }}" alt="Logo" class="w-48" />
+      </a>
+    </div>
+
     <div class="flex lg:hidden">
       <button type="button" class="menu-button -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" data-action="click->toggle#toggleMenu" data-toggle-target="button">
         <span class="sr-only">Open main menu</span>
@@ -26,8 +28,8 @@
     <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
       <div class="flex items-center justify-between">
         <a href="/" class="-m-1.5 p-1.5" data-action="click->toggle#closeMenu">
-          <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="/images/rose_city_robotics_icon.png" alt="">
+          <span class="sr-only">Rose City Robotics</span>
+          <img src="{{ "/images/Logo-Primary.svg" }}" alt="Logo" class="w-48" />
         </a>
         <button type="button" class="close-menu-button -m-2.5 rounded-md p-2.5 text-gray-700" data-action="click->toggle#toggleMenu" data-toggle-target="closeButton">
           <span class="sr-only">Close menu</span>
