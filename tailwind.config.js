@@ -60,6 +60,9 @@ module.exports = {
           '950': '#081701'
         },
       },
+      fontFamily: {
+        sans: ['Manrope', 'sans-serif'], // Set Manrope as the default sans-serif font
+      },
     },
   },
   plugins: [
