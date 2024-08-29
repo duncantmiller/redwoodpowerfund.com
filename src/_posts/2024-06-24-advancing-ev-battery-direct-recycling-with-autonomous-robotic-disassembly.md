@@ -1,7 +1,7 @@
 ---
 layout: post
 author: duncan_miller
-title: EV Battery Direct Recycling with Autonomous Robotic Disassembly
+title: EV Battery Recycling with Autonomous Robotic Disassembly
 description: Discover how Rose City Robotics is pioneering autonomous robotic solutions for the recycling of lithium-ion electric vehicle batteries.
 image: /images/posts/ev_battery.png
 published: true
@@ -22,18 +22,21 @@ At Rose City Robotics, we are developing autonomous robotic systems to enhance t
 ### The Need for Autonomous Robotic Disassembly
 
 #### Ideal Recycling Process
-The best way to recycle a lithium-ion battery is called direct recycling. Direct recycling involves disassembling the battery packs to get at the cells within which recovers the most material with the lowest environmental and energy footprint. When a battery reaches its end of life, it may be because only one or two cells have gone bad. The good cells can be repackaged for use in other applications, either in rebuilt batteries for EVs or for other purposes like energy storage for buildings or utilities. Bad cells that are not usable can then be shredded to recover the materials through a chemical processes called hydrometallurgy.
+The way recycle a lithium-ion battery with the lowest environmental and energy footprint is called direct recycling. Direct recycling involves extracting anode and cathode materials from batteries before their chemistry is compromised, enabling them to be reused in new batteries. While this works well in a lab, it has not yet been commercialized due to the difficulties and isolating feedstocks to specific battery chemistries, which is a required prerequisite to direct recucling.
+
+#### Second-Life Opportunities
+When a battery reaches its end of life, it may be because only one or two cells have gone bad. Many of the components and the good battery modules and cells can be repackaged for use in other applications, either in rebuilt batteries for EVs or for other purposes like energy storage for buildings or utilities. Bad cells that are not usable can then be shredded to recover the materials through a chemical processes called hydrometallurgy.
 
 #### Current Recycling Methods
-Unfortunately today, direct recycling is not used for the vast majority of batteries that are recycled. Currently, most batteries that come in to recycling centers with over 30% of charge are burned whole and the materials are recovered through a process called pyrometallurgy. This is a challenging process since the whole pack is burned, it contains a lot of carbon which binds with the valuable materials, making them more difficult to recover.
+Currently most batteries that come in to recycling centers with either burned whole and the materials are recovered through a process called pyrometallurgy or shredded whole, then recovered using hydrometallurgy. Pyrometallurgy is energy and carbon intensive and since the whole pack is burned, it contains a lot of carbon which binds with the valuable materials, making them more difficult to recover.
 
-Batteries that come in under a 30% charge of are simply shredded whole, then recovered using hydrometallurgy. Again, since the whole pack is shredded together it takes lots of energy and strong acids to recover the materials. If a battery has over 30% charge, pyrometallurgy makes more sense as the charge is too high for shredding and it would be too challenging and time consuming to discharge to a safe level.
+With hydrometallurgy, since the whole pack is shredded together it takes lots of processing with strong acids to recover the materials. Hydrometallurgy is also a very energy intensive process, using a lot of water and chemicals.
 
-Some recyclers and vehicle OEMs perform manual disassembly of the packs down to the module level, but no further than that as the process is too dangerous and time consuming for human workers.
+Some recyclers and vehicle OEMs perform manual disassembly of the packs down to the module level, but no further than that as the process is too dangerous and time consuming for human workers. Still, disassembly has many benefits enabling lower cost shredding equipment and a simplified downstream recycling process which can enable higher recovery rates of critical materials at lower cost.
 
-Both burning and shredding whole battery packs are not only inefficient but also environmentally damaging. The recycling process involves significant emissions and fails to recover valuable materials optimally. This is where the need for direct recycling and a more refined, autonomous approach becomes evident.
+Both burning and shredding whole battery packs are not only inefficient but also environmentally damaging. The recycling process involves significant emissions and fails to recover valuable materials optimally. This is where the need for a disassembly solution a more refined, autonomous approach becomes evident.
 
-#### Challenges of Direct Recycling
+#### Challenges of Disassembly
 When batteries are delivered to recyclers from scrap yards they come in a wide variety of conditions. Some scrap yards store them outside due to fear of fire and they are often covered in rust, dirt, grease and grime. Batteries may be bent or damaged if they are dropped and bumped during the transportation process.
 
 #### Dangers to Humans
@@ -46,7 +49,7 @@ Manufacturers also make their own proprietary battery packs that are sealed and 
 Given these dangers and challenges, its simply not feasible for humans to disassemble each battery pack so its more practical right now to just either burn or shred the battery packs whole.
 
 #### Why Autonomous Robots?
-Autonomous robots offer a promising solution by enabling direct recycling of battery packs. Robots are well suited for dangerous jobs dealing with high voltage electricity and hazardous materials, removing the risk to human workers.
+Autonomous robots offer a promising solution by enabling automated disassembly of battery packs. Robots are well suited for dangerous jobs dealing with high voltage electricity and hazardous materials, removing the risk to human workers.
 
 Overcoming the challenge of fastener defeating calls for intelligent and adaptive robotics that can learn on the job, from other robots in a network as well as from humans, videos and product documentation.
 
@@ -63,9 +66,9 @@ We are also using a technique called active inference, which is a unified theory
 We are developing [systems for capturing training data from human demonstrations](https://rosecityrobotics.com/2024/05/08/data-collection-methodologies-for-ai-driven-robotics/). By integrating training data gathered from our sensors and vision systems, we provide our robots with the necessary data to understand and navigate the intricate structures of EV battery packs. This data is crucial for training custom robots to perform these tasks safely and efficiently.
 
 ### Benefits of Autonomous Robotic Disassembly
-Autonomous robotic disassembly allows for more precise material recovery compared to traditional methods. By directly disassembling battery packs, autonomous robots can recover valuable materials such as nickel, manganese, cobalt, aluminum, copper and lithium more efficiently. Also good cells can be extracted before the recycling process and returned directly to use, which saves a considerable amount of embodied manufacturing energy and cost.
+Autonomous robotic disassembly allows for more precise material recovery compared to traditional methods. By disassembling battery packs, autonomous robots can recover valuable materials such as nickel, manganese, cobalt, aluminum, copper and lithium more efficiently. Also good cells can be extracted before the recycling process and returned to use, which saves a considerable amount of embodied manufacturing energy and cost.
 
-Traditional methods like burning and shredding packs whole result in high levels of emissions, whereas direct recycling with autonomous robotics minimizes environmental impact through precise and controlled operations and more efficient extraction of valuable materials.
+Traditional methods like burning and shredding packs whole result in high levels of emissions, whereas disassembly with autonomous robotics minimizes environmental impact through precise and controlled operations and more efficient extraction of valuable materials.
 
 Battery recycling involves handling hazardous materials with electrical charge, which poses safety risks to human workers. Autonomous robots mitigate these risks by performing dangerous tasks, ensuring a safer working environment.
 
@@ -85,6 +88,6 @@ The production of lithium-ion batteries has a significant environmental impact, 
 
 #### The Future of EV Battery Recycling
 
-At Rose City Robotics we believe the future of EV battery recycling lies in direct recycling using autonomous robotic disassembly. We are committed to advancing this technology to increase safety, reduce emissions and enable the continued growth of electric vehicles and battery technology, which we believe will benefit humanity and provide a positive climate impact. By leveraging machine learning we are developing intelligent, adaptive robots that revolutionize the recycling process.
+At Rose City Robotics we believe the future of EV battery recycling lies in disassembly using autonomous robotics. We are committed to advancing this technology to increase safety, reduce emissions and enable the continued growth of electric vehicles and battery technology, which we believe will benefit humanity and provide a positive climate impact. By leveraging machine learning we are developing intelligent, adaptive robots that revolutionize the recycling process.
 
 Join us in pioneering sustainable recycling solutions and transforming the way we handle EV battery waste. For more information [reach out](/#contact) to us today.
