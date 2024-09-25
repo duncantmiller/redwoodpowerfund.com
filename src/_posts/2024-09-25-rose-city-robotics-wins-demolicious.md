@@ -9,7 +9,7 @@ published: true
 
 Last week, we won our first pitch competition at [Demolicious](https://www.pitchatdemolicious.com/). Winning Demolicious is not just about taking home a belt, it's about being part of Portland’s thriving startup ecosystem. The competition fosters an incredible sense of community, where early-stage teams can network, share ideas, and gain valuable feedback from fellow entrepreneurs. For us at Rose City Robotics, it was an opportunity to not only showcase our company but also see the exciting projects other teams are working on.
 
-Demolicious is hosted monthly in Portland Oregon, organized by Rick Turoczy and Upstart Collective's Josh Carter. Teams get just 3 minutes to pitch their idea with slides.
+Demolicious is hosted monthly in Portland Oregon, organized by Rick Turoczy and Upstart Collective's Josh Carter. Teams get just 3 minutes to pitch their idea with slides. Since its inception in 2008, Demolicious has served as Portland’s premier launchpad for groundbreaking ideas.
 
 Our win was particularly sweet after dethroning the amazing 3-time winner [Airbuild](https://www.airbuildinc.com/) lead by David Gory, a team that has dominated the competition for months. While Airbuild couldn't make it in person this time, we know they’ll be bringing their A-game to the finals. We’d also like to extend our appreciation to the other six teams that participated. Each pitch showcased the creativity and ambition that Portland’s startup community is known for. We look forward to seeing you again!
 
