@@ -25,4 +25,4 @@ So, if you’re in Portland on October 24th, [come cheer us on](https://www.meet
 
 The Champion of Champions will get this sweet belt made by the same company that makes the official WWF belts (they are leaning into the wrestling theme here if you haven't caught on yet). Wish us luck and come support our pitch!
 
-A big thank you to Josh Carter and Rick Turoczy for organizing as well as the sponsor support from [Upstart Collective](https://www.upstartcollective.org/), [Portland State University](https://www.pdx.edu/accelerator/), [Graybox](https://graybox.co/) and [Oregon Venture Fund](https://www.oregonventurefund.com/).
+A big thank you to Josh Carter and Rick Turoczy for organizing as well as the sponsor support from [Upstart Collective](https://www.upstartcollective.org/), [Oregon Venture Fund](https://www.oregonventurefund.com/), [PSU Accelerator](https://www.pdx.edu/accelerator/), [Graybox](https://graybox.co/), [Prosper Portland](https://prosperportland.us/) and [Pacific West Bank](https://www.pacificwestbank.com/).
