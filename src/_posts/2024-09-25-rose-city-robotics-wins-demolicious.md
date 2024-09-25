@@ -2,7 +2,7 @@
 layout: post
 author: duncan_miller
 title: Rose City Robotics Wins Demolicious
-description:
+description: The competition fosters an incredible sense of community, where early-stage teams can network, share ideas, and gain valuable feedback
 image: /images/posts/demo_belt_joe_duncan_small.png
 published: true
 ---
