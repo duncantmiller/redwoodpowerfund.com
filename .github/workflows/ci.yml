@@ -58,7 +58,7 @@ jobs:
       run: standardrb
 
     - name: Build site
-      run: bin/bridgetown build
+      run: bin/bridgetown deploy
 
   deploy:
     if: github.ref == 'refs/heads/main'
