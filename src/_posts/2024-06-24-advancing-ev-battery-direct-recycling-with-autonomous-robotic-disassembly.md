@@ -90,4 +90,4 @@ The production of lithium-ion batteries has a significant environmental impact, 
 
 At Rose City Robotics we believe the future of EV battery recycling lies in disassembly using autonomous robotics. We are committed to advancing this technology to increase safety, reduce emissions and enable the continued growth of electric vehicles and battery technology, which we believe will benefit humanity and provide a positive climate impact. By leveraging machine learning we are developing intelligent, adaptive robots that revolutionize the recycling process.
 
-Join us in pioneering sustainable recycling solutions and transforming the way we handle EV battery waste. For more information [reach out](/#contact) to us today.
+Join us in pioneering sustainable recycling solutions and transforming the way we handle EV battery waste. For more information [reach out](/contact) to us today.
