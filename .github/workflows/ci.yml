@@ -57,9 +57,6 @@ jobs:
     - name: Run standardrb
       run: standardrb
 
-    - name: Build site
-      run: bin/bridgetown deploy
-
   deploy:
     if: github.ref == 'refs/heads/main'
     needs: build-and-test
@@ -107,11 +104,8 @@ jobs:
     - name: Install Node.js dependencies with Yarn
       run: yarn install
 
-    - name: Build Frontend Assets
-      run: bin/bridgetown frontend:build
-
-    - name: Build site
-      run: bin/bridgetown deploy
+    - name: Build Deploy
+      run: BRIDGETOWN_ENV=production bin/bridgetown deploy
 
     - name: Install Netlify CLI
       run: npm install -g netlify-cli
