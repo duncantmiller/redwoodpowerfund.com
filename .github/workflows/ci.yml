@@ -111,7 +111,7 @@ jobs:
       run: bin/bridgetown frontend:build
 
     - name: Build site
-      run: bin/bridgetown build
+      run: bin/bridgetown deploy
 
     - name: Install Netlify CLI
       run: npm install -g netlify-cli
