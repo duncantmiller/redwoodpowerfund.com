@@ -13,6 +13,6 @@ We pitched last week in the semifinals against nine other amazing teams down in 
 
 ![Demolicious Belt](/images/posts/demo_belt_small.jpeg)
 
-We are thrilled to take home this $3,000 cash prize and the Early Stage Audience Award. We will join four other early stage teams including Fordje, Prophetic, Offer Haus and Howl at the Spoon at the Bend Venture Conference in October to face off in the finals [come watch](https://www.eventbrite.com/e/2024-bend-venture-conference-tickets-945142515707?aff=oddtdtcreator).
+We are thrilled to take home this $3,000 cash prize and the Early Stage Audience Award. We will join four other early stage teams including [Fordje](https://www.fordje.com/), [Prophetic](https://www.propheticsoftware.ai/), [The Offer Haus](https://www.theofferhaus.com/) and [Howl at the Spoon](https://howlatthespoon.com/) at the Bend Venture Conference in October to face off in the finals [come watch](https://www.eventbrite.com/e/2024-bend-venture-conference-tickets-945142515707?aff=oddtdtcreator).
 
 A big thank you to Josh Carter and Ben Parish from [Upstart Collective](https://www.upstartcollective.org/) for sponsoring our BVC application, [Washington Trust Bank](https://www.oregonventurefund.com/) for the generous $3,000 prize as well as the judges Don Myll, Lisa Hovey, and Jenn Lynch and the audience for their support!
