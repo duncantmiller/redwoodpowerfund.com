@@ -15,4 +15,6 @@ We pitched last week in the semifinals against nine other amazing teams down in 
 
 We are thrilled to take home this $3,000 cash prize and the Early Stage Audience Favorite Award. We will join four other early stage teams including [Fordje](https://www.fordje.com/), [Prophetic](https://www.propheticsoftware.ai/), [The Offer Haus](https://www.theofferhaus.com/) and [Howl at the Spoon](https://howlatthespoon.com/) at the Bend Venture Conference in October to face off in the finals so [please come watch](https://www.eventbrite.com/e/2024-bend-venture-conference-tickets-945142515707?aff=oddtdtcreator)!
 
+Reflecting on the event, Jon Stark, CEO of EDCO, said, "The energy at PubTalk was incredible, and it was amazing to see such innovation and drive from these entrepreneurs. We can’t wait to see them take the stage at BVC and showcase the transformative potential of their companies."
+
 A big thank you to Josh Carter and Ben Parish from [Upstart Collective](https://www.upstartcollective.org/) for sponsoring our BVC application, [Washington Trust Bank](https://www.oregonventurefund.com/) for the generous $3,000 prize, [Bend Venture Conference](https://www.bendvc.com/), [EDCO](https://edcoinfo.com/) as well as the judges Don Myll, Lisa Hovey, and Jenn Lynch and the audience for their support!
