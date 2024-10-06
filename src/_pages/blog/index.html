@@ -59,8 +59,6 @@ paginate:
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
-
-
               </a>
             </li>
 
@@ -70,7 +68,7 @@ paginate:
                 <a href="{% if page == 1 %}/blog/{% else %}/blog/page/{{ page }}{% endif %}"
                   class="px-4 py-2 border flex items-center
                   {% if paginator.page == page %}
-                    bg-gray-500 text-white
+                    bg-green-500 text-white
                   {% else %}
                     bg-white text-gray-600 hover:bg-gray-100 border-gray-300
                   {% endif %}
@@ -86,8 +84,6 @@ paginate:
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
-
-
               </a>
             </li>
           </ul>
