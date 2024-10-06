@@ -68,7 +68,7 @@ paginate:
                 <a href="{% if page == 1 %}/blog/{% else %}/blog/page/{{ page }}{% endif %}"
                   class="px-4 py-2 border flex items-center
                   {% if paginator.page == page %}
-                    bg-green-500 text-white
+                    bg-dark-green-500 text-white
                   {% else %}
                     bg-white text-gray-600 hover:bg-gray-100 border-gray-300
                   {% endif %}
