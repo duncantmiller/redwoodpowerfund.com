@@ -35,3 +35,7 @@ template_engine: liquid
 
 kramdown:
   input: GFM # GitHub Flavored Markdown, if you prefer it
+
+pagination:
+  enabled: true
+  per_page: 5  # Number of posts per page

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Blog
+paginate:
+  collection: posts
 ---
 <div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -8,7 +10,7 @@ title: Blog
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
       <p class="mt-2 text-lg leading-8 text-gray-600">Learn about what is happening on the forefront of AI in robotics.</p>
       <div class="mt-10 space-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16">
-        {% for post in collections.posts.resources %}
+        {% for post in paginator.resources %}
           {% assign author = site.data.authors[post.author] %}
           <article class="relative isolate flex flex-col gap-8 lg:flex-row">
             <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
@@ -48,6 +50,50 @@ title: Blog
           </article>
         {% endfor %}
       </div>
+      <div class="pagination mt-32">
+        {% if paginator.total_pages > 1 %}
+          <ul class="flex justify-center space-x-4">
+            <!-- Previous Page Link -->
+            <li>
+              <a href="{{ paginator.previous_page_path }}" class="px-4 py-2 text-gray-600 bg-white border border-gray-300 rounded-md hover:bg-gray-100 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>
+
+
+              </a>
+            </li>
+
+            <!-- Page Number Links -->
+            {% for page in (1..paginator.total_pages) %}
+              <li>
+                <a href="{% if page == 1 %}/blog/{% else %}/blog/page/{{ page }}{% endif %}"
+                  class="px-4 py-2 border flex items-center
+                  {% if paginator.page == page %}
+                    bg-gray-500 text-white
+                  {% else %}
+                    bg-white text-gray-600 hover:bg-gray-100 border-gray-300
+                  {% endif %}
+                  rounded-md">
+                  {{ page }}
+                </a>
+              </li>
+            {% endfor %}
+
+            <!-- Next Page Link -->
+            <li>
+              <a href="{{ paginator.next_page_path }}" class="px-4 py-2 text-gray-600 bg-white border border-gray-300 rounded-md hover:bg-gray-100 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+
+
+              </a>
+            </li>
+          </ul>
+        {% endif %}
+      </div>
+
     </div>
   </div>
 </div>
