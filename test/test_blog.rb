@@ -3,10 +3,7 @@ require_relative "helper"
 class TestBlog < Minitest::Test
   context "blog" do
     setup do
-      @site = Bridgetown::Site.new(Bridgetown.configuration)
-      @site.process
-
-      @pages = @site.generated_pages.select { |page| page.relative_url.start_with?("/blog") }
+      @pages = site.generated_pages.select { |page| page.relative_url.start_with?("/blog") }
       # Optionally, test only the first page or iterate through all pages
       document_root @pages.first  # This will select the first page (or adjust if testing paginated pages)
     end
