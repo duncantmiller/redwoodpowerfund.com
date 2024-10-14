@@ -11,9 +11,15 @@ I'm excited and honored to announce that we won the Early Stage Audience Favorit
 
 We pitched last week in the semifinals against nine other amazing teams down in Bend at the Road to BVC Central Oregon Pubtalk hosted by Economic Development of Central Oregon (EDCO). This high-energy entrepreneurial event showcased the BVC Early Stage semifinalists with three-minute pitches and no slides to a live crowd of over 200 attendees. The audience, along with an expert panel of judges, voted to decide which companies advance to present at the Tower Theatre for the 21st annual Bend Venture Conference on October 17-18, 2024. In addition to influencing which companies advance to the BVC stage, the audience vote determined Rose City Robotics received the $3,000 cash award, courtesy of Washington Trust Bank.
 
-![Audience Favorite Award Check](/images/posts/bvc_check_small.jpeg)
+### Watch the Rose City Robotics Pitch
+
+{% render "youtube_embed", youtube_key: "ynB3QgnURSY?si=9ZFMi36JeoLRUAFx&amp;start=4432" %}
+
+### Audience Favorite Award
 
 We are thrilled to take home this $3,000 cash prize and the Early Stage Audience Favorite Award. We will join four other early stage teams including [Fordje](https://www.fordje.com/), [Prophetic](https://www.propheticsoftware.ai/), [The Offer Haus](https://www.theofferhaus.com/) and [Howl at the Spoon](https://howlatthespoon.com/) at the Bend Venture Conference in October to face off in the finals so [please come watch](https://www.eventbrite.com/e/2024-bend-venture-conference-tickets-945142515707?aff=oddtdtcreator)!
+
+![Audience Favorite Award Check](/images/posts/bvc_check_small.jpeg)
 
 Reflecting on the event, Jon Stark, CEO of EDCO, said, "The energy at PubTalk was incredible, and it was amazing to see such innovation and drive from these entrepreneurs. We can’t wait to see them take the stage at BVC and showcase the transformative potential of their companies."
 
