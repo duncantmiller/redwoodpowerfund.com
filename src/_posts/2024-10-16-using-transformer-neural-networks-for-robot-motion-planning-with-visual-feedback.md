@@ -2,7 +2,7 @@
 layout: post
 author: joseph_cole
 title: Using Transformer Neural Networks for Robot Motion Planning with Visual Feedback
-description: The competition fosters an incredible sense of community, where early-stage teams can network, share ideas, and gain valuable feedback
+description: Transformer neural networks are the same technology behind ChatGPT, but in robotics they predict sequences motor control signals
 image: /images/posts/joe_thomas_laptop.jpeg
 published: true
 ---
