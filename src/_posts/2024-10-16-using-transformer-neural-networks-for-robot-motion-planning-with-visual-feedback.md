@@ -23,7 +23,7 @@ with Neural Networks](https://arxiv.org/pdf/1409.3215). At the time they had ver
 In our robotics application, the query is a sinusoidal position code that represents a particular place in an image. Keys and values are relevant information, from the current joint positions and camera views, that is organized into a kind of dictionary by the transformer encoder during the training process. The input to the encoder is the camera data (with positional embeddings, and encoded into features using ResNet18 CNNs) along with the current motor positions and a “style variable” (described later). The output is this dictionary that can be used by the transformer decoder to predict output actions. The dictionary is constantly updated by the changing current camera data and motor positions, so the keys and values evolve over time and are always relevant to the current state of the robot. However, all the possible keys and values are stored by the neural network weights during the training phase.
 
 ### Transformers for Motion Planning
-ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperation, (developed and published)[https://mobile-aloha.github.io/]) by researchers at Stanford University. In this project, Stanford researchers demonstrated the ability to utilize Transformer Neural Networks for robotic motion planning.
+ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperation, [developed and published](https://mobile-aloha.github.io/) by researchers at Stanford University. In this project, Stanford researchers demonstrated the ability to utilize Transformer Neural Networks for robotic motion planning.
 
 #### Action Chunking with Transformers
 

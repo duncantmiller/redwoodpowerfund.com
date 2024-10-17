@@ -47,7 +47,7 @@ UMI enables operators to perform tasks in varied environments, capturing every m
 ### 2. Teleoperation with ALOHA
 
 #### Overview of ALOHA
-ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperation, (developed and published)[https://mobile-aloha.github.io/]) by researchers at Stanford University. It represents a significant leap in making fine manipulation tasks accessible and reproducible on a budget, without sacrificing performance.
+ALOHA stands for A Low-cost Open-source Hardware System for Bimanual Teleoperation, [developed and published](https://mobile-aloha.github.io/) by researchers at Stanford University. It represents a significant leap in making fine manipulation tasks accessible and reproducible on a budget, without sacrificing performance.
 
 #### Teleoperation Data Collection Examples
 {% render "youtube_embed", youtube_key: "N-WSYbU4I_0" %}
