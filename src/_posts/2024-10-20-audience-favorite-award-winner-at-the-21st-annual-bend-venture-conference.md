@@ -3,7 +3,7 @@ layout: post
 author: duncan_miller
 title: Audience Favorite Award Winner at the 21st Annual Bend Venture Conference
 description: The competition fosters an incredible sense of community, where early-stage teams can network, share ideas, and gain valuable feedback
-image: /images/posts/bvc_finals_winner.jpg
+image: /images/posts/bvc_winner_joe_duncan.jpeg
 published: true
 ---
 
