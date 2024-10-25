@@ -63,6 +63,18 @@ module.exports = {
       fontFamily: {
         sans: ['Manrope', 'sans-serif'], // Set Manrope as the default sans-serif font
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            img: {
+              borderRadius: '1rem', // Equivalent to rounded-2xl
+              aspectRatio: '16/9',  // Equivalent to aspect-[16/9]
+              width: '100%',        // Equivalent to w-full
+              backgroundColor: '#f3f4f6', // Equivalent to bg-gray-100 (Gray-100 in Tailwind)
+            },
+          },
+        },
+      },
     },
   },
   plugins: [
