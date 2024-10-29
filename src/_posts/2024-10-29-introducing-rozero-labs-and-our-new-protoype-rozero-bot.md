@@ -7,7 +7,7 @@ image: /images/posts/joe_robot_battery_lab_16x9.jpg
 published: true
 ---
 
-We are excited to announce that our company is evolving! Effective immediately, we are changing our name from Rose City Robotics to **RoZero Labs**.
+Our company is evolving! Effective immediately, we are changing our name from Rose City Robotics to **RoZero Labs**.
 
 Along with this rebrand, we are excited to introduce our latest prototype: RoZero Bot (also known as RoZe), which we are now using in our lab to collect machine learning datasets.
 
