@@ -19,7 +19,7 @@ Yes we watched the Jetson's growing up and RoZero Bot is an homage to [Rosie the
 
 ### Introducing RoZero Bot aka RoZe
 
-Built on Stanford University's open-source [ALOHA platform](https://mobile-aloha.github.io/), RoZe allows a human operator to control two robotic arms with precision. Its three onboard cameras and onboard laptop capture video and joint position data, which can then be used as machine learning training data to train a transformer neural network.
+Built on Stanford University researchers' open-source [ALOHA platform](https://mobile-aloha.github.io/), RoZe allows a human operator to control two robotic arms with precision. Its three onboard cameras and onboard laptop capture video and joint position data, which can then be used as machine learning training data to train a transformer neural network.
 
 This advanced system enables the transfer of skills to RoZe, allowing it to perform tasks autonomously after being trained by human demonstration. This leap forward in robotics and machine learning is enabled by the advancements in transformer neural networks, the technology behind Large Language Models like ChatGPT. Transformer neural networks are essentially prediction machines, but instead of using the to predict language tokens to write text, we use them to predict motion control signals to move RoZe.
 
@@ -31,8 +31,10 @@ Check out this video showing us using RoZe in the lab.
 
 ### We are now RoZero Labs
 
-Why the name change? We will always be proud of our Portland roots, symbolized by the "RoZe" in our new name, as well as our amazing climate-tech community in the Pacific Northwest, but we have larger aspirations beyond the region. We aim to lead the way in transforming lithium-ion battery recycling, introducing circularity and striving for zero waste in recycling processes for zero-emissions vehicle batteries. The 'Zero' in our name reflects our commitment to circularity and sustainability and the 'Labs' our commitment to innovation.
+Why the name change? We will always be proud of our Portland roots, symbolized by the "RoZe" in our new name, as well as our amazing climate-tech startup community in the Pacific Northwest. We have larger aspirations beyond the region and want a name that resonates globally.
 
-As part of this transition, we have acquired the domain [https://rozerolabs.com](https://rozerolabs.com) and have moved all systems to this domain. Our existing @rosecityrobotics.com email addresses will still work but in the future we can be contacted @rozerolabs.com. Stay tuned for exciting updates as RoZero Labs takes on the challenge of revolutionizing robotics and advancing the future of sustainable technology.
+We aim to lead the way in transforming lithium-ion battery recycling, introducing circularity and striving for zero waste in recycling processes for zero-emissions vehicle batteries. The 'Zero' in our name reflects our commitment to circularity and sustainability and the 'Labs' our commitment to innovation.
+
+As part of this transition, we have acquired the domain [https://rozerolabs.com](https://rozerolabs.com) and have moved all systems to this domain. Our existing @rosecityrobotics.com email addresses will still work but in the future we can be contacted @rozerolabs.com. Stay tuned for exciting updates as RoZero Labs takes on the challenge of revolutionizing robotics and advancing the future of EV battery recycling.
 
 Thank you for your continued support as we embark on this exciting new journey!
