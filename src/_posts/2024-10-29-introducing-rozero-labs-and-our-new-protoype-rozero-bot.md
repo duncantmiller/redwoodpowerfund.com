@@ -15,7 +15,7 @@ This prototype will help us to develop a proof of concept for our autonomous dis
 
 ![RoZe the Robot](/images/posts/rosies.jpg)
 
-Yes we watched the Jetson's growing up and RoZero Bot is an homage to [Rosie the Robot](https://thejetsons.fandom.com/wiki/Rosey_the_Robot_(episode)), the autonomous robot housekeeper of the Jetson family. We also believe that the existential need to mobilize the world against climate change requires a movement akin the 'We Can Do It' spirit of [Rosie the Riveter](https://hbr.org/1993/07/whatever-happened-to-rosie-the-riveter).
+Yes we watched the Jetson's growing up and RoZero Bot is an homage to [Rosie the Robot](https://thejetsons.fandom.com/wiki/Rosey_the_Robot_(episode)), the autonomous robot housekeeper of the Jetson family. We also believe that the existential need to mobilize the world against climate change requires a movement akin to the 'We Can Do It' spirit of [Rosie the Riveter](https://hbr.org/1993/07/whatever-happened-to-rosie-the-riveter).
 
 ### Introducing RoZero Bot aka RoZe
 
