@@ -4,7 +4,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.metadata.myvariable }}.
 
-title: RoZero Labs
+title: Rose City Robotics
 tagline: An AI robotics integrator based in Portland Oregon
 email: support@rozerolabs.com
 description: >-
