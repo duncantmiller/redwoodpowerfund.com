@@ -35,8 +35,8 @@ The above diagram shows how we utilize cameras to feed data to the neural networ
 
 ### How we are using Transformer Neural Networks
 
-At Rose City Robotics, we have a working prototype based on the open-source Stanford robot [ALOHA parts list and assembly tutorial](https://docs.google.com/document/d/1_3yhWjodSNNYlpxkRCPIlvIAaQ76Nqk2wsqhnEVM6Dc/edit) we call Rosey.
+At Rose City Robotics, we have a working prototype based on the open-source Stanford robot [ALOHA parts list and assembly tutorial](https://docs.google.com/document/d/1_3yhWjodSNNYlpxkRCPIlvIAaQ76Nqk2wsqhnEVM6Dc/edit) we call Rosie.
 
-![Rosey](/images/posts/rosey.png)
+![Rosie](/images/posts/Rosie.png)
 
-With Rosey, a human operator teleoperates two robotic arms and gripper end effectors to perform a task. Rosey is equipped with three onboard cameras, one on each wrist and one on the main body as well as a laptop which together capture motion and joint data. With a dataset of 50-100 examples, we can train a Transformer Neural Network to perform a task autonomously with up to 90% accuracy.
+With Rosie, a human operator teleoperates two robotic arms and gripper end effectors to perform a task. Rosie is equipped with three onboard cameras, one on each wrist and one on the main body as well as a laptop which together capture motion and joint data. With a dataset of 50-100 examples, we can train a Transformer Neural Network to perform a task autonomously with up to 90% accuracy.
