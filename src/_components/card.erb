@@ -1,0 +1,9 @@
+<%
+  tag_name = as
+  css_classes = ["group", "relative", "flex", "flex-col", "items-start"]
+  css_classes << css_class if css_class
+%>
+
+<<%= tag_name %> class="<%= css_classes.join(" ") %>">
+  <%= content %>
+</<%= tag_name %>>
