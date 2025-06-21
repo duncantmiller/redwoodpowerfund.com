@@ -23,7 +23,7 @@
     <meta property="og:title" content="<%= resource.data.title || site.metadata.title %>" />
     <meta property="og:description" content="<%= resource.data.description || site.metadata.description %>" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="<%= absolute_url resource.url %>" />
+    <meta property="og:url" content="<%= absolute_url resource.relative_url %>" />
 
     <% if resource.data.image %>
       <meta property="og:image" content="<%= absolute_url resource.data.image %>" />
@@ -38,11 +38,11 @@
         </div>
       </div>
       <div class="relative flex w-full flex-col">
-        <%= render Header.new %>
+        <%= render Header.new(is_home: resource.relative_url == "/") %>
         <main class="flex-auto">
           <%= yield %>
         </main>
-        <%= render "footer" %>
+        <%= render Footer.new %>
       </div>
     </div>
   </body>
