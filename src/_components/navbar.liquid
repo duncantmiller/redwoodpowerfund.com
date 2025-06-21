@@ -1,51 +1,73 @@
-<header data-controller="toggle">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-    <div class="flex items-center">
-      <a href="/" class="-m-1.5 p-1.5">
-        <img src="{{ "/images/Logo-Primary.svg" }}" alt="Rose City Robotics" class="h-9 sm:h-12" />
-      </a>
-    </div>
+<div class="fixed inset-0 flex justify-center sm:px-8">
+  <div class="flex w-full max-w-7xl lg:px-8">
+    <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900"></div>
+  </div>
+</div>
 
-    <div class="flex lg:hidden">
-      <button type="button" class="menu-button -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" data-action="click->toggle#toggleMenu" data-toggle-target="button">
-        <span class="sr-only">Open main menu</span>
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+<header class="relative flex items-center justify-between bg-white px-4 py-4 shadow-md ring-1 ring-gray-200 dark:bg-zinc-800 dark:ring-gray-700 sm:px-6 lg:fixed lg:inset-x-0 lg:top-0 lg:z-40 lg:bg-white lg:px-8 dark:lg:bg-zinc-900" data-controller="toggle theme">
+
+  <!-- Desktop Navigation -->
+  <div class="hidden lg:flex lg:flex-1">
+    <nav class="flex rounded-full bg-white px-3 text-sm font-medium text-zinc-800 shadow-lg ring-1 ring-gray-200 dark:bg-zinc-800 dark:text-zinc-200 dark:ring-gray-600">
+      <a href="/" class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400">Home</a>
+      <a href="/blog" class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400">Blog</a>
+      <a href="/projects" class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400">Projects</a>
+      <a href="/contact" class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Avatar -->
+  <div class="flex flex-1 justify-end md:justify-center">
+    <div class="pointer-events-auto md:hidden">
+      <button type="button" class="group flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg ring-1 ring-gray-200 dark:bg-zinc-800 dark:text-zinc-200 dark:ring-gray-600 dark:hover:ring-gray-500" data-action="click->toggle#toggleMenu" data-toggle-target="button">
+        Menu
+        <svg viewBox="0 0 8 6" aria-hidden="true" class="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400">
+          <path d="M1.75 1.75 4 4.25l2.25-2.5" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
       </button>
     </div>
-    <div class="hidden lg:flex lg:gap-x-12">
-      <a href="/blog" class="text-sm font-semibold leading-6 text-gray-900">Blog</a>
-      <a href="/projects" class="text-sm font-semibold leading-6 text-gray-900">Projects</a>
-      <a href="/contact" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
+
+    <div class="hidden md:pointer-events-auto md:block">
+      <a href="/" aria-label="Home" class="block h-16 w-16 origin-left">
+        <img src="{{ '/images/avatar.jpg' | relative_url }}" alt="Avatar" class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-16 w-16" />
+      </a>
     </div>
-  </nav>
-  <!-- Mobile menu, show/hide based on menu open state. -->
-  <div class="mobile-menu hidden lg:hidden" role="dialog" aria-modal="true"  data-toggle-target="menu">
-    <!-- Background backdrop, show/hide based on slide-over state. -->
-    <div class="fixed inset-0 z-10"></div>
-    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-      <div class="flex items-center justify-between">
-        <a href="/" class="-m-1.5 p-1.5" data-action="click->toggle#closeMenu">
-          <span class="sr-only">Rose City Robotics</span>
-          <img src="{{ "/images/Logo-Primary.svg" }}" alt="Rose City Robotics" class="h-9" />
-        </a>
-        <button type="button" class="close-menu-button -m-2.5 rounded-md p-2.5 text-gray-700" data-action="click->toggle#toggleMenu" data-toggle-target="closeButton">
-          <span class="sr-only">Close menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      <div class="mt-6 flow-root">
-        <div class="-my-6 divide-y divide-gray-500/10">
-          <div class="space-y-2 py-6">
-            <a href="/blog" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" data-action="click->toggle#closeMenu">Blog</a>
-            <a href="/#about" class="-mx-3 block rounded-lg px-3 py-2 text-base
-            font-semibold leading-7 text-gray-900 hover:bg-gray-50" data-action="click->toggle#closeMenu">About</a>
-          </div>
-        </div>
-      </div>
+  </div>
+
+  <!-- Theme Toggle -->
+  <div class="flex justify-end md:flex-1">
+    <div class="pointer-events-auto">
+      <button type="button" aria-label="Toggle theme" class="group rounded-full bg-white px-3 py-2 shadow-lg ring-1 ring-gray-200 transition dark:bg-zinc-800 dark:ring-gray-600 dark:hover:ring-gray-500" data-action="click->theme#toggle" data-theme-target="toggle">
+        <!-- Sun Icon -->
+        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden" data-theme-target="sunIcon">
+          <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z"></path>
+          <path d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061" fill="none"></path>
+        </svg>
+        <!-- Moon Icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block" data-theme-target="moonIcon">
+          <path d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
     </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-gray-200 dark:bg-zinc-900 dark:ring-gray-600 hidden" role="dialog" aria-modal="true" data-toggle-target="menu">
+    <div class="flex flex-row-reverse items-center justify-between">
+      <button aria-label="Close menu" class="-m-1 p-1" data-action="click->toggle#toggleMenu" data-toggle-target="closeButton">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 text-zinc-500 dark:text-zinc-400">
+          <path d="m17.25 6.75-10.5 10.5M6.75 6.75l10.5 10.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="text-sm font-medium text-zinc-600 dark:text-zinc-400">Navigation</h2>
+    </div>
+    <nav class="mt-6">
+      <ul class="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-700 dark:text-zinc-300">
+        <li><a href="/" class="block py-2" data-action="click->toggle#closeMenu">Home</a></li>
+        <li><a href="/blog" class="block py-2" data-action="click->toggle#closeMenu">Blog</a></li>
+        <li><a href="/projects" class="block py-2" data-action="click->toggle#closeMenu">Projects</a></li>
+        <li><a href="/contact" class="block py-2" data-action="click->toggle#closeMenu">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>

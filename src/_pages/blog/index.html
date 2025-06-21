@@ -1,95 +1,60 @@
 ---
 layout: default
 title: Blog
-paginate:
-  collection: posts
+description: Thoughts on robotics, battery recycling, artificial intelligence, and the technologies that shape our future.
 ---
-<div class="bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:max-w-4xl">
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
-      <p class="mt-2 text-lg leading-8 text-gray-600">Learn about what is happening on the forefront of AI in robotics.</p>
-      <div class="mt-10 space-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16">
-        {% for post in paginator.resources %}
-          {% assign author = site.data.authors[post.author] %}
-          <article class="relative isolate flex flex-col gap-8 lg:flex-row">
-            <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-              <a href="{{ post.relative_url }}">
-                <img src="{{ post.image }}"  alt="{{ post.title }} image" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
-              </a>
-              <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-            </div>
-            <div>
-              <div class="flex items-center gap-x-4 text-xs">
-                <time class="text-gray-500">{{ post.date | date: "%B %e, %Y" }}</time>
-              </div>
-              <div class="group relative max-w-xl">
-                <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                  <a href="{{ post.relative_url }}" class="text-gray-900 group-hover:text-gray-600">
-                    <span class="absolute inset-0"></span>
-                    {{ post.title }}
-                  </a>
-                </h3>
-                <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 break-words">{{ post.summary | strip_html }}</p>
-              </div>
-              <div class="mt-6 flex border-t border-gray-900/5 pt-6">
-                <div class="relative flex items-center gap-x-4">
-                  <img src="{{ author.image }}" alt="" class="h-10 w-10 rounded-full bg-gray-50">
-                  <div class="text-sm leading-6">
-                    <p class="font-semibold text-gray-900">
-                      <a href="{{ post.relative_url }}">
-                        <span class="absolute inset-0"></span>
-                        {{ author.name }}
+
+<div class="sm:px-8 mt-16 sm:mt-32">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <header class="max-w-2xl">
+          <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+            Writing on robotics, technology, and innovation
+          </h1>
+          <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            All of our thoughts on robotics, battery recycling, artificial intelligence, and the technologies that shape our future.
+          </p>
+        </header>
+
+        <div class="mt-16 sm:mt-20">
+          <div class="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
+            <div class="flex max-w-3xl flex-col space-y-16">
+              {% for post in collections.posts %}
+                <article class="md:grid md:grid-cols-4 md:items-baseline">
+                  <div class="md:col-span-3 group relative flex flex-col items-start">
+                    <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+                      <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
+                      <a href="{{ post.url }}">
+                        <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                        <span class="relative z-10">{{ post.data.title }}</span>
                       </a>
+                    </h2>
+                    <time class="md:hidden relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+                      <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                        <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
+                      </span>
+                      {{ post.date | date: '%B %d, %Y' }}
+                    </time>
+                    <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                      {{ post.data.description | default: post.content | strip_html | truncate: 150 }}
                     </p>
-                    <p class="text-gray-600">{{ author.title }}</p>
+                    <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500">
+                      Read article
+                      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
+                        <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </div>
+                  <time class="relative z-10 order-first mb-3 mt-1 hidden items-center text-sm text-zinc-400 dark:text-zinc-500 md:block" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+                    {{ post.date | date: '%B %d, %Y' }}
+                  </time>
+                </article>
+              {% endfor %}
             </div>
-          </article>
-        {% endfor %}
+          </div>
+        </div>
       </div>
-      <div class="pagination mt-32">
-        {% if paginator.total_pages > 1 %}
-          <ul class="flex justify-center space-x-4">
-            <!-- Previous Page Link -->
-            <li>
-              <a href="{{ paginator.previous_page_path }}" class="px-4 py-2 text-gray-600 bg-white border border-gray-300 rounded-md hover:bg-gray-100 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                </svg>
-              </a>
-            </li>
-
-            <!-- Page Number Links -->
-            {% for page in (1..paginator.total_pages) %}
-              <li>
-                <a href="{% if page == 1 %}/blog/{% else %}/blog/page/{{ page }}{% endif %}"
-                  class="px-4 py-2 border flex items-center
-                  {% if paginator.page == page %}
-                    bg-dark-green-500 text-white
-                  {% else %}
-                    bg-white text-gray-600 hover:bg-gray-100 border-gray-300
-                  {% endif %}
-                  rounded-md">
-                  {{ page }}
-                </a>
-              </li>
-            {% endfor %}
-
-            <!-- Next Page Link -->
-            <li>
-              <a href="{{ paginator.next_page_path }}" class="px-4 py-2 text-gray-600 bg-white border border-gray-300 rounded-md hover:bg-gray-100 flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        {% endif %}
-      </div>
-
     </div>
   </div>
 </div>
