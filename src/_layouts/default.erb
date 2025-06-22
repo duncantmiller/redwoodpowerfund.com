@@ -3,7 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= resource.data.title || site.metadata.title %></title>
+    <title><%=
+      if resource.data.title
+        resource.data.title
+      else
+        "#{site.data.personal_info.name} #{site.metadata.title}".strip
+      end
+    %></title>
     <meta name="description" content="<%= resource.data.description || site.metadata.description %>" />
 
     <link rel="stylesheet" href="<%= asset_path :css %>" />
@@ -20,7 +26,13 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="<%= resource.data.title || site.metadata.title %>" />
+    <meta property="og:title" content="<%=
+      if resource.data.title&.include?("site.data.personal_info.name")
+        site.data.personal_info.name || "Rose City Robotics"
+      else
+        resource.data.title || site.metadata.title
+      end
+    %>" />
     <meta property="og:description" content="<%= resource.data.description || site.metadata.description %>" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<%= absolute_url resource.relative_url %>" />
