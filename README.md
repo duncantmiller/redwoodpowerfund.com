@@ -144,7 +144,7 @@ Store post images in `src/images/posts/` and reference them in your markdown:
 
 ### Option 1: One-Click Deploy (Recommended)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rose-city-robotics/portfolio-website-bridgetown)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rosecityrobotics/portfolio-website-bridgetown)
 
 Update this deploy url with your forked repository address to deploy your site.
 
