@@ -14,29 +14,47 @@ A modern, responsive portfolio website template built with [Bridgetown](https://
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Requirements
 
-Make sure you have all [required Bridgetown dependencies](https://www.bridgetownrb.com/docs/installation#requirements) installed:
+You will need the following dependencies installed:
 
-1. **Ruby** (recommended: install with [RVM](https://rvm.io/))
-2. **Node.js** (recommended: install with [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md))
-3. **Yarn** package manager ([installation guide](https://classic.yarnpkg.com/lang/en/docs/install/))
-
-### Installation
-
-1. **Clone and setup the repository:**
+**macOS (via Homebrew):**
 ```bash
-git clone https://github.com/rosecityrobotics/portfolio-website-bridgetown.git
+# Install all dependencies at once
+brew install ruby node yarn
+```
+
+**Manual installation:**
+- **Ruby 3.1+** - [Install with RVM](https://rvm.io/) (recommended) or [rbenv](https://github.com/rbenv/rbenv)
+- **Node.js 18+** - [Install with NVM](https://github.com/nvm-sh/nvm/blob/master/README.md) (recommended) or [directly](https://nodejs.org/)
+- **Yarn** - [Installation guide](https://classic.yarnpkg.com/lang/en/docs/install/) or `npm install -g yarn`
+
+**Note:** Make sure you have the latest versions. Check with:
+```bash
+ruby --version    # Should be 3.1+
+node --version    # Should be 18+
+yarn --version    # Should be 1.22+
+```
+
+### Initial Setup
+
+1. **Fork the repository** on GitHub by clicking the "Fork" button at the top right
+   - This creates YOUR own copy of the repository that you'll customize and host
+   - Your fork will be at: `https://github.com/YOUR-USERNAME/portfolio-website-bridgetown`
+
+2. **Clone your forked repository locally:**
+```bash
+git clone https://github.com/YOUR-USERNAME/portfolio-website-bridgetown.git
 cd portfolio-website-bridgetown
+git remote add upstream https://github.com/rosecityrobotics/portfolio-website-bridgetown.git
 ```
 
-2. **Install Ruby dependencies:**
+3. **Install dependencies:**
 ```bash
+# Install Ruby gems
 bundle install
-```
 
-3. **Install JavaScript dependencies:**
-```bash
+# Install JavaScript packages
 yarn install
 ```
 
@@ -47,6 +65,45 @@ bin/bridgetown start
 
 5. **View your site:**
 Open your browser and visit `http://localhost:4000`
+
+### Development Workflow
+
+**Making changes to your portfolio:**
+1. Create a new branch for your changes:
+   ```bash
+   git checkout -b customize-portfolio
+   ```
+
+2. Make your customizations (update personal info, add projects, write blog posts)
+
+3. Test your changes locally:
+   ```bash
+   bin/check  # Run tests and linter
+   ```
+
+4. Commit and push your changes:
+   ```bash
+   git add .
+   git commit -m "Customize portfolio with my information"
+   git push origin customize-portfolio
+   ```
+
+**Contributing improvements back to the template:**
+1. Keep your fork updated:
+   ```bash
+   git fetch upstream
+   git checkout main
+   git merge upstream/main
+   ```
+
+2. Create a feature branch:
+   ```bash
+   git checkout -b improve-feature
+   ```
+
+3. Make your improvements and test thoroughly
+
+4. Push and create a pull request to the main repository
 
 ## 🎨 Customizing Your Portfolio
 
@@ -145,18 +202,20 @@ Store post images in `src/images/posts/` and reference them in your markdown:
 
 ### Option 1: One-Click Deploy (Recommended)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rosecityrobotics/portfolio-website-bridgetown)
+After forking the repository, you can deploy directly from your fork:
 
-Update this deploy url with your forked repository address to deploy your site.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/YOUR-USERNAME/portfolio-website-bridgetown)
+
+**Important:** Replace `YOUR-USERNAME` in the URL above with your actual GitHub username to deploy YOUR fork.
 
 ### Option 2: Manual Setup
 
 1. **Create a Netlify account** at [netlify.com](https://netlify.com)
 
-2. **Connect your repository:**
+2. **Connect your forked repository:**
    - Click "New site from Git"
    - Choose your GitHub as your Git provider
-   - Select your portfolio repository
+   - Select your forked portfolio repository (`YOUR-USERNAME/portfolio-website-bridgetown`)
 
 3. **Configure build settings:**
    - **Build command**: `bin/bridgetown deploy`
