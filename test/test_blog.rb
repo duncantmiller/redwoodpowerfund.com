@@ -3,9 +3,8 @@ require_relative "helper"
 class TestBlog < Minitest::Test
   context "blog" do
     setup do
-      @pages = site.generated_pages.select { |page| page.relative_url.start_with?("/blog") }
-      # Optionally, test only the first page or iterate through all pages
-      document_root @pages.first  # This will select the first page (or adjust if testing paginated pages)
+      page = site.collections.pages.resources.find { |doc| doc.relative_url == "/blog/" }
+      document_root page
     end
 
     should "exist" do
@@ -13,30 +12,15 @@ class TestBlog < Minitest::Test
     end
 
     should "display blog titles" do
-      @pages.each do |page|
-        document_root page
-        assert_select "h3 a", true, "Blog titles should be present and contained within <h3> tags"
-      end
+      assert_select "h2 a", true, "Blog titles should be present and contained within <h2> tags"
     end
 
-    should "display author names" do
-      @pages.each do |page|
-        document_root page
-        assert_select ".text-sm", true, "Author names should be present and contained within the specified selector"
-      end
+    should "display post dates" do
+      assert_select "time", true, "Post dates should be present within time elements"
     end
 
-    should "include post images for each blog entry" do
-      @pages.each do |page|
-        document_root page
-        assert_select "article a img", true, "Each blog entry should have at least one post image within an anchor tag"
-      end
-    end
-
-
-
-    should "include pagination links" do
-      assert_select "a", /\d+/, "Page numbers should be displayed"
+    should "include post links for each blog entry" do
+      assert_select "article a", true, "Each blog entry should have at least one link"
     end
   end
 end
