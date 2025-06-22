@@ -1,89 +1,250 @@
-# Rose City Robotics
-A robotics startup in Portland Oregon.
+# Student Portfolio Website Template
 
-## Usage
-gem install bridgetown -N
+A modern, responsive portfolio website template built with [Bridgetown](https://www.bridgetownrb.com/). Perfect for students, developers, and professionals who want to showcase their projects, blog posts, and experience.
 
-This codebase generates a static site using [Bridgetown](https://www.bridgetownrb.com/). To use it:
+## ✨ Features
 
-1. Make sure you have all [required Bridgetown dependencies](https://www.bridgetownrb.com/docs/installation#requirements) installed. If you need to install Ruby, I recommend [RVM](https://rvm.io/).
-2. Install a Javascript package manager, I recommend [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) which can also be installed using [homebrew](https://formulae.brew.sh/formula/yarn). You will also need Node, if you don't already have it I recommend installing with [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md).
-3. Clone the Repo and cd into the portfolio-website-bridgetown directory.
-```
-git clone git@github.com:RoseCityRobotics/portfolio-website-bridgetown.git
+- **Responsive Design**: Beautiful, modern design that works on all devices
+- **Blog Support**: Built-in blog functionality with markdown support
+- **Easy Customization**: Simple configuration files for personal information
+- **Fast & Secure**: Static site generation for optimal performance
+- **SEO Optimized**: Built-in SEO best practices
+- **One-Click Deployment**: Ready to deploy to Netlify
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+Make sure you have all [required Bridgetown dependencies](https://www.bridgetownrb.com/docs/installation#requirements) installed:
+
+1. **Ruby** (recommended: install with [RVM](https://rvm.io/))
+2. **Node.js** (recommended: install with [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md))
+3. **Yarn** package manager ([installation guide](https://classic.yarnpkg.com/lang/en/docs/install/))
+
+### Installation
+
+1. **Clone and setup the repository:**
+```bash
+git clone https://github.com/YOUR-USERNAME/portfolio-website-bridgetown.git
 cd portfolio-website-bridgetown
 ```
-4. Install Ruby Gems with bundler (preinstalled with Ruby), gems are specified in the Gemfile.
-```
+
+2. **Install Ruby dependencies:**
+```bash
 bundle install
 ```
-5. Install Javascript packages, packages are specified in package.json.
-```
+
+3. **Install JavaScript dependencies:**
+```bash
 yarn install
 ```
-6. Start the Bridgetown server
-```
+
+4. **Start the development server:**
+```bash
 bin/bridgetown start
 ```
-7. In your browser visit
-```
-http://localhost:4000
-```
-8. Edit files in the /src directory and they will be generated as static pages in the output directory. So to edit the index page, edit the rosecityrobotics.com/src/index.html file.
 
-### Publishing Blog Posts
+5. **View your site:**
+Open your browser and visit `http://localhost:4000`
 
-Bridgetown has some built in functionality for managing blog posts. To create a new blog post add a file in the src/_posts directory with the following format:
+## 🎨 Customizing Your Portfolio
+
+### Personal Information
+
+Edit `src/_data/personal_info.yml` to customize your personal details:
+
+```yaml
+# Personal Information Configuration
+name: "Your Name"
+email: "your.email@example.com"
+
+# Social Media Links (leave blank to hide)
+github: "https://github.com/your-username"
+linkedin: "https://linkedin.com/in/your-profile"
+youtube: "https://www.youtube.com/@your-channel"
+
+# Homepage content
+tagline: "Your Professional Tagline"
+bio: "Write a brief bio about yourself, your interests, and what you're working on."
 ```
-YYYY-MM-DD-title-of-post.md
+
+### Site Metadata
+
+Edit `src/_data/site_metadata.yml` for site-wide settings:
+
+```yaml
+title: Your Portfolio Title
+tagline: Your Site Tagline
+email: your.email@example.com
+description: A brief description of your portfolio for SEO purposes.
 ```
 
-The blog post can be written in markdown and you can also mix in html if needed, or more complex logic using [liquid](https://github.com/Shopify/liquid).
+### Profile Images
 
-At the top of the post file, you need to include "front matter" in YAML format. This is where you specify the layout and author of the post as well as a meta description for SEO (should be 156 characters or less). Here is an example:
+Replace the following images in `src/images/` with your own:
 
+- **`avatar.jpg`**: Your profile picture (square format recommended)
+- **`portrait.jpg`**: A larger portrait photo for the about section
+- **`favicon.ico`**: Your site's favicon
+
+**Image Requirements:**
+- Avatar: 400x400px minimum, square aspect ratio
+- Portrait: 800x600px minimum
+- Favicon: 32x32px, .ico format
+
+### Customizing Pages
+
+- **Homepage**: Edit `src/_pages/index.erb`
+- **About/Contact**: Edit `src/_pages/contact.erb`
+- **Projects**: Edit `src/_pages/projects.erb`
+- **Blog**: Edit `src/_pages/blog/index.erb`
+
+## 📝 Managing Blog Posts
+
+### Creating a New Post
+
+1. Create a new file in `src/_posts/` with the format:
 ```
+YYYY-MM-DD-your-post-title.md
+```
+
+2. Add front matter at the top of your post:
+```yaml
 ---
 layout: post
-description: Rose City Robotics Founder and CEO Joseph Cole, PhD will be presenting on Mobile ALOHA, the open source robotics hardware developed by Stanford University.
-image: images/posts/image.jpg
+description: A brief description for SEO (156 characters max)
+image: images/posts/your-image.jpg
 ---
 ```
 
-The post title and date will be added to the post based on the filename, just use kabob case and the correct format for the date. If you want to specify the exact formatting of the title you can add a `title:` key to the front matter. The author and author image and bio will be added to the post based on the front matter and corresponding author data in the _data/authors.yml file. You can view the structure of this template in the src/_layouts/post.html file.
+3. Write your content in Markdown below the front matter.
 
-## Draft blog posts
-If you want to create a draft blog post that won't be published, just add the `published: false` key to the front matter. This will prevent the post from being published. You can also preview the post by running the server with the --unpublished or -U flag `bin/bridgetown start -U`.
+### Draft Posts
 
-## Running tests
-The tests and standardrb linter check will need to pass in the github action continuous integration in order for the changes to be deployed to Netlify after pushing commits to github.
+To create a draft post that won't be published, add `published: false` to the front matter:
 
-First make sure test gems are installed
-
+```yaml
+---
+layout: post
+published: false
+description: This is a draft post
+---
 ```
+
+Preview drafts by running: `bin/bridgetown start -U`
+
+### Post Images
+
+Store post images in `src/images/posts/` and reference them in your markdown:
+```markdown
+![Alt text](images/posts/your-image.jpg)
+```
+
+## 🚀 Deploying to Netlify
+
+### Option 1: One-Click Deploy (Recommended)
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/YOUR-USERNAME/portfolio-website-bridgetown)
+
+### Option 2: Manual Setup
+
+1. **Create a Netlify account** at [netlify.com](https://netlify.com)
+
+2. **Connect your repository:**
+   - Click "New site from Git"
+   - Choose your Git provider (GitHub, GitLab, etc.)
+   - Select your portfolio repository
+
+3. **Configure build settings:**
+   - **Build command**: `bin/bridgetown deploy`
+   - **Publish directory**: `output`
+   - **Node version**: Latest LTS (set in Environment variables as `NODE_VERSION`)
+
+4. **Environment variables** (if needed):
+   - `NODE_VERSION`: `18` (or latest LTS)
+   - `RUBY_VERSION`: `3.1.0` (or your Ruby version)
+
+5. **Deploy**: Click "Deploy site"
+
+### Custom Domain (Optional)
+
+1. In your Netlify dashboard, go to **Site settings** > **Domain management**
+2. Click **Add custom domain**
+3. Follow the instructions to configure your DNS
+
+## 🧪 Testing & Development
+
+### Running Tests
+
+Install test dependencies:
+```bash
 bundle install --with test
 ```
 
-Then you can run the tests with:
-
+Run tests and linter:
+```bash
+bin/check
 ```
+
+Or run individually:
+```bash
+# Tests only
 bin/bridgetown test
-```
 
-and run standardrb linter with
-
-```
+# Linter only
 standardrb
-```
 
-or to also fix any issues automatically
-
-```
+# Linter with auto-fix
 standardrb --fix
 ```
 
-or run tests and standardrb together with:
+### Development Workflow
+
+1. Make changes to files in the `src/` directory
+2. The development server will automatically reload
+3. Test your changes at `http://localhost:4000`
+4. Run `bin/check` before committing
+5. Push to your repository to trigger automatic deployment
+
+## 📁 Project Structure
 
 ```
-bin/check
+src/
+├── _components/     # Reusable components
+├── _data/          # Configuration files
+│   ├── personal_info.yml
+│   └── site_metadata.yml
+├── _layouts/       # Page templates
+├── _pages/         # Static pages
+├── _posts/         # Blog posts
+└── images/         # Images and assets
 ```
+
+## 🎨 Customization Tips
+
+- **Colors & Styling**: Edit `frontend/styles/index.css` and `tailwind.config.js`
+- **Components**: Modify files in `src/_components/`
+- **Layouts**: Customize `src/_layouts/` for different page structures
+- **JavaScript**: Add functionality in `frontend/javascript/`
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests with `bin/check`
+5. Submit a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🆘 Need Help?
+
+- [Bridgetown Documentation](https://www.bridgetownrb.com/docs/)
+- [Netlify Documentation](https://docs.netlify.com/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+
+---
+
+**Happy building! 🚀** Make this portfolio template your own and showcase your amazing work to the world.
