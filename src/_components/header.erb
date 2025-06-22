@@ -71,6 +71,11 @@
   <% end %>
 </header>
 
+<!-- Content offset for homepage avatar spacing -->
+<% if is_home_page? %>
+  <div class="flex-none h-16"></div>
+<% end %>
+
 <!-- Mobile Menu -->
 <div class="mobile-menu fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 transition duration-150 hidden" role="dialog" aria-modal="true" data-toggle-target="menu">
   <div class="flex flex-row-reverse items-center justify-between">
