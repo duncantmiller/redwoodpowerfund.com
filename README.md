@@ -5,11 +5,12 @@ A modern, responsive portfolio website template built with [Bridgetown](https://
 ## ✨ Features
 
 - **Responsive Design**: Beautiful, modern design that works on all devices
-- **Blog Support**: Built-in blog functionality with markdown support
+- **Blog Support**: Built-in blog functionality with [markdown support](https://www.markdownguide.org/)
 - **Easy Customization**: Simple configuration files for personal information
 - **Fast & Secure**: Static site generation for optimal performance
 - **SEO Optimized**: Built-in SEO best practices
-- **One-Click Deployment**: Ready to deploy to Netlify
+- **No Database**: Super light infrastructure, with no database required and easy to create blog articles using markdown.
+- **One-Click Free Hosted Deployment**: Ready to deploy to Netlify for free (must keep repo public to qualify for free hosting)
 
 ## 🚀 Quick Start
 
@@ -263,6 +264,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - [Bridgetown Documentation](https://www.bridgetownrb.com/docs/)
 - [Netlify Documentation](https://docs.netlify.com/)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Markdown Guide](https://www.markdownguide.org/) - Learn how to write in Markdown
 
 ---
 
