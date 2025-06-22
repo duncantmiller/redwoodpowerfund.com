@@ -45,6 +45,9 @@ git remote add upstream https://github.com/rosecityrobotics/portfolio-website-br
 
 3. **Install dependencies:**
 ```bash
+# First, install Bundler if you don't have it
+gem install bundler
+
 # Install Ruby gems
 bundle install
 
