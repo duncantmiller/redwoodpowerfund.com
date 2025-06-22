@@ -214,11 +214,11 @@ After forking the repository, you can deploy directly from your fork:
 3. **Configure build settings:**
    - **Build command**: `bin/bridgetown deploy`
    - **Publish directory**: `output`
-   - **Node version**: Latest LTS (set in Environment variables as `NODE_VERSION`)
+   - **Node version**: 18 LTS (set in Environment variables as `NODE_VERSION`)
 
 4. **Environment variables** (if needed):
-   - `NODE_VERSION`: `18` (or latest LTS)
-   - `RUBY_VERSION`: `3.1.0` (or your Ruby version)
+   - `NODE_VERSION`: `18` (or LTS)
+   - `RUBY_VERSION`: `3.1.0` (or minor version up)
 
 5. **Deploy**: Click "Deploy site"
 
@@ -239,7 +239,7 @@ Once connected to your GitHub repository, Netlify will automatically deploy your
    - Go to **Site settings** > **Build & deploy** > **Continuous deployment**
    - You can change which branch triggers production deployments (default is usually `main` or `master`)
 
-### Custom Domain (Optional)
+### Custom Domain (Optional - costs money)
 
 1. In your Netlify dashboard, go to **Site settings** > **Domain management**
 2. Click **Add custom domain**
@@ -299,6 +299,7 @@ src/
 - **Components**: Modify files in `src/_components/`
 - **Layouts**: Customize `src/_layouts/` for different page structures
 - **JavaScript**: Add functionality in `frontend/javascript/`
+- **Simple Forms**: Despite the lack of a database, [Netlify does support basic forms](https://docs.netlify.com/forms/setup/)
 
 ## 🤝 Contributing
 
@@ -321,4 +322,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Happy building! 🚀** Make this portfolio template your own and showcase your amazing work to the world.
+**Happy building! 🚀** Make this portfolio template your own and showcase your amazing work to the world. Let us know if we can help in any way.
