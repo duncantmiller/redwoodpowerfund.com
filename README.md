@@ -18,12 +18,6 @@ A modern, responsive portfolio website template built with [Bridgetown](https://
 
 You will need the following dependencies installed:
 
-**macOS (via Homebrew):**
-```bash
-# Install all dependencies at once
-brew install ruby node yarn
-```
-
 **Manual installation:**
 - **Ruby 3.1+** - [Install with RVM](https://rvm.io/) (recommended) or [rbenv](https://github.com/rbenv/rbenv)
 - **Node.js 18+** - [Install with NVM](https://github.com/nvm-sh/nvm/blob/master/README.md) (recommended) or [directly](https://nodejs.org/)
