@@ -12,7 +12,7 @@ class TestBlogPosts < Minitest::Test
       @post_files.each do |file_path|
         content = File.read(file_path)
         front_matter = content.match(/---\s*\n(.*?)---/m)[1]
-        data = YAML.load(front_matter)
+        data = YAML.safe_load(front_matter)
         assert data, "Front matter should be present in #{File.basename(file_path)}"
         assert data["image"], "Image should be specified in the front matter of #{File.basename(file_path)}"
         refute_empty data["image"], "Image path should not be empty in #{File.basename(file_path)}"
@@ -25,7 +25,7 @@ class TestBlogPosts < Minitest::Test
       @post_files.each do |file_path|
         content = File.read(file_path)
         front_matter = content.match(/---\s*\n(.*?)---/m)[1]
-        data = YAML.load(front_matter)
+        data = YAML.safe_load(front_matter)
         assert data, "Front matter should be present in #{File.basename(file_path)}"
         assert data["layout"], "Layout should be specified in the front matter of #{File.basename(file_path)}"
         refute_empty data["layout"], "Layout should not be empty in #{File.basename(file_path)}"
@@ -36,7 +36,7 @@ class TestBlogPosts < Minitest::Test
       @post_files.each do |file_path|
         content = File.read(file_path)
         front_matter = content.match(/---\s*\n(.*?)---/m)[1]
-        data = YAML.load(front_matter)
+        data = YAML.safe_load(front_matter)
         assert data, "Front matter should be present in #{File.basename(file_path)}"
         assert data["description"], "Description should be specified in the front matter of #{File.basename(file_path)}"
         refute_empty data["description"], "Description should not be empty in #{File.basename(file_path)}"

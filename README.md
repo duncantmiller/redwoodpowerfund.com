@@ -50,8 +50,6 @@ image: images/posts/image.jpg
 ---
 ```
 
-The author maps to a record in the src/_data/authors.yml file. So if you want to add or modify author details, just edit the authors.yml file. The author key should match the key in the front matter of the blog post.
-
 The post title and date will be added to the post based on the filename, just use kabob case and the correct format for the date. If you want to specify the exact formatting of the title you can add a `title:` key to the front matter. The author and author image and bio will be added to the post based on the front matter and corresponding author data in the _data/authors.yml file. You can view the structure of this template in the src/_layouts/post.html file.
 
 ## Draft blog posts
