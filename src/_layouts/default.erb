@@ -3,13 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%=
-      if resource.data.title
-        resource.data.title
-      else
-        "#{site.data.personal_info.name} #{site.metadata.title}".strip
-      end
-    %></title>
+    <title>
+      <%= "#{site.data.personal_info.name} #{resource&.data&.title || site.metadata.title}" %>
+    </title>
     <meta name="description" content="<%= resource.data.description || site.metadata.description %>" />
 
     <link rel="stylesheet" href="<%= asset_path :css %>" />
