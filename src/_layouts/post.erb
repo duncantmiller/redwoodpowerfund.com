@@ -3,7 +3,7 @@ layout: default
 sitemap_priority: 0.8
 sitemap_change_frequency: monthly
 ---
-<% author = site.data.authors[resource.data.author] %>
+<% # Use personal info as the author %>
 
 <%= render Container.new(outer_class: "mt-16 sm:mt-32") do %>
   <div class="max-w-3xl text-base leading-7 text-gray-700 dark:text-gray-300">
@@ -39,7 +39,7 @@ sitemap_change_frequency: monthly
     </nav>
     <h1 class="mt-6 text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100"><%= resource.data.title %></h1>
     <div class="flex items-center gap-x-4 text-sm text-zinc-500 mt-6 dark:text-zinc-400">
-      by <%= author.name %> on <%= resource.date.strftime("%B %e, %Y") %>
+      by <%= site.data.personal_info.name %> on <%= resource.date.strftime("%B %e, %Y") %>
     </div>
     <article class="prose prose-zinc lg:prose-xl mt-6 dark:prose-invert">
       <img src="<%= resource.data.image %>" alt="<%= resource.data.title %> image" class="aspect-[16/9] w-full rounded-2xl bg-zinc-100 dark:bg-zinc-800">

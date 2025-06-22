@@ -22,7 +22,7 @@ class TestBlog < Minitest::Test
     should "display author names" do
       @pages.each do |page|
         document_root page
-        assert_select ".text-sm a", true, "Author names should be present and contained within the specified selector"
+        assert_select ".text-sm", true, "Author names should be present and contained within the specified selector"
       end
     end
 
@@ -33,12 +33,7 @@ class TestBlog < Minitest::Test
       end
     end
 
-    should "include author images for each blog entry" do
-      @pages.each do |page|
-        document_root page
-        assert_select "article img.rounded-full", true, "Each blog entry should have at least one author image with 'rounded-full' class"
-      end
-    end
+
 
     should "include pagination links" do
       assert_select "a", /\d+/, "Page numbers should be displayed"

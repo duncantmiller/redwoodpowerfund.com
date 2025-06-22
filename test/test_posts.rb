@@ -19,16 +19,7 @@ class TestBlogPosts < Minitest::Test
       end
     end
 
-    should "specify an author in the front matter for each post" do
-      @post_files.each do |file_path|
-        content = File.read(file_path)
-        front_matter = content.match(/---\s*\n(.*?)---/m)[1]
-        data = YAML.load(front_matter)
-        assert data, "Front matter should be present in #{File.basename(file_path)}"
-        assert data["author"], "Author should be specified in the front matter of #{File.basename(file_path)}"
-        refute_empty data["author"], "Author should not be empty in #{File.basename(file_path)}"
-      end
-    end
+
 
     should "specify a layout in the front matter for each post" do
       @post_files.each do |file_path|

@@ -8,10 +8,10 @@ This codebase generates a static site using [Bridgetown](https://www.bridgetownr
 
 1. Make sure you have all [required Bridgetown dependencies](https://www.bridgetownrb.com/docs/installation#requirements) installed. If you need to install Ruby, I recommend [RVM](https://rvm.io/).
 2. Install a Javascript package manager, I recommend [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) which can also be installed using [homebrew](https://formulae.brew.sh/formula/yarn). You will also need Node, if you don't already have it I recommend installing with [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md).
-3. Clone the Repo and cd into the rosecityrobotics.com directory.
+3. Clone the Repo and cd into the portfolio-website-bridgetown directory.
 ```
-git clone git@github.com:RoseCityRobotics/rosecityrobotics.com.git
-cd rosecityrobotics.com
+git clone git@github.com:RoseCityRobotics/portfolio-website-bridgetown.git
+cd portfolio-website-bridgetown
 ```
 4. Install Ruby Gems with bundler (preinstalled with Ruby), gems are specified in the Gemfile.
 ```
@@ -38,18 +38,13 @@ Bridgetown has some built in functionality for managing blog posts. To create a 
 YYYY-MM-DD-title-of-post.md
 ```
 
-The blog post can be written in markdown and you can also mix in html if needed, or more complex logic using [liquid](https://github.com/Shopify/liquid). For example in the /src/_posts/2024-04-28-join-us-at-portland-area-robotics-society.md file there is a youtube video embed code using an iframe. I've added this html code in a reusable youtube_embed component using liquid that just requires a value passed for the youtube_key variable which comes at the end of the youtube url. So for example you can embed an youtube video with the url `https://www.youtube.com/embed/N-WSYbU4I_0` using:
-
-```
-{% render "youtube_embed", youtube_key: "N-WSYbU4I_0" %}
-```
+The blog post can be written in markdown and you can also mix in html if needed, or more complex logic using [liquid](https://github.com/Shopify/liquid).
 
 At the top of the post file, you need to include "front matter" in YAML format. This is where you specify the layout and author of the post as well as a meta description for SEO (should be 156 characters or less). Here is an example:
 
 ```
 ---
 layout: post
-author: duncan_miller
 description: Rose City Robotics Founder and CEO Joseph Cole, PhD will be presenting on Mobile ALOHA, the open source robotics hardware developed by Stanford University.
 image: images/posts/image.jpg
 ---
