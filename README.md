@@ -25,7 +25,7 @@ Make sure you have all [required Bridgetown dependencies](https://www.bridgetown
 
 1. **Clone and setup the repository:**
 ```bash
-git clone https://github.com/YOUR-USERNAME/portfolio-website-bridgetown.git
+git clone https://github.com/rosecityrobotics/portfolio-website-bridgetown.git
 cd portfolio-website-bridgetown
 ```
 
@@ -144,7 +144,9 @@ Store post images in `src/images/posts/` and reference them in your markdown:
 
 ### Option 1: One-Click Deploy (Recommended)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/YOUR-USERNAME/portfolio-website-bridgetown)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rose-city-robotics/portfolio-website-bridgetown)
+
+Update this deploy url with your forked repository address to deploy your site.
 
 ### Option 2: Manual Setup
 
@@ -152,7 +154,7 @@ Store post images in `src/images/posts/` and reference them in your markdown:
 
 2. **Connect your repository:**
    - Click "New site from Git"
-   - Choose your Git provider (GitHub, GitLab, etc.)
+   - Choose your GitHub as your Git provider
    - Select your portfolio repository
 
 3. **Configure build settings:**
@@ -165,6 +167,23 @@ Store post images in `src/images/posts/` and reference them in your markdown:
    - `RUBY_VERSION`: `3.1.0` (or your Ruby version)
 
 5. **Deploy**: Click "Deploy site"
+
+### Automatic Deployment Setup
+
+Once connected to your GitHub repository, Netlify will automatically deploy your site whenever you push changes to your main branch. Here's how it works:
+
+1. **Automatic Builds**: Every time you push to your main branch, Netlify will:
+   - Pull the latest code from GitHub
+   - Run the build command (`bin/bridgetown deploy`)
+   - Deploy the updated site automatically
+
+2. **Deploy Previews**: Netlify also creates preview deployments for pull requests, so you can test changes before merging.
+
+3. **Build Status**: You can monitor build status in your Netlify dashboard under **Site overview** > **Deploys**
+
+4. **Branch Settings** (optional):
+   - Go to **Site settings** > **Build & deploy** > **Continuous deployment**
+   - You can change which branch triggers production deployments (default is usually `main` or `master`)
 
 ### Custom Domain (Optional)
 
