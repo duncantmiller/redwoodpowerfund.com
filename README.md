@@ -1,6 +1,8 @@
 # Student Portfolio Website Template
 
-A modern, responsive portfolio website template built with [Bridgetown](https://www.bridgetownrb.com/). Perfect for students, developers, and professionals who want to showcase their projects, blog posts, and experience.
+View a[live demo here](https://brilliant-cranachan-4c5e88.netlify.app/blog/).
+
+A modern, responsive portfolio website template built with the [Bridgetown](https://www.bridgetownrb.com/) framework - a simple static website generator for blogging. Perfect for students, developers, and professionals who want to showcase their projects, blog posts, and experience.
 
 ## ✨ Features
 
