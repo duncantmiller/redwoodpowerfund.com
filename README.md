@@ -113,6 +113,8 @@ Edit `src/_data/personal_info.yml` to customize your personal details:
 ```yaml
 # Personal Information Configuration
 name: "Your Name"
+
+# optional - only fill out if you want this public
 email: "your.email@example.com"
 
 # Social Media Links (leave blank to hide)
@@ -205,7 +207,7 @@ After forking the repository, you can deploy directly from your fork:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/YOUR-USERNAME/portfolio-website-bridgetown)
 
-**Important:** Replace `YOUR-USERNAME` in the URL above with your actual GitHub username to deploy YOUR fork.
+**Important:** Replace `YOUR-USERNAME` in the URL above with your actual GitHub username to deploy YOUR fork also if you've updated your github repository name to something other than portfolio-website-bridgetown. The url is `https://app.netlify.com/start/deploy?repository=https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME`
 
 ### Option 2: Manual Setup
 
