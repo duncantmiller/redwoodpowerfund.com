@@ -1,5 +1,6 @@
 ---
 layout: post
+published: false
 title: "Building My First Autonomous Robot: A Complete Project Showcase"
 description: "A comprehensive guide to my autonomous line-following robot project, including design decisions, code snippets, challenges faced, and lessons learned."
 date: 2024-01-15
@@ -11,7 +12,7 @@ tags: ["robotics", "arduino", "autonomous-systems", "computer-vision", "sensors"
 
 This post showcases my first major robotics project: an autonomous line-following robot built during my junior year. This project demonstrates key robotics concepts including sensor integration, control algorithms, and real-time decision making.
 
-**Project Goals:**
+Project Goals:
 - Build a robot that can autonomously follow a black line on a white surface
 - Implement PID control for smooth navigation
 - Add obstacle detection and avoidance capabilities

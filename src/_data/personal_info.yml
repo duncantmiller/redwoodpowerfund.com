@@ -1,17 +1,17 @@
 # Personal Information Configuration
 # Update these values with your own information
 
-name: "PretendUser Fakename"
+name: "Duncan Miller"
 
 #optionally, you can add your email address here, but it will be visible to the public
 #note - if you are using GitHub you have to add the email address in GitHub settings or you will get a security error when pushing to the repository
-email: "hello@example.com"
+email: "duncan@rosecityrobotics.com"
 
 # Social Media Links (leave blank if you don't want to show them)
-github: "https://github.com/example-handle"
-linkedin: "https://linkedin.com/company/example-handle"
-youtube: "https://www.youtube.com/@example-handle"
+github: "https://github.com/duncantmiller"
+linkedin: "https://linkedin.com/in/duncantmiller"
+youtube: "https://www.youtube.com/@rosecityrobotics"
 
 # Homepage content
-tagline: "Robots, Drones, AI and Rockets."
-bio: "I'm PretendUser Fakename, a high school senior based in Springfield, Oregon. I'm the leadership team of FIRST Robotics FRC#000000 Fakeplanet, where we are excited to be working on a new robot for this season."
+tagline: "I like Robots"
+bio: "I run Rose City Robotics."
