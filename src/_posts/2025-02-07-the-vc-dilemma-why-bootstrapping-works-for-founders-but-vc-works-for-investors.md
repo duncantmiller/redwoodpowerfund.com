@@ -4,7 +4,7 @@ title: "The VC Dilemma: Why Bootstrapping Works for Founders but VC Works for In
 date: 2025-02-07
 tags: [bootstrapping, venture-capital, startups, founders, investing, open-source, public-benefit]
 description: "After two decades of bootstrapping—and a recent look at VC from the investor side—here’s why I’m staying founder-first without raising venture money."
-image: /images/posts/vc-dilemma/cover.jpg
+image: /images/posts/trees_blog_image.jpeg
 ---
 
 *AI/ML Robotics Education at Rose City Robotics · Social Entrepreneur · Climate Investor · Software Engineer · Passionate About Technology Solutions for Climate*
