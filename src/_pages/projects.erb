@@ -1,69 +1,79 @@
 ---
 layout: default
-title: Projects
-description: "Things I've made trying to put my dent in the universe."
-projects:
-  - name: "Autonomous Robot"
-    description: "Building my first autonomous robot with computer vision and machine learning capabilities for navigation and object recognition."
-    link:
-      href: "/blog/2024/01/15/building-my-first-autonomous-robot-project-showcase/"
-      label: "Read the story"
-    logo: "/images/posts/rosie.png"
+title: Portfolio
+description: "Companies I've invested in"
+direct_investments:
   - name: "Rose City Robotics"
-    description: "Co-founded a robotics company focused on educational robotics and automation solutions for small businesses."
+    description: "(Co-founder and Investor) Robotics company focused on educational robotics."
     link:
-      href: "#"
+      href: "https://rosecityrobotics.com"
       label: "rosecityrobotics.com"
-    logo: "/images/olympus-controls-logo.png"
-  - name: "BattleBots Competition"
-    description: "Designed and built combat robots for BattleBots competition, winning audience favorite award with innovative design."
+    logo: "images/portfolio_companies/RoseCityRobotics-Logo-Primary-RGB-Red.png"
+fund_investments:
+  - name: "Regener8 2024 Fund"
+    description: "Independent, Member-Driven Annual Fund Following E8 Angels Investments. All investment decisions are made collectively by Fund Member vote."
     link:
-      href: "#"
-      label: "Competition results"
-    logo: "/images/posts/champion_belt.jpeg"
-  - name: "EV Battery Analysis"
-    description: "Research project analyzing electric vehicle battery performance and degradation patterns using machine learning."
+      href: "https://e8regenr8.com/"
+      label: "e8regenr8.com"
+    logo: "/images/portfolio_companies/Regenr8_logo-1.webp"
+    portfolio_companies: []
+  - name: "Intrepid Oregon Fund I (Portland Seed Fund)"
+    description: "The Intrepid Oregon Fund (IOF) is anchored by a $4 million initial investment by Business Oregon through its Commercialization Gap Fund program. IOF invests in early-stage companies less than five years old, in sectors that are primarily technology and science-focused such as digital health, healthcare IT, bioscience, medical devices, climate-tech, advanced manufacturing, advanced materials, and natural resources."
     link:
-      href: "#"
-      label: "GitHub repository"
-    logo: "/images/posts/ev_battery.png"
-  - name: "Welding Automation"
-    description: "Developed automated welding solutions for manufacturing, improving precision and reducing production time."
-    link:
-      href: "#"
-      label: "Case study"
-    logo: "/images/posts/welding_robot.png"
-  - name: "Portfolio Website"
-    description: "Built this portfolio website using Bridgetown static site generator with modern design and performance optimization."
-    link:
-      href: "https://github.com/yourusername/portfolio"
-      label: "View source"
+      href: "https://portlandseedfund.com/iof/"
+      label: "portlandseedfund.com/iof/"
+    logo: "/images/portfolio_companies/iof.png"
+    portfolio_companies:
+      - name: "Bold Reuse"
+        url: "https://www.boldreuse.com/"
+      - name: "Solid Carbon"
+        url: "https://www.solid-carbon.com/"
+      - name: "Transformative Optics"
+        url: "https://www.transformativeoptics.com/"
+      - name: "Thaena"
+        url: "https://thaena.com/"
+      - name: "Panthalassa"
+        url: "https://panthalassa.com/"
+      - name: "AscendArc"
+        url: "https://www.ascendarc.com/"
+      - name: "ENES"
+        url: "https://n4ea.co/"
+      - name: "SynPlexity"
+        url: "https://synplexity.com/"
+      - name: "SurgiVance"
+        url: "https://surgivance.com/"
+      - name: "iGridSim"
+        url: "https://igridsim.com/"
 ---
 
 <%= render Container.new(outer_class: "mt-16 sm:mt-32") do %>
   <header class="max-w-2xl">
     <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-      Things I've made trying to put my dent in the universe.
+      <%= resource.data.title %>
     </h1>
     <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-      I've worked on tons of little projects over the years but these are the ones that I'm most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.
+      <%= resource.data.description %>
     </p>
   </header>
 
+  <!-- Individual Investments Section -->
   <div class="mt-16 sm:mt-20">
+    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100 mb-8">
+      Direct Investments
+    </h2>
     <ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-      <% resource.data.projects.each do |project| %>
+      <% resource.data.direct_investments.each do |project| %>
         <%= render Card.new(as: "li") do %>
-          <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+          <div class="relative z-10 flex h-18 w-22 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 mx-auto">
             <% if project["logo"] %>
-              <img src="<%= relative_url project["logo"] %>" alt="" class="h-8 w-8 rounded-full object-cover" />
+              <img src="<%= relative_url project["logo"] %>" alt="<%= project["name"] %> logo" class="h-16 w-20 object-contain" />
             <% else %>
-              <div class="h-8 w-8 rounded-full bg-teal-500 flex items-center justify-center">
-                <span class="text-white text-sm font-bold"><%= project["name"][0] %></span>
+              <div class="h-16 w-20 rounded bg-teal-500 flex items-center justify-center">
+                <span class="text-white text-xl font-bold"><%= project["name"][0] %></span>
               </div>
             <% end %>
           </div>
-          <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+          <h3 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
             <% if project["link"] %>
               <a href="<%= project["link"]["href"] %>" class="group">
                 <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
@@ -73,7 +83,7 @@ projects:
             <% else %>
               <%= project["name"] %>
             <% end %>
-          </h2>
+          </h3>
           <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
             <%= project["description"] %>
           </p>
@@ -88,5 +98,72 @@ projects:
         <% end %>
       <% end %>
     </ul>
+  </div>
+
+  <!-- Fund Investments Section -->
+  <div class="mt-24 sm:mt-32">
+    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100 mb-8">
+      Fund Investments
+    </h2>
+    <div class="space-y-16">
+      <% resource.data.fund_investments.each do |fund| %>
+        <div class="border-l-4 border-teal-500 pl-8">
+          <%= render Card.new do %>
+            <div class="flex items-start space-x-6">
+              <div class="relative z-10 flex h-22 w-34 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 flex-shrink-0">
+                <% if fund["logo"] %>
+                  <img src="<%= relative_url fund["logo"] %>" alt="<%= fund["name"] %> logo" class="max-h-20 max-w-32 object-contain" />
+                <% else %>
+                  <div class="h-20 w-32 rounded bg-teal-500 flex items-center justify-center">
+                    <span class="text-white text-2xl font-bold"><%= fund["name"][0] %></span>
+                  </div>
+                <% end %>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+                  <% if fund["link"] %>
+                    <a href="<%= fund["link"]["href"] %>" class="hover:text-teal-500 transition-colors">
+                      <%= fund["name"] %>
+                    </a>
+                  <% else %>
+                    <%= fund["name"] %>
+                  <% end %>
+                </h3>
+                <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+                  <%= fund["description"] %>
+                </p>
+                <% if fund["link"] %>
+                  <p class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-teal-500 transition-colors dark:text-zinc-200">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none">
+                      <path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor" />
+                    </svg>
+                    <span class="ml-2"><%= fund["link"]["label"] %></span>
+                  </p>
+                <% end %>
+
+                <% if fund["portfolio_companies"] && fund["portfolio_companies"].length > 0 %>
+                  <div class="mt-6">
+                    <h4 class="text-sm font-medium text-zinc-800 dark:text-zinc-100 mb-3">Portfolio Companies</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+                      <% fund["portfolio_companies"].each do |company| %>
+                        <% if company["url"] %>
+                          <a href="<%= company["url"] %>" target="_blank" rel="noopener noreferrer" class="px-3 py-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-teal-200 dark:hover:bg-teal-800 hover:text-teal-900 dark:hover:text-teal-100 transition-colors">
+                            <%= company["name"] %>
+                          </a>
+                        <% else %>
+                          <div class="px-3 py-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg text-xs font-medium text-zinc-800 dark:text-zinc-200">
+                            <%= company["name"] %>
+                          </div>
+                        <% end %>
+                      <% end %>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 <% end %>
