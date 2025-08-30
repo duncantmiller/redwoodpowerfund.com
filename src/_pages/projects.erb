@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Portfolio
-description: "Companies I've invested in"
+description: "With Redwood Power Fund I'm investing in early stage startups focused on AI, climate and energy."
 direct_investments:
   - name: "Rose City Robotics"
     description: "(Co-founder and Investor) Robotics company focused on educational robotics."
@@ -61,43 +61,47 @@ fund_investments:
     <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100 mb-8">
       Direct Investments
     </h2>
-    <ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="space-y-16">
       <% resource.data.direct_investments.each do |project| %>
-        <%= render Card.new(as: "li") do %>
-          <div class="relative z-10 flex h-18 w-22 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 mx-auto">
-            <% if project["logo"] %>
-              <img src="<%= relative_url project["logo"] %>" alt="<%= project["name"] %> logo" class="h-16 w-20 object-contain" />
-            <% else %>
-              <div class="h-16 w-20 rounded bg-teal-500 flex items-center justify-center">
-                <span class="text-white text-xl font-bold"><%= project["name"][0] %></span>
+        <div class="border-l-4 border-teal-500 pl-8">
+          <%= render Card.new do %>
+            <div class="flex items-start space-x-6">
+              <div class="relative z-10 flex h-20 w-32 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 flex-shrink-0">
+                <% if project["logo"] %>
+                  <img src="<%= relative_url project["logo"] %>" alt="<%= project["name"] %> logo" class="max-h-16 max-w-28 object-contain" />
+                <% else %>
+                  <div class="h-16 w-28 rounded bg-teal-500 flex items-center justify-center">
+                    <span class="text-white text-xl font-bold"><%= project["name"][0] %></span>
+                  </div>
+                <% end %>
               </div>
-            <% end %>
-          </div>
-          <h3 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-            <% if project["link"] %>
-              <a href="<%= project["link"]["href"] %>" class="group">
-                <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50"></div>
-                <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
-                <span class="relative z-10"><%= project["name"] %></span>
-              </a>
-            <% else %>
-              <%= project["name"] %>
-            <% end %>
-          </h3>
-          <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-            <%= project["description"] %>
-          </p>
-          <% if project["link"] %>
-            <p class="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none">
-                <path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor" />
-              </svg>
-              <span class="ml-2"><%= project["link"]["label"] %></span>
-            </p>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+                  <% if project["link"] %>
+                    <a href="<%= project["link"]["href"] %>" class="hover:text-teal-500 transition-colors">
+                      <%= project["name"] %>
+                    </a>
+                  <% else %>
+                    <%= project["name"] %>
+                  <% end %>
+                </h3>
+                <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+                  <%= project["description"] %>
+                </p>
+                <% if project["link"] %>
+                  <p class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-teal-500 transition-colors dark:text-zinc-200">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none">
+                      <path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor" />
+                    </svg>
+                    <span class="ml-2"><%= project["link"]["label"] %></span>
+                  </p>
+                <% end %>
+              </div>
+            </div>
           <% end %>
-        <% end %>
+        </div>
       <% end %>
-    </ul>
+    </div>
   </div>
 
   <!-- Fund Investments Section -->
@@ -110,12 +114,12 @@ fund_investments:
         <div class="border-l-4 border-teal-500 pl-8">
           <%= render Card.new do %>
             <div class="flex items-start space-x-6">
-              <div class="relative z-10 flex h-22 w-34 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 flex-shrink-0">
+              <div class="relative z-10 flex h-20 w-32 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 flex-shrink-0">
                 <% if fund["logo"] %>
-                  <img src="<%= relative_url fund["logo"] %>" alt="<%= fund["name"] %> logo" class="max-h-20 max-w-32 object-contain" />
+                  <img src="<%= relative_url fund["logo"] %>" alt="<%= fund["name"] %> logo" class="max-h-16 max-w-28 object-contain" />
                 <% else %>
-                  <div class="h-20 w-32 rounded bg-teal-500 flex items-center justify-center">
-                    <span class="text-white text-2xl font-bold"><%= fund["name"][0] %></span>
+                  <div class="h-16 w-28 rounded bg-teal-500 flex items-center justify-center">
+                    <span class="text-white text-xl font-bold"><%= fund["name"][0] %></span>
                   </div>
                 <% end %>
               </div>
