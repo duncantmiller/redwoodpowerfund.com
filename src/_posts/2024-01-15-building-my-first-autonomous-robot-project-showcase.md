@@ -1,5 +1,6 @@
 ---
 layout: post
+published: true
 title: "Building My First Autonomous Robot: A Complete Project Showcase"
 description: "A comprehensive guide to my autonomous line-following robot project, including design decisions, code snippets, challenges faced, and lessons learned."
 date: 2024-01-15
