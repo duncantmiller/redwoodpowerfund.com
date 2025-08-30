@@ -4,17 +4,17 @@ title: Portfolio
 description: "With Redwood Power Fund I'm investing in early stage startups focused on AI, climate and energy."
 direct_investments:
   - name: "Rose City Robotics"
-    description: "(Co-founder and Investor) Robotics company focused on educational robotics."
+    description: "At Rose City Robotics, we train the next generation of technical leaders through hands-on robotics, AI, and systems engineering. Our programs are designed for ambitious students who want more than theory—they want tools, mentorship, and outcomes that matter."
     link:
       href: "https://rosecityrobotics.com"
       label: "rosecityrobotics.com"
     logo: "images/portfolio_companies/RoseCityRobotics-Logo-Primary-RGB-Red.png"
   - name: "Gaia AI"
-    description: "(Investor) AI company focused on sustainable and ethical AI."
+    description: "Gaia AI simplifies forest data collection and analysis using AI-powered tools and sensor technology, delivering precise insights to optimize your harvesting, timber sales, and carbon credit strategies."
     link:
-      href: "https://www.gaia-ai.eco/"
+      href: "https://gaia-ai.eco"
       label: "gaia-ai.eco"
-    logo: "images/portfolio_companies/gaia-ai.png"
+    logo: "images/portfolio_companies/gaia_ai.png"
 fund_investments:
   - name: "Regener8 2024 Fund"
     description: "Independent, Member-Driven Annual Fund Following E8 Angels Investments. All investment decisions are made collectively by Fund Member vote."
@@ -22,7 +22,23 @@ fund_investments:
       href: "https://e8regenr8.com/"
       label: "e8regenr8.com"
     logo: "/images/portfolio_companies/Regenr8_logo-1.webp"
-    portfolio_companies: []
+    portfolio_companies:
+      - name: "Currents"
+        url: "https://currents.market/"
+      - name: "Symbium"
+        url: "https://symbium.com/"
+      - name: "SolarSteam"
+        url: "https://solarsteam.ca/"
+      - name: "Beyond Silicon"
+        url: ""
+      - name: "Photon Marine"
+        url: "https://www.photonmarine.com/"
+      - name: "Paleblue"
+        url: "https://paleblueearth.com/"
+      - name: "Solidec"
+        url: "https://solidec.com/"
+      - name: "Inventwood"
+        url: "https://inventwood.com/"
   - name: "Intrepid Oregon Fund I (Portland Seed Fund)"
     description: "The Intrepid Oregon Fund (IOF) is anchored by a $4 million initial investment by Business Oregon through its Commercialization Gap Fund program. IOF invests in early-stage companies less than five years old, in sectors that are primarily technology and science-focused such as digital health, healthcare IT, bioscience, medical devices, climate-tech, advanced manufacturing, advanced materials, and natural resources."
     link:
@@ -68,38 +84,38 @@ fund_investments:
       Direct Investments
     </h2>
         <div class="space-y-16">
-      <% resource.data.direct_investments.each do |project| %>
+      <% resource.data.direct_investments.each do |investment| %>
         <div class="border-l-4 border-teal-500 pl-8">
           <%= render Card.new do %>
             <div class="flex items-start space-x-6">
               <div class="relative z-10 flex h-20 w-32 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 flex-shrink-0">
-                <% if project["logo"] %>
-                  <img src="<%= relative_url project["logo"] %>" alt="<%= project["name"] %> logo" class="max-h-16 max-w-28 object-contain" />
+                <% if investment["logo"] %>
+                  <img src="<%= relative_url investment["logo"] %>" alt="<%= investment["name"] %> logo" class="max-h-16 max-w-28 object-contain" />
                 <% else %>
                   <div class="h-16 w-28 rounded bg-teal-500 flex items-center justify-center">
-                    <span class="text-white text-xl font-bold"><%= project["name"][0] %></span>
+                    <span class="text-white text-xl font-bold"><%= investment["name"][0] %></span>
                   </div>
                 <% end %>
               </div>
               <div class="flex-1 min-w-0">
                 <h3 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
-                  <% if project["link"] %>
-                    <a href="<%= project["link"]["href"] %>" class="hover:text-teal-500 transition-colors">
-                      <%= project["name"] %>
+                  <% if investment["link"] %>
+                    <a href="<%= investment["link"]["href"] %>" class="hover:text-teal-500 transition-colors">
+                      <%= investment["name"] %>
                     </a>
                   <% else %>
-                    <%= project["name"] %>
+                    <%= investment["name"] %>
                   <% end %>
                 </h3>
                 <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
-                  <%= project["description"] %>
+                  <%= investment["description"] %>
                 </p>
-                <% if project["link"] %>
+                <% if investment["link"] %>
                   <p class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-teal-500 transition-colors dark:text-zinc-200">
                     <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none">
                       <path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor" />
                     </svg>
-                    <span class="ml-2"><%= project["link"]["label"] %></span>
+                    <span class="ml-2"><%= investment["link"]["label"] %></span>
                   </p>
                 <% end %>
               </div>
