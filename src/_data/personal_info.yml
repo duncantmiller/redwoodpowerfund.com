@@ -1,14 +1,14 @@
 # Personal Information Configuration
 # Update these values with your own information
 
-name: "Duncan Miller"
+name: "Redwood Power Fund"
 
 #optionally, you can add your email address here, but it will be visible to the public
 #note - if you are using GitHub you have to add the email address in GitHub settings or you will get a security error when pushing to the repository
 email:
 
 # Social Media Links (leave blank if you don't want to show them)
-github: "https://github.com/duncantmiller"
+github:
 linkedin: "https://linkedin.com/in/duncantmiller"
 
 # Homepage content
