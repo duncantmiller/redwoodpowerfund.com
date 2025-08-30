@@ -7,11 +7,9 @@ description: "After two decades of bootstrapping—and a recent look at VC from 
 image: /images/posts/trees_blog_image.jpeg
 ---
 
-*AI/ML Robotics Education at Rose City Robotics · Social Entrepreneur · Climate Investor · Software Engineer · Passionate About Technology Solutions for Climate*
-
 I’ve been a bootstrapped founder for over 20 years. I’ve built 3 successful companies and many more failures. But I’ve managed to make a living and maintain control over my own destiny—all without raising any investor capital.
 
-Recently, I explored the VC path with Rose City Robotics. I had conversations, customer discovery, pitch competitions, and weighed the pros and cons, and ultimately decided that venture capital wasn’t the right fit for me.  
+Recently, I explored the VC path with Rose City Robotics. I had conversations, customer discovery, pitch competitions, and weighed the pros and cons, and ultimately decided that venture capital wasn’t the right fit for me.
 <!--more-->
 
 While I’ve chosen to stay bootstrapped, I now also have the opportunity to invest as a VC, which is a completely different game—one where I can spread risk across multiple companies and benefit from others’ success rather than shouldering all the risk myself. That’s the fundamental dichotomy of VC: it’s a great system for investors, but honestly not a great one for founders. Yes, it’s possible to make a huge, life-changing exit, but do most founders really make money when exiting after raising VC funding? I have my doubts.
