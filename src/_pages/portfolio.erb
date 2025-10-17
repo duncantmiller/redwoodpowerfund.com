@@ -66,6 +66,25 @@ fund_investments:
         url: "https://surgivance.com/"
       - name: "iGridSim"
         url: "https://igridsim.com/"
+exits:
+  - name: "HeatSpring"
+    description: "B2B STEM education platform for building trades professionals and clean energy workforce development."
+    link:
+      href: "https://heatspring.com"
+      label: "heatspring.com"
+    logo: "images/portfolio_companies/HeatSpring-logo.jpg"
+  - name: "OpenShiro"
+    description: "B2B SaaS Prompt Engineering platform for AI Large Language Model integrations"
+    link:
+      href: "https://openshiro.com"
+      label: "openshiro.com"
+    logo: "images/portfolio_companies/OpenShiro.png"
+  - name: "Waivolt"
+    description: "B2B AI-native education platform for solar professional development"
+    link:
+      href: "https://waivolt.com"
+      label: "waivolt.com"
+    logo: "images/portfolio_companies/Waivolt.png"
 ---
 
 <%= render Container.new(outer_class: "mt-16 sm:mt-32") do %>
@@ -184,6 +203,54 @@ fund_investments:
                       <% end %>
                     </div>
                   </div>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Exits Section -->
+  <div class="mt-24 sm:mt-32">
+    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100 mb-8">
+      Exits
+    </h2>
+    <div class="space-y-16">
+      <% resource.data.exits.each do |exit| %>
+        <div class="border-l-4 border-forest-600 pl-8">
+          <%= render Card.new do %>
+            <div class="flex items-start space-x-6">
+              <div class="relative z-10 flex h-20 w-32 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 flex-shrink-0">
+                <% if exit["logo"] %>
+                  <img src="<%= relative_url exit["logo"] %>" alt="<%= exit["name"] %> logo" class="max-h-16 max-w-28 object-contain" />
+                <% else %>
+                  <div class="h-16 w-28 rounded bg-forest-600 flex items-center justify-center">
+                    <span class="text-white text-xl font-bold"><%= exit["name"][0] %></span>
+                  </div>
+                <% end %>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+                  <% if exit["link"] %>
+                    <a href="<%= exit["link"]["href"] %>" class="hover:text-forest-600 transition-colors">
+                      <%= exit["name"] %>
+                    </a>
+                  <% else %>
+                    <%= exit["name"] %>
+                  <% end %>
+                </h3>
+                <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+                  <%= exit["description"] %>
+                </p>
+                <% if exit["link"] %>
+                  <p class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-forest-600 transition-colors dark:text-zinc-200">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none">
+                      <path d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z" fill="currentColor" />
+                    </svg>
+                    <span class="ml-2"><%= exit["link"]["label"] %></span>
+                  </p>
                 <% end %>
               </div>
             </div>
