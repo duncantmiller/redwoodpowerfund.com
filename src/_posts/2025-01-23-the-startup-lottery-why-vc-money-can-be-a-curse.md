@@ -2,7 +2,7 @@
 layout: post
 title: "The Startup Lottery: Why VC Money Can Be a Curse"
 description: "Venture capital is glamorized, but getting VC money early is often more curse than blessing. Here's why customer validation beats investor validation every time."
-date: 2025-01-23
+date: 2025-10-21
 categories: [startups, venture-capital, bootstrapping]
 ---
 
