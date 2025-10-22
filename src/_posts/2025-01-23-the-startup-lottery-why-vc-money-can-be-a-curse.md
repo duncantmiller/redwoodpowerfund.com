@@ -28,7 +28,7 @@ When a founder gets validation from an investor, they often stop seeking it from
 
 VCs optimize for 100x returns. That means pushing for speed and scale—sometimes before the foundation is ready. If you're not growing fast enough, you'll be cut off, pivoted, or replaced.
 
-This is venture capital by definition: a parasite that feeds on your company's growth. VCs need your success more than you need their money—but they've convinced founders otherwise.
+This is venture capital by definition: **a parasite** that feeds on your company's growth. VCs need your success more than you need their money—but they've convinced founders otherwise.
 
 ## "Fuel on Fire" Only Works If There's a Fire
 
@@ -45,9 +45,8 @@ Starting with customer revenue forces you to build something people actually wan
 VC can be a useful tool—if you control the relationship:
 
 - You have a product with traction and want to scale.
-- You understand the terms, tradeoffs, and timelines.
+- You understand the terms, tradeoffs, ownership, control, and timelines.
 - You're building something capital-intensive that can't be bootstrapped.
-- You're strong enough that the parasite can't kill the host.
 
 But as a starting point? It's often a distraction from the real work. You're inviting the parasite in before you're strong enough to survive it.
 
