@@ -6,7 +6,9 @@ date: 2025-10-21
 categories: [startups, venture-capital, bootstrapping]
 ---
 
-Venture capital is glamorized. Startup competitions, pitch decks, cash prizes, investment. Founders are celebrated for raising millions before building anything real. But what if getting VC money early is more curse than blessing?
+Venture capital is glamorized. Startup competitions, pitch decks, cash prizes, investment.
+
+Founders are celebrated for raising millions before building anything real. But what if getting VC money early is more curse than blessing?
 
 Raising VC is like winning the lottery and founders who cash in too early often flame out. Here's why.
 
@@ -26,9 +28,13 @@ When a founder gets validation from an investor, they often stop seeking it from
 
 VCs optimize for 100x returns. That means pushing for speed and scale—sometimes before the foundation is ready. If you're not growing fast enough, you'll be cut off, pivoted, or replaced.
 
+This is venture capital by definition: a parasite that feeds on your company's growth. VCs need your success more than you need their money—but they've convinced founders otherwise.
+
 ## "Fuel on Fire" Only Works If There's a Fire
 
 VC money is fuel. It makes things go faster. But if you don't have a working engine, you're just burning cash. Many startups mistake capital for progress. They chase growth before understanding their customer. They hire too quickly, scale too early, and collapse under their own weight.
+
+Meanwhile, the VC has extracted their management fees and moved on to the next host. The parasite survives; the startup doesn't.
 
 ## Bootstrapping Builds Muscle
 
@@ -36,18 +42,17 @@ Starting with customer revenue forces you to build something people actually wan
 
 ## When VC Makes Sense
 
-VC can be a great tool—if:
+VC can be a useful tool—if you control the relationship:
 
 - You have a product with traction and want to scale.
 - You understand the terms, tradeoffs, and timelines.
 - You're building something capital-intensive that can't be bootstrapped.
+- You're strong enough that the parasite can't kill the host.
 
-But as a starting point? It's often a distraction from the real work.
+But as a starting point? It's often a distraction from the real work. You're inviting the parasite in before you're strong enough to survive it.
 
 ## Closing Thought
 
-Venture capital is a tool—not a goal. It's not how you start a business. It's how you scale one.
-
-Get customer money first. Then, if needed, bring in VC to turn a small fire into a bonfire.
+Venture capital is a parasite by definition—it needs your company to survive, but you don't need it to start. Get customer money first. Build strength. Then, if needed, bring in VC to turn a small fire into a bonfire. But only when you're strong enough that the parasite can't kill the host.
 
 Don't win the startup lottery. Win the customer.
