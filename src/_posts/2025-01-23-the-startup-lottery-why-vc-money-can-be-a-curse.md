@@ -28,7 +28,7 @@ When a founder gets validation from an investor, they often stop seeking it from
 
 VCs optimize for 100x returns. That means pushing for speed and scale—sometimes before the foundation is ready. If you're not growing fast enough, you'll be cut off, pivoted, or replaced.
 
-This is venture capital by definition: **a parasite** that feeds on your company's growth. VCs need your success more than you need their money—but they've convinced founders otherwise.
+This is venture capital by definition: **extractive capital** it harvests your growth on a fund’s schedule. The game is startup hot potato: pass the company fast enough to land an acquisition or IPO before the music stops. Place 10 bets and maybe one of them will hit. Its not evil, its math. But the math sucks for founders.
 
 ## "Fuel on Fire" Only Works If There's a Fire
 
