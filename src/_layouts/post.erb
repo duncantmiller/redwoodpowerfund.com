@@ -42,7 +42,9 @@ sitemap_change_frequency: monthly
       by <%= resource.data.author || site.data.personal_info.name %> on <%= resource.date.strftime("%B %e, %Y") %>
     </div>
     <article class="prose prose-zinc lg:prose-xl mt-6">
-      <img src="<%= resource.data.image %>" alt="<%= resource.data.title %> image" class="aspect-[16/9] w-full rounded-2xl bg-zinc-100">
+      <% if resource.data.image %>
+        <img src="<%= resource.data.image %>" alt="<%= resource.data.title %> image" class="aspect-[16/9] w-full rounded-2xl bg-zinc-100">
+      <% end %>
       <div>
         <%= yield %>
       </div>
