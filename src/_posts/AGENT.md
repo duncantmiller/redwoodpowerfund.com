@@ -32,9 +32,24 @@ Use headings instead:
 ## Section Title
 ```
 
-## URLs
+## URLs and Categories
 
-The site uses `permalink: pretty`, which includes categories in the URL path. Keep categories short and meaningful — they become URL segments.
+The site uses `permalink: pretty` in `bridgetown.config.yml`. Under this setting, Bridgetown builds URLs by joining categories + date + slug:
+
+```
+/category-one/category-two/YYYY/MM/DD/post-slug/
+```
+
+**Example:** a post dated 2026-04-04 with `categories: [startups, robotics]` produces:
+```
+/startups/robotics/2026/04/04/post-slug/
+```
+
+**Consequences:**
+- Changing or removing categories changes the URL and breaks existing links.
+- Choose categories carefully before publishing — treat them as permanent once live.
+- Fewer categories = shorter, cleaner URLs. Prefer 1–2 per post.
+- If a post has no categories, the URL is just `/YYYY/MM/DD/post-slug/`.
 
 ## Images
 
