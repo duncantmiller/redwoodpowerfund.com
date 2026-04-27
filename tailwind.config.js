@@ -4,7 +4,7 @@ module.exports = {
     './src/**/*.{html,md,liquid,erb,serb,rb}',
     './frontend/javascript/**/*.js',
   ],
-  darkMode: 'class',
+  safelist: ['h-16', 'h-20', 'h-24', 'w-24', 'w-32', 'w-36', 'w-40'],
   theme: {
     extend: {
       colors: {

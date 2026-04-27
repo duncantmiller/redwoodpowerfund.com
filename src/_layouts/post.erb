@@ -6,12 +6,12 @@ sitemap_change_frequency: monthly
 <% # Use personal info as the author %>
 
 <%= render Container.new(outer_class: "mt-16 sm:mt-32") do %>
-  <div class="max-w-3xl text-base leading-7 text-gray-700 dark:text-gray-300">
+  <div class="max-w-3xl text-base leading-7 text-gray-700">
     <nav class="flex" aria-label="Breadcrumb">
       <ol role="list" class="list-none flex items-center space-x-4">
         <li>
           <div>
-            <a href="/" class="text-zinc-600 hover:text-forest-600 dark:text-zinc-400 dark:hover:text-forest-500 transition">
+            <a href="/" class="text-zinc-600 hover:text-forest-600 transition">
               <svg class="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z" clip-rule="evenodd" />
               </svg>
@@ -21,28 +21,28 @@ sitemap_change_frequency: monthly
         </li>
         <li>
           <div class="flex items-center">
-            <svg class="h-5 w-5 flex-shrink-0 text-zinc-400 dark:text-zinc-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg class="h-5 w-5 flex-shrink-0 text-zinc-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
             </svg>
-            <a href="/blog" class="text-zinc-600 hover:text-forest-600 dark:text-zinc-400 dark:hover:text-forest-500 transition">Blog</a>
+            <a href="/blog" class="text-zinc-600 hover:text-forest-600 transition">Blog</a>
           </div>
         </li>
         <li>
           <div class="flex items-center">
-            <svg class="h-5 w-5 flex-shrink-0 text-zinc-400 dark:text-zinc-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg class="h-5 w-5 flex-shrink-0 text-zinc-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
             </svg>
-            <a href="<%= resource.relative_url %>" class="text-zinc-600 hover:text-forest-600 dark:text-zinc-400 dark:hover:text-forest-500 transition"><%= resource.data.title %></a>
+            <a href="<%= resource.relative_url %>" class="text-zinc-600 hover:text-forest-600 transition"><%= resource.data.title %></a>
           </div>
         </li>
       </ol>
     </nav>
-    <h1 class="mt-6 text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100"><%= resource.data.title %></h1>
-    <div class="flex items-center gap-x-4 text-sm text-zinc-500 mt-6 dark:text-zinc-400">
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl"><%= resource.data.title %></h1>
+    <div class="flex items-center gap-x-4 text-sm text-zinc-500 mt-6">
       by <%= resource.data.author || site.data.personal_info.name %> on <%= resource.date.strftime("%B %e, %Y") %>
     </div>
-    <article class="prose prose-zinc lg:prose-xl mt-6 dark:prose-invert">
-      <img src="<%= resource.data.image %>" alt="<%= resource.data.title %> image" class="aspect-[16/9] w-full rounded-2xl bg-zinc-100 dark:bg-zinc-800">
+    <article class="prose prose-zinc lg:prose-xl mt-6">
+      <img src="<%= resource.data.image %>" alt="<%= resource.data.title %> image" class="aspect-[16/9] w-full rounded-2xl bg-zinc-100">
       <div>
         <%= yield %>
       </div>

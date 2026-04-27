@@ -11,7 +11,7 @@ direct_investments:
     logo: "images/portfolio_companies/RoseCityRobotics-Logo-Primary-RGB-Red.png"
     deal_terms:
       - label: "Instrument"
-        value: "Founder Shares"
+        value: "Convertible Note"
   - name: "Gaia AI"
     description: "Gaia AI simplifies forest data collection and analysis using AI-powered tools and sensor technology, delivering precise insights to optimize your harvesting, timber sales, and carbon credit strategies."
     link:
@@ -94,7 +94,7 @@ exits:
     link:
       href: "https://heatspring.com"
       label: "heatspring.com"
-    logo: "images/portfolio_companies/HeatSpring-logo.jpg"
+    logo: "images/portfolio_companies/heatspring_logo.jpeg"
   - name: "OpenShiro"
     description: "B2B SaaS Prompt Engineering platform for AI Large Language Model integrations"
     link:
@@ -120,17 +120,17 @@ failed_investments:
 
 <%= render Container.new(outer_class: "mt-16 sm:mt-32") do %>
   <header class="max-w-2xl">
-    <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+    <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
       <%= resource.data.title %>
     </h1>
-    <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+    <p class="mt-6 text-base text-zinc-600">
       <%= resource.data.description %>
     </p>
   </header>
 
   <!-- Individual Investments Section -->
   <div class="mt-16 sm:mt-20">
-    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl mb-8">
       Direct Investments
     </h2>
         <div class="space-y-16">
@@ -138,9 +138,9 @@ failed_investments:
         <div class="border-l-4 border-forest-600 pl-8">
           <%= render Card.new do %>
             <div class="flex items-start space-x-6">
-              <div class="relative z-10 flex h-20 w-32 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 flex-shrink-0">
+              <div class="relative z-10 flex <%= investment["logo_box"] || "h-20 w-32" %> items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 flex-shrink-0">
                 <% if investment["logo"] %>
-                  <img src="<%= relative_url investment["logo"] %>" alt="<%= investment["name"] %> logo" class="max-h-16 max-w-28 object-contain" />
+                  <img src="<%= relative_url investment["logo"] %>" alt="<%= investment["name"] %> logo" class="max-h-full max-w-full object-contain p-1" />
                 <% else %>
                   <div class="h-16 w-28 rounded bg-forest-600 flex items-center justify-center">
                     <span class="text-white text-xl font-bold"><%= investment["name"][0] %></span>
@@ -148,7 +148,7 @@ failed_investments:
                 <% end %>
               </div>
               <div class="flex-1 min-w-0">
-                <h3 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+                <h3 class="text-xl font-semibold text-zinc-800">
                   <% if investment["link"] %>
                     <a href="<%= investment["link"]["href"] %>" class="hover:text-forest-600 transition-colors">
                       <%= investment["name"] %>
@@ -157,21 +157,21 @@ failed_investments:
                     <%= investment["name"] %>
                   <% end %>
                 </h3>
-                <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+                <p class="mt-3 text-sm text-zinc-600">
                   <%= investment["description"] %>
                 </p>
                 <% if investment["deal_terms"] && investment["deal_terms"].length > 0 %>
                   <div class="mt-4 flex flex-wrap gap-2">
                     <% investment["deal_terms"].each do |term| %>
-                      <div class="inline-flex items-center rounded-md bg-forest-50 px-3 py-1.5 text-xs ring-1 ring-inset ring-forest-200 dark:bg-forest-900/30 dark:ring-forest-800">
-                        <span class="font-medium uppercase tracking-wide text-forest-700 dark:text-forest-300"><%= term["label"] %></span>
-                        <span class="ml-2 font-semibold text-zinc-800 dark:text-zinc-100"><%= term["value"] %></span>
+                      <div class="inline-flex items-center rounded-md bg-forest-50 px-3 py-1.5 text-xs ring-1 ring-inset ring-forest-200">
+                        <span class="font-medium uppercase tracking-wide text-forest-700"><%= term["label"] %></span>
+                        <span class="ml-2 font-semibold text-zinc-800"><%= term["value"] %></span>
                       </div>
                     <% end %>
                   </div>
                 <% end %>
                 <% if investment["link"] %>
-                  <a href="<%= investment["link"]["href"] %>" target="_blank" rel="noopener noreferrer" class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-forest-600 transition-colors dark:text-zinc-200">
+                  <a href="<%= investment["link"]["href"] %>" target="_blank" rel="noopener noreferrer" class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-forest-600 transition-colors">
                     <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                       <polyline points="15,3 21,3 21,9" />
@@ -190,7 +190,7 @@ failed_investments:
 
   <!-- Fund Investments Section -->
   <div class="mt-24 sm:mt-32">
-    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl mb-8">
       Fund Investments
     </h2>
     <div class="space-y-16">
@@ -198,9 +198,9 @@ failed_investments:
         <div class="border-l-4 border-forest-600 pl-8">
           <%= render Card.new do %>
             <div class="flex items-start space-x-6">
-              <div class="relative z-10 flex h-20 w-32 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 flex-shrink-0">
+              <div class="relative z-10 flex <%= fund["logo_box"] || "h-20 w-32" %> items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 flex-shrink-0">
                 <% if fund["logo"] %>
-                  <img src="<%= relative_url fund["logo"] %>" alt="<%= fund["name"] %> logo" class="max-h-16 max-w-28 object-contain" />
+                  <img src="<%= relative_url fund["logo"] %>" alt="<%= fund["name"] %> logo" class="max-h-full max-w-full object-contain p-1" />
                 <% else %>
                   <div class="h-16 w-28 rounded bg-forest-600 flex items-center justify-center">
                     <span class="text-white text-xl font-bold"><%= fund["name"][0] %></span>
@@ -208,7 +208,7 @@ failed_investments:
                 <% end %>
               </div>
               <div class="flex-1 min-w-0">
-                <h3 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+                <h3 class="text-xl font-semibold text-zinc-800">
                   <% if fund["link"] %>
                     <a href="<%= fund["link"]["href"] %>" class="hover:text-forest-600 transition-colors">
                       <%= fund["name"] %>
@@ -217,21 +217,21 @@ failed_investments:
                     <%= fund["name"] %>
                   <% end %>
                 </h3>
-                <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+                <p class="mt-3 text-sm text-zinc-600">
                   <%= fund["description"] %>
                 </p>
                 <% if fund["deal_terms"] && fund["deal_terms"].length > 0 %>
                   <div class="mt-4 flex flex-wrap gap-2">
                     <% fund["deal_terms"].each do |term| %>
-                      <div class="inline-flex items-center rounded-md bg-forest-50 px-3 py-1.5 text-xs ring-1 ring-inset ring-forest-200 dark:bg-forest-900/30 dark:ring-forest-800">
-                        <span class="font-medium uppercase tracking-wide text-forest-700 dark:text-forest-300"><%= term["label"] %></span>
-                        <span class="ml-2 font-semibold text-zinc-800 dark:text-zinc-100"><%= term["value"] %></span>
+                      <div class="inline-flex items-center rounded-md bg-forest-50 px-3 py-1.5 text-xs ring-1 ring-inset ring-forest-200">
+                        <span class="font-medium uppercase tracking-wide text-forest-700"><%= term["label"] %></span>
+                        <span class="ml-2 font-semibold text-zinc-800"><%= term["value"] %></span>
                       </div>
                     <% end %>
                   </div>
                 <% end %>
                 <% if fund["link"] %>
-                  <a href="<%= fund["link"]["href"] %>" target="_blank" rel="noopener noreferrer" class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-forest-600 transition-colors dark:text-zinc-200">
+                  <a href="<%= fund["link"]["href"] %>" target="_blank" rel="noopener noreferrer" class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-forest-600 transition-colors">
                     <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                       <polyline points="15,3 21,3 21,9" />
@@ -243,15 +243,15 @@ failed_investments:
 
                 <% if fund["portfolio_companies"] && fund["portfolio_companies"].length > 0 %>
                   <div class="mt-6">
-                    <h4 class="text-sm font-medium text-zinc-800 dark:text-zinc-100 mb-3">Portfolio Companies</h4>
+                    <h4 class="text-sm font-medium text-zinc-800 mb-3">Portfolio Companies</h4>
                     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                       <% fund["portfolio_companies"].each do |company| %>
                         <% if company["url"] %>
-                          <a href="<%= company["url"] %>" target="_blank" rel="noopener noreferrer" class="px-3 py-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:bg-forest-200 dark:hover:bg-forest-800 hover:text-forest-900 dark:hover:text-forest-100 transition-colors">
+                          <a href="<%= company["url"] %>" target="_blank" rel="noopener noreferrer" class="px-3 py-2 bg-zinc-200 rounded-lg text-xs font-medium text-zinc-800 hover:bg-forest-200 hover:text-forest-900 transition-colors">
                             <%= company["name"] %>
                           </a>
                         <% else %>
-                          <div class="px-3 py-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg text-xs font-medium text-zinc-800 dark:text-zinc-200">
+                          <div class="px-3 py-2 bg-zinc-200 rounded-lg text-xs font-medium text-zinc-800">
                             <%= company["name"] %>
                           </div>
                         <% end %>
@@ -269,7 +269,7 @@ failed_investments:
 
   <!-- Exits Section -->
   <div class="mt-24 sm:mt-32">
-    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl mb-8">
       Exits
     </h2>
     <div class="space-y-16">
@@ -277,9 +277,9 @@ failed_investments:
         <div class="border-l-4 border-forest-600 pl-8">
           <%= render Card.new do %>
             <div class="flex items-start space-x-6">
-              <div class="relative z-10 flex h-20 w-32 items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 flex-shrink-0">
+              <div class="relative z-10 flex <%= exit["logo_box"] || "h-20 w-32" %> items-center justify-center rounded-lg bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 flex-shrink-0">
                 <% if exit["logo"] %>
-                  <img src="<%= relative_url exit["logo"] %>" alt="<%= exit["name"] %> logo" class="max-h-16 max-w-28 object-contain" />
+                  <img src="<%= relative_url exit["logo"] %>" alt="<%= exit["name"] %> logo" class="max-h-full max-w-full object-contain p-1" />
                 <% else %>
                   <div class="h-16 w-28 rounded bg-forest-600 flex items-center justify-center">
                     <span class="text-white text-xl font-bold"><%= exit["name"][0] %></span>
@@ -287,7 +287,7 @@ failed_investments:
                 <% end %>
               </div>
               <div class="flex-1 min-w-0">
-                <h3 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+                <h3 class="text-xl font-semibold text-zinc-800">
                   <% if exit["link"] %>
                     <a href="<%= exit["link"]["href"] %>" class="hover:text-forest-600 transition-colors">
                       <%= exit["name"] %>
@@ -296,11 +296,11 @@ failed_investments:
                     <%= exit["name"] %>
                   <% end %>
                 </h3>
-                <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+                <p class="mt-3 text-sm text-zinc-600">
                   <%= exit["description"] %>
                 </p>
                 <% if exit["link"] %>
-                  <a href="<%= exit["link"]["href"] %>" target="_blank" rel="noopener noreferrer" class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-forest-600 transition-colors dark:text-zinc-200">
+                  <a href="<%= exit["link"]["href"] %>" target="_blank" rel="noopener noreferrer" class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-forest-600 transition-colors">
                     <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                       <polyline points="15,3 21,3 21,9" />
@@ -319,15 +319,15 @@ failed_investments:
 
   <!-- Failed / Shut Down Section -->
   <div class="mt-24 sm:mt-32">
-    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100 mb-8">
+    <h2 class="text-2xl font-bold tracking-tight text-zinc-800 sm:text-3xl mb-8">
       Failed / Shut Down
     </h2>
     <div class="border-l-4 border-zinc-400 pl-8">
       <ul class="space-y-3">
         <% resource.data.failed_investments.each do |failed| %>
-          <li class="text-base text-zinc-600 dark:text-zinc-400">
-            <span class="font-medium text-zinc-800 dark:text-zinc-200"><%= failed["name"] %></span>
-            <span class="text-zinc-500 dark:text-zinc-500">(<%= failed["year"] %>)</span>
+          <li class="text-base text-zinc-600">
+            <span class="font-medium text-zinc-800"><%= failed["name"] %></span>
+            <span class="text-zinc-500">(<%= failed["year"] %>)</span>
           </li>
         <% end %>
       </ul>

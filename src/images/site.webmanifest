@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Redwood Power Fund",
+    "short_name": "Redwood Power",
     "icons": [
         {
             "src": "/images/android-chrome-192x192.png",
@@ -11,9 +11,14 @@
             "src": "/images/android-chrome-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
+        },
+        {
+            "src": "/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#26452D",
     "background_color": "#ffffff",
     "display": "standalone"
 }

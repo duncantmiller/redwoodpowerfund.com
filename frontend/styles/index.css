@@ -8,13 +8,6 @@
 @tailwind utilities;
 @import './syntax-highlighting.css';
 
-/* Dark mode utilities */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
-}
-
 /* Custom utilities for the spotlight design */
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
