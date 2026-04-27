@@ -9,18 +9,27 @@ direct_investments:
       href: "https://rosecityrobotics.com"
       label: "rosecityrobotics.com"
     logo: "images/portfolio_companies/RoseCityRobotics-Logo-Primary-RGB-Red.png"
+    deal_terms:
+      - label: "Instrument"
+        value: "Founder Shares"
   - name: "Gaia AI"
     description: "Gaia AI simplifies forest data collection and analysis using AI-powered tools and sensor technology, delivering precise insights to optimize your harvesting, timber sales, and carbon credit strategies."
     link:
       href: "https://gaia-ai.eco"
       label: "gaia-ai.eco"
     logo: "images/portfolio_companies/gaia_ai.png"
+    deal_terms:
+      - label: "Instrument"
+        value: "SAFE"
   - name: "Tender Loving Empire"
     description: "Tender Loving Empire is a profitable Pacific Northwest retailer that has cracked the code on scaling handmade goods. TLE operates seven stores — including long-term locations at PDX and Sea-Tac airports — and has grown 13× over the last decade to $7.8M in 2024 revenue at a 62% gross margin, with its house brand line delivering ~75% margins."
     link:
       href: "https://tenderlovingempire.com/"
       label: "tenderlovingempire.com"
     logo: "images/portfolio_companies/tender_loving_empire.jpeg"
+    deal_terms:
+      - label: "Instrument"
+        value: "Convertible Note"
 fund_investments:
   - name: "Regener8 2024 Fund"
     description: "Independent, Member-Driven Annual Fund Following E8 Angels Investments. All investment decisions are made collectively by Fund Member vote."
@@ -28,6 +37,13 @@ fund_investments:
       href: "https://e8regenr8.com/"
       label: "e8regenr8.com"
     logo: "/images/portfolio_companies/Regenr8_logo-1.webp"
+    deal_terms:
+      - label: "Instrument"
+        value: "SAFE"
+      - label: "Instrument"
+        value: "Convertible Note"
+      - label: "Instrument"
+        value: "Priced Round Follow-On"
     portfolio_companies:
       - name: "Currents"
         url: "https://currents.market/"
@@ -85,12 +101,6 @@ exits:
       href: "https://openshiro.com"
       label: "openshiro.com"
     logo: "images/portfolio_companies/OpenShiro.png"
-  - name: "Waivolt"
-    description: "B2B AI-native education platform for solar professional development"
-    link:
-      href: "https://waivolt.com"
-      label: "waivolt.com"
-    logo: "images/portfolio_companies/Waivolt.png"
 failed_investments:
   - name: "Miller Enterprises"
     year: "2005"
@@ -150,6 +160,16 @@ failed_investments:
                 <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
                   <%= investment["description"] %>
                 </p>
+                <% if investment["deal_terms"] && investment["deal_terms"].length > 0 %>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    <% investment["deal_terms"].each do |term| %>
+                      <div class="inline-flex items-center rounded-md bg-forest-50 px-3 py-1.5 text-xs ring-1 ring-inset ring-forest-200 dark:bg-forest-900/30 dark:ring-forest-800">
+                        <span class="font-medium uppercase tracking-wide text-forest-700 dark:text-forest-300"><%= term["label"] %></span>
+                        <span class="ml-2 font-semibold text-zinc-800 dark:text-zinc-100"><%= term["value"] %></span>
+                      </div>
+                    <% end %>
+                  </div>
+                <% end %>
                 <% if investment["link"] %>
                   <a href="<%= investment["link"]["href"] %>" target="_blank" rel="noopener noreferrer" class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-forest-600 transition-colors dark:text-zinc-200">
                     <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none" fill="none" stroke="currentColor" stroke-width="2">
@@ -200,6 +220,16 @@ failed_investments:
                 <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
                   <%= fund["description"] %>
                 </p>
+                <% if fund["deal_terms"] && fund["deal_terms"].length > 0 %>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    <% fund["deal_terms"].each do |term| %>
+                      <div class="inline-flex items-center rounded-md bg-forest-50 px-3 py-1.5 text-xs ring-1 ring-inset ring-forest-200 dark:bg-forest-900/30 dark:ring-forest-800">
+                        <span class="font-medium uppercase tracking-wide text-forest-700 dark:text-forest-300"><%= term["label"] %></span>
+                        <span class="ml-2 font-semibold text-zinc-800 dark:text-zinc-100"><%= term["value"] %></span>
+                      </div>
+                    <% end %>
+                  </div>
+                <% end %>
                 <% if fund["link"] %>
                   <a href="<%= fund["link"]["href"] %>" target="_blank" rel="noopener noreferrer" class="mt-4 flex text-sm font-medium text-zinc-400 hover:text-forest-600 transition-colors dark:text-zinc-200">
                     <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5 flex-none" fill="none" stroke="currentColor" stroke-width="2">
