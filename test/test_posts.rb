@@ -8,7 +8,7 @@ class TestBlogPosts < Minitest::Test
       @post_files = Dir.glob(File.join(@posts_dir, "*.md"))
     end
 
-    should "specify an image in the front matter for each post" do
+    should "not have a blank image value in the front matter (omit the field entirely if no image)" do
       @post_files.each do |file_path|
         content = File.read(file_path)
         front_matter_match = content.match(/---\s*\n(.*?)---/m)
@@ -17,8 +17,10 @@ class TestBlogPosts < Minitest::Test
         front_matter = front_matter_match[1]
         data = YAML.safe_load(front_matter, permitted_classes: [Date, Time])
         assert data, "Front matter should be present in #{File.basename(file_path)}"
-        assert data["image"], "Image should be specified in the front matter of #{File.basename(file_path)}"
-        refute_empty data["image"], "Image path should not be empty in #{File.basename(file_path)}"
+        if data.key?("image")
+          refute_nil data["image"], "Image key is present but nil in #{File.basename(file_path)} — omit the field if there is no image"
+          refute_empty data["image"].to_s, "Image path should not be empty in #{File.basename(file_path)}"
+        end
       end
     end
 
