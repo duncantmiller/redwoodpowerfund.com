@@ -14,7 +14,7 @@ If you buy a property and hold it, you might realistically expect ~4-6% annual r
 But if you buy at a premium (for view, location), your “yield” (cash flow) may be much lower. Using a 5% risk free rate benchmark, you’d need a very good deal to make it cash‐flow comfortably.
 Also, if you buy hoping for “skyrocketing appreciation,” remember ~6% annual long‐term is a healthy expectation—not 20% year after year.
 
-2. Airbnb / Vacation Rental: Are You Actually Making Money?
+## Airbnb / Vacation Rental: Are You Actually Making Money?
 
 Many investors look to short‐term rentals (STRs) or “Airbnb” style leasing. Let’s dig into the data and the pitfalls.
 
@@ -40,7 +40,7 @@ Conclusion on Airbnb/STR
 Yes, you can make money via STR on a vacation property. But don’t assume “holiday‐home + Airbnb = automatic windfall.” Unless you do your homework, you may get modest returns or negative cash flow once all costs are accounted.
 If you’re looking for yield (cash income) rather than just appreciation + occasional use, traditional long‐term rentals may actually offer more stable ROI in certain locations.
 
-3. Timeshare / Fractional Ownership: Why This Often Looks Like a Bad Investment
+## Timeshare / Fractional Ownership: Why This Often Looks Like a Bad Investment
 
 Timeshares are common in vacation destinations, as well as the hard pitch: people buy into resorts, fractional ownership, etc. But from an investment point of view the structure often works against the owner in terms of cash‐return.
 
@@ -68,7 +68,7 @@ If you’re okay with low (or negative) “investment yield” in exchange for p
 Bottom line
 Treat timeshare more as “lifestyle purchase” than “investment vehicle.” If you buy expecting strong ROI like a rental income-property, you’ll often be disappointed.
 
-4. Small Business + Export / Service Ventures
+## Small Business + Export / Service Ventures
 
 Beyond property, there are opportunities (and risks) in owning or starting businesses in a tourist area: local services (lawyer, contractor, trades), tourism support businesses, niche export/agribusiness.
 
@@ -101,7 +101,7 @@ How sensitive is your business to external shocks (tourist downturn, volcanic/ea
 Summary
 Service or trades businesses in high-end real estate or tourism-connected markets can be solid investments. Export or niche local product businesses offer higher growth potential, but also require scale, logistics and market access. If you’re looking to invest or start a business on the Big Island, thinking local + niche + value proposition is key.
 
-5. Putting It Together: What Should YOU Do?
+## Putting It Together: What Should YOU Do?
 
 Here are questions and a decision framework to help you choose the best “investment path” for you on the Big Island:
 
@@ -143,7 +143,7 @@ Consider local risks: volcanic activity, remote location, shipping delays, highe
 
 Have an exit strategy: If you buy property, how easy will you sell if you need to? If you start a business, what does ramp-up look like and is it scalable or sell-able?
 
-6. Final Word
+## Final Word
 
 The Big Island offers unique opportunities: beautiful location, tourism influx, niche resources and local business demand. But “investment in paradise” is not a guarantee of outsized return—costs are high, yield often modest, risks significant.
 If you do your homework, align your investment path with your goals (income vs appreciation), model realistically (not just dream of 20% returns), and understand the island-specific dynamics (logistics, regulation, tourism cycles), you can make smart decisions.
