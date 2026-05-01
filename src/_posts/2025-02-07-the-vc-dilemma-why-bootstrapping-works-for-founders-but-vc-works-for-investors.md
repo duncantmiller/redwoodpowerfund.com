@@ -2,6 +2,7 @@
 layout: post
 title: "The VC Dilemma: Why Bootstrapping Works for Founders but VC Works for Investors"
 date: 2025-02-07
+author: "Duncan Miller"
 tags: [bootstrapping, venture-capital, startups, founders, investing, open-source, public-benefit]
 description: "After two decades of bootstrapping—and a recent look at VC from the investor side—here’s why I’m staying founder-first without raising venture money."
 image: /images/posts/trees_blog_image.jpeg
