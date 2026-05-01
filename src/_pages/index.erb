@@ -68,7 +68,7 @@ description:
 
     <!-- Blog Posts -->
     <div class="flex flex-col gap-16">
-      <% collections.posts.resources.first(4).each do |post| %>
+      <% collections.posts.resources.reject { |post| post.data.unlisted }.first(4).each do |post| %>
         <article class="group relative flex flex-col items-start">
           <h2 class="text-base font-semibold tracking-tight text-zinc-800">
             <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"></div>

@@ -15,6 +15,7 @@ image: /path/to/image.jpg  # optional — omit if no image; do NOT leave blank
 ```
 
 - `image` is optional. If there is no image, omit the field entirely — do not leave it as an empty string. An empty or missing image will be hidden automatically.
+- `unlisted: true` (optional) hides the post from the homepage's recent-posts list and the `/blog/` index, but the post itself still renders at its URL so direct links keep working.
 
 ## Headings
 

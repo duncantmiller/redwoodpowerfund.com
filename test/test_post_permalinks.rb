@@ -8,6 +8,8 @@ class TestPostPermalinks < Minitest::Test
   PERMALINK_SNAPSHOT = {
     "2025-01-23-the-startup-lottery-why-vc-money-can-be-a-curse.md" =>
       "/startups/venture-capital/bootstrapping/2025/01/23/the-startup-lottery-why-vc-money-can-be-a-curse/",
+    "2025-02-07-the-vc-dilemma-why-bootstrapping-works-for-founders-but-vc-works-for-investors.md" =>
+      "/2025/02/07/the-vc-dilemma-why-bootstrapping-works-for-founders-but-vc-works-for-investors/",
     "2025-11-03-the-pitfalls-of-investing-in-vacation-property.md" =>
       "/investing/2025/11/03/the-pitfalls-of-investing-in-vacation-property/",
     "2026-04-04-is-your-automation-vendor-actually-building-for-you-or-for-their-next-investor.md" =>

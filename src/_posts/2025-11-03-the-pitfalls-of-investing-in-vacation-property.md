@@ -5,6 +5,7 @@ description: "A beautiful vacation property sounds like a win-win. But what is y
 date: 2025-11-03
 categories: [investing]
 author: "Duncan Miller"
+unlisted: true
 ---
 
 Owning a vacation property like a timeshare or AirBnB might sound like paradise, but investing here is not just “buy a sunset view and it appreciates.” It’s a nuanced landscape of high cost, regulatory quirks, tourism dependencies and local-market dynamics. If you are considering putting money into real estate, short-term rentals, business ownership or export ventures, here’s a clear look at what works, what’s risky, and how to actually measure your ROI.
